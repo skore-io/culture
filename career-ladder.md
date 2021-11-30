@@ -11,7 +11,10 @@ Independente de qual ponto da ladder o engenheiro esteja, será ouvido e terá s
 
 #### Habilidades
 
-- Fome de aprendizado.
+- Fome de aprendizado
+- Conceitos básicos de desenvolvimento de software
+- Conhece todas as boas práticas de desenvolvimento do nosso time
+- Construção de software orientado a testes
 
 #### Responsabilidades
 
@@ -19,6 +22,8 @@ Foca no crescimento como engenheiro, aprendendo as melhores práticas da engenha
 
 - Se esforça para aprender os valores essenciais da empresa, e em exibir esses valores em seu trabalho diário.
 - Capaz de realizar tarefas bem definidas de um projeto e concluí-las em um período de tempo razoável, com supervisão de membros mais seniores da equipe.
+- Está presente no dia-a-dia do time, se envolve nas discussões e se voluntaria para as tarefas.
+- Busca conhecimento dentro e fora da empresa, procurando se especializar cada vez mais.
 
 <h2 align="center">Pleno</h2>
 
@@ -52,9 +57,9 @@ Foca no crescimento como engenheiro, aprendendo as melhores práticas da engenha
 - Não apresenta apenas problemas, mas também soluções.
 - Busca evidências para apoiar suas idéias.
 - Identifica riscos no código, recursos e design.
-- Pesquisa e propõem novas tecnologias.
+- Pesquisa e propõe novas tecnologias.
 - Tem um amplo conhecimento da arquitetura, bem como um conhecimento bastante detalhado de sua área.
-- Sabe se gerenciar.
+- Sabe gerenciar seu tempo e suas prioridades, bem como as dependencias de suas tarefas.
 - Se esforça para entregar features no prazo e melhorar a precisão das estimativas de sua equipe.
 - Trabalha de forma eficaz com membros não técnicos, e é capaz de identificar problemas com requisitos e ajudar sua equipe a corrigir o curso em torno desses problemas.
 
@@ -69,6 +74,8 @@ https://medium.com/rd-shipit/o-que-faz-um-principal-engineer-41a62490837b#:~:tex
 - Visão técnica dos caminhos do produto.
 - Boa comunicação, já que suas falas terão um grande impacto no time.
 - Linguagem não técnica para se expressar com membros que não são engenheiros, de dentro ou fora da equipe.
+- Conhecimento em práticas de gestão de pessoas (1:1, gestão de performance, etc)
+- Domínio nas tecnologias usadas na nossa stack
 
 #### Responsabilidades
 
