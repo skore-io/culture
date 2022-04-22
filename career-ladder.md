@@ -1,7 +1,7 @@
 <h1 align="center">Tabela de evolução de carreira</h1>
 <h4 align="center">Este documento é fortemente baseado no documento de <a href="https://dresscode.renttherunway.com/blog/ladder" target="_blank">carreira do Rent the Runway.</a></h4>
 
-- Espera-se que todos os membros da equipe de tecnologia exibam os valores da empresa em seu trabalho: **seguir as boas práticas do time, revisar PR, compartilhar conhecimento, fornecer feedbacks e trabalhar em equipe**.
+- Espera-se que todos os membros da equipe de tecnologia exibam os valores da empresa em seu trabalho: **seguir as boas práticas do time, revisar PR, compartilhar conhecimento, fornecer/receber feedbacks e trabalhar em equipe**.
 - Independente de qual ponto da ladder o engenheiro esteja, será ouvido e terá seu espaço criativo da mesma maneira.
 - Todos os níveis são cumulativos.
 
@@ -20,9 +20,11 @@ Foca no crescimento como engenheiro, aprendendo as melhores práticas da engenha
   <ul>
     <li>Fome de aprendizado.</li>
     <li>Conceitos básicos de desenvolvimento de software.</li>
-    <li>Construção de software orientado a testes.</li>
+    <li>Construção de software orientado a testes: saber "como", "o que" e "quando" testar.</li>
+    <li>Participação na revisão de código de outras pessoas com intuito de aprender mais.</li>
+    <li>Planejamento e organização.</li>
+    <li>Questionar tarefas onde não tem a clareza do objetivo.</li>
   </ul>
-
 </details>
 
 <details>
@@ -30,34 +32,31 @@ Foca no crescimento como engenheiro, aprendendo as melhores práticas da engenha
     <b>Responsabilidades</b>
   </summary>
   <ul>
-    <li>Conhecer todas as boas práticas de desenvolvimento do nosso time.</li>
-    <li>Aprender os valores essenciais da empresa, e em exibir esses valores em seu trabalho diário.</li>
+    <li>Conhecer, entender e aplicar todas as boas práticas e ferramentas de desenvolvimento usadas pelo time: PRs, ADRs, RFCs, Lint, CI/CD, entre outros.</li>
+    <li>Aprender os valores essenciais da empresa, e em exibir esses valores em seu trabalho diário: revisar PR, compartilhar conhecimento, dar/receber feedbacks e trabalhar em equipe.</li>
     <li>Realizar tarefas bem definidas de um projeto e concluí-las em um período de tempo razoável, com supervisão de membros mais seniores da equipe.</li>
-    <li>Estar presente no dia-a-dia do time, se envolvendo nas discussões e se voluntariando para as tarefas.</li>
+    <li>Estar presente no dia-a-dia do time, se envolvendo nas discussões, revisando PRs, ADRs e RFCs e se voluntariando para realização de tarefas.</li>
     <li>Buscar conhecimento dentro e fora da empresa, procurando se especializar cada vez mais.</li>
   </ul>
-
 </details>
 
 <h2>Pleno</h2>
 
 > Analista
 
+O progresso neste nível está focado em assumir tarefas de maior complexidade, escopo e responsabilidade, concluindo-as com uma alta qualidade, e com uma menor necessidade de supervisão do líder de tecnologia.
+
 <details>
   <summary>
     <b>Comportamentos</b>
   </summary>
   <ul>
-    <li>O progresso neste nível está focado em assumir tarefas de maior complexidade, escopo e responsabilidade, concluindo-as com uma alta qualidade, e com uma menor necessidade de supervisão do líder de tecnologia.</li>
-    <li>Comunica-se bem e é capaz de fornecer feedback aos colegas.</li>
+    <li>Comunica-se bem e é capaz de fornecer/receber feedbacks dos colegas.</li>
     <li>Possui habilidades importantes fora da programação, como: boa comunicação e documentação.</li>
-    <li>Orientar estagiários e juniores, e ajuda-los a se desenvolverem.</li>
-    <li>Quebrar as tarefas em subtarefas menores, para evitar PRs gigantes. (Quando possível)</li>
-    <li>Encontrar bugs e propor plano de ação para correção.</li>
-    <li>Facilidade em trocar de contexto durante o dia.</li>
-    <li>Configurar o ambiente de desenvolvimento sozinho (instalar docker, nestjs, vuejs...).</li>
+    <li>Ajudar os juniores com dúvidas técnicas e com escopos de tarefas. Ex: configurar o ambiente de desenvolvimento (instalar docker, nestjs, vuejs...).</li>
+    <li>Quebrar as tarefas em subtarefas menores, para evitar PRs gigantes ou multiplos contextos. (Quando possível)</li>
+    <li>Encontrar bugs/code smells, propor correções e atuar nelas.</li>
   </ul>
-
 </details>
 
 <details>
@@ -65,14 +64,13 @@ Foca no crescimento como engenheiro, aprendendo as melhores práticas da engenha
     <b>Responsabilidades</b>
   </summary>
   <ul>
-    <li>Realizar tarefas bem definidas e concluí-las em um curto período de tempo.</li>
+    <li>Realizar tarefas parcialmente definidas e concluí-las em um curto período de tempo, com menor necessidade de supervisão de membros mais seniores da equipe. Isso significa também ter poucos comentários em seus PRs.</li>
     <li>Quando recebe uma tarefa com requisitos pouco claros, sabe como pedir esclarecimentos e garante que todas as suposições sejam examinadas antes do início do trabalho, para reduzir a necessidade de retrabalho.</li>
-    <li>Conduzir tarefas desde o desenvolvimento até o lançamento.</li>
-    <li>Ajudar no suporte de incidentes ou novas funcionalidades, até mesmo em áreas com as quais não esta familiarizado (projeto que ainda não teve contato).</li>
-    <li>Aplicar padrões de alta qualidade sem sacrificar a produtividade, e constantemente faz progresso nas tarefas que são atribuídas a ele.</li>
+    <li>Ownership das tarefas desde o desenvolvimento até o lançamento. Ex: cobrar revisões de pull request e QAs.</li>
+    <li>Baixa curva de aprendizado em projetos nos quais não esta familiarizado.</li>
+    <li>Conciliar qualidade com produtividade, e constantemente fazer progresso nas tarefas atribuídas.</li>
     <li>Testes, testes e mais testes.</li>
   </ul>
-
 </details>
 
 <h2>Sênior</h2>
@@ -90,7 +88,6 @@ Deve ser visto como um engenheiro sólido e constante, sem altos e baixos. Possu
     <li>Não requer supervisão, além da direção de alto nível.</li>
     <li>Possui habilidades importantes fora da programação, como: boa comunicação, documentação, monitoramento, otimização de desempenho e desenho de arquitetura (RFC).</li>
   </ul>
-
 </details>
 
 <details>
@@ -108,7 +105,6 @@ Deve ser visto como um engenheiro sólido e constante, sem altos e baixos. Possu
     <li>Entregar features dentro do prazo, e melhorar a precisão das estimativas de sua equipe.</li>
     <li>Trabalhar de forma eficaz com membros não técnicos, e ser capaz de identificar problemas com requisitos e ajudar sua equipe a corrigir o curso em torno desses problemas.</li>
   </ul>
-
 </details>
 
 <h2>Principal Engineer</h2>
@@ -129,7 +125,6 @@ Está no mesmo nível do Tech Lead, com um impacto de staff menor, pois olha par
     <li>Linguagem não técnica para se expressar com membros que não são engenheiros, de dentro ou fora do time.</li>
     <li>Domínio nas tecnologias usadas na nossa stack.</li>
   </ul>
-
 </details>
 
 <details>
@@ -144,7 +139,6 @@ Está no mesmo nível do Tech Lead, com um impacto de staff menor, pois olha par
     <li>Desbloquear os envolvidos na funcionalidade que está sendo desenvolvida, alinhando com o tech lead/product manager, conversando com outras áreas, etc.</li>
     <li>Garantir a entrega da funcionalidade no prazo definido.</li>
   </ul>
-
 </details>
 
 <h2>Tech lead</h2>
@@ -167,7 +161,6 @@ Está no mesmo nível do Principal Engineer, com um impacto de staff maior, pois
     <li>Conhecimento em práticas de gestão de pessoas (1:1, gestão de performance, etc).</li>
     <li>Saber escutar: esse é o melhor caminho para descobrir como motivar e engajar um membro do time.</li>
   </ul>
-
 </details>
 
 <details>
@@ -185,7 +178,6 @@ Está no mesmo nível do Principal Engineer, com um impacto de staff maior, pois
     <li>Garantir a qualidade de código do time.</li>
     <li>Garantir a entrega dos projetos no prazo definido.</li>
   </ul>
-
 </details>
 
 <h2 align="center">Glossário</h2>
