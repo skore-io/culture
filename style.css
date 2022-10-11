@@ -12,6 +12,12 @@ html {
 }
 
 .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
   background-color: #2d333b;
   border: 2px solid #444c56;
   border-radius: 10px;
@@ -19,9 +25,8 @@ html {
   color: #adbac7;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   max-width: 400px;
-  height: 300px;
+  height: 230px;
   font-weight: 400;
   padding: 14px;
 }
@@ -29,13 +34,19 @@ html {
 p {
   background-color: #444c56;
   border-radius: 10px;
+  height: 118px;
   padding: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 footer {
   align-items: center;
   display: flex;
-  margin: 10px 0;
+  margin-top: 10px;
 }
 
 img.avatar {
