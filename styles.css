@@ -1,0 +1,71 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.wrapper {
+  background-color: #2d333b;
+  border: 2px solid #444c56;
+  border-radius: 10px;
+  box-shadow: 2px 3px 20px #46608855;
+  color: #adbac7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  height: 300px;
+  font-weight: 400;
+  padding: 14px;
+}
+
+p {
+  background-color: #444c56;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  margin: 10px 0;
+}
+
+img.avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 50px;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.name {
+  color: #adbac7;
+}
+
+.job {
+  color: ghostwhite;
+}
+
+.job:after {
+  content: '_';
+}
+
+img.uol {
+  align-self: flex-end;
+  margin-left: auto;
+  margin-bottom: 10px;
+  width: 30%;
+}
