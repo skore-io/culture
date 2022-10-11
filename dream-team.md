@@ -1,10 +1,8 @@
 <h1 align="center">Conheça nosso 'Dream Team' 🚀</h1>
-
 <h2 align="left">Desenvolvedores_</h2>
-
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
   <body>
     <div class="wrapper">
