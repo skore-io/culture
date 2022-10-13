@@ -2,11 +2,9 @@
 
 A collection of guides, standards and rules.
 
-- [Career Ladder](career-ladder.html)
+- [Career Ladder](career-ladder.md)
 - [Stack](stack.md)
-- [Dream team](dream-team.html)
-
-Access this page on web: https://skore-io.github.io/culture
+- [Dream team](https://skore-io.github.io/culture/dream-team.html)
 
 ### Running locally
 

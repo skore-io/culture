@@ -11,6 +11,32 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  padding: 30px 45px;
+  background-color: #22272e;
+}
+
+a {
+  text-decoration: none;
+  color: #737e89;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin-top: 24px;
+  color: #adbac7;
+}
+
+h2 {
+  color: #adbac7;
+  margin: 20px 0 15px; 
+}
+
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -21,12 +47,12 @@ html {
   background-color: #2d333b;
   border: 2px solid #444c56;
   border-radius: 10px;
-  box-shadow: 2px 3px 20px #46608855;
+  box-shadow: 1px 0 20px 2px #afb3b624;
   color: #adbac7;
   display: flex;
   flex-direction: column;
   max-width: 400px;
-  height: 230px;
+  height: 255px;
   font-weight: 400;
   padding: 14px;
 }
@@ -34,10 +60,10 @@ html {
 p {
   background-color: #444c56;
   border-radius: 10px;
-  height: 118px;
-  padding: 8px;
+  height: 170px;
+  padding: 3px 10px;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -46,7 +72,7 @@ p {
 footer {
   align-items: center;
   display: flex;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 img.avatar {
