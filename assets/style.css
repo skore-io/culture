@@ -16,7 +16,7 @@ body {
   background-color: #22272e;
 }
 
-a {
+a.culture {
   text-decoration: none;
   color: #737e89;
   font-size: 1.75rem;
