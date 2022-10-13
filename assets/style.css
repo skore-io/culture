@@ -63,6 +63,7 @@ p {
   background-color: #444c56;
   border-radius: 0.625em;
   max-height: 10.625em;
+  min-height: 9em;
   padding: 0.188em 0.625em;
   display: -webkit-box;
   -webkit-line-clamp: 6;
@@ -81,6 +82,8 @@ img.avatar {
   border-radius: 50%;
   margin-right: 0.625em;
   width: 3.125em;
+  height: 3.125em;
+  object-fit: fill;
 }
 
 .author {
