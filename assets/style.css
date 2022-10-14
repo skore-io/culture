@@ -34,7 +34,7 @@ h1 {
 
 h2 {
   color: #adbac7;
-  margin: 1.25em 0 0.938em; 
+  margin: 1.25em 0 0.938em;
 }
 
 .wrapper {
@@ -56,6 +56,12 @@ h2 {
   min-width: 25em;
   font-weight: 400;
   padding: 0.875em;
+  transition: 0.4s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
 }
 
 p {
