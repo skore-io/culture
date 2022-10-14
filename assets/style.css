@@ -51,10 +51,9 @@ h2 {
   color: #adbac7;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 25em;
   min-width: 25em;
-  max-height: 15.938em;
-  min-height: 15.938em;
   font-weight: 400;
   padding: 0.875em;
 }
@@ -63,13 +62,14 @@ p {
   background-color: #444c56;
   border-radius: 0.625em;
   max-height: 10.625em;
-  min-height: 9em;
   padding: 0.188em 0.625em;
   display: -webkit-box;
+  font-size: 14px;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex: 1;
 }
 
 footer {
@@ -83,7 +83,7 @@ img.avatar {
   margin-right: 0.625em;
   width: 3.125em;
   height: 3.125em;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .author {
