@@ -69,6 +69,10 @@ h2 {
   padding-left: 1rem;
 }
 
+.row-product {
+  border-left: 3px solid #f000bc;
+}
+
 .wrapper {
   padding: 2em 0;
 }
