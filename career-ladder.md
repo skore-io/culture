@@ -147,7 +147,9 @@ Está no mesmo nível do Tech Lead, com um impacto de staff menor, pois olha par
 
 [Lídera] pessoas, baseando-se na cultura da empresa.
 
-Está no mesmo nível do Principal Engineer, com um impacto de staff maior, pois olha para todas as features que o time estiver construindo.
+Está no mesmo nível do Principal Engineer, com um impacto de staff maior.
+
+Seu papel principal é elaborar uma visão técnica do que está sendo desenvolvido a fim de que a equipe desenvolva com a máxima eficiência.
 
 <details>
   <summary>
@@ -155,9 +157,9 @@ Está no mesmo nível do Principal Engineer, com um impacto de staff maior, pois
   </summary>
   <ul>
     <li>Visão técnica dos caminhos do produto.</li>
-    <li>Boa comunicação, já que suas falas terão um grande impacto no time.</li>
-    <li>Linguagem não técnica para se expressar com membros que não são engenheiros, de dentro ou fora do time.</li>
-    <li>Domínio nas tecnologias usadas na nossa stack.</li>
+    <li>Boa comunicação.</li>
+    <li>Domínio das tecnologias usadas na stack</li>
+    <li>Aprender novas tecnologias e ser o precursor da cultura da inovação.</li>
     <li>Conhecimento em práticas de gestão de pessoas (1:1, gestão de performance, etc).</li>
     <li>Saber escutar: esse é o melhor caminho para descobrir como motivar e engajar um membro do time.</li>
   </ul>
@@ -165,18 +167,40 @@ Está no mesmo nível do Principal Engineer, com um impacto de staff maior, pois
 
 <details>
   <summary>
-    <b>Responsabilidades</b>
+    <b>Responsabilidades técnicas</b>
   </summary>
   <ul>
-    <li>Fazer 1:1s regulares (quinzenais, ou a critério do líder).</li>
-    <li>Fornecer feedbacks regulares sobre o crescimento da carreira, progressão em direção às metas, áreas de melhoria e elogios.</li>
-    <li>É a barreira do time: filtra e leva para a equipe as informações relevantes, mantendo um ambiente de trabalho saudável.</li>
-    <li>Se concentrar na produtividade de toda a equipe e se esforçar para aumentar a velocidade e qualidade dela.</li>
-    <li>Estar mais próximo do PM: participar das discussões de roadmap, e discutir os processos do time junto ao squad líder.</li>
-    <li>Promover o engajamento, e a felicidade do time para que todos caminhem em direção ao mesmo objetivo.</li>
-    <li>Resolver os conflitos do time.</li>
-    <li>Garantir a qualidade de código do time.</li>
-    <li>Garantir a entrega dos projetos no prazo definido.</li>
+    <li>Arquitetar soluções técnicas escaláveis de novas funcionalidades em conjunto com o time de produtos e as boas práticas da engenharia</li>
+   <li>Desbloquear o time tecnicamente com a ajuda de outros sêniores.</li>
+   <li>Garantir a qualidade das entregas do time: código, performance e escalabilidade.</li>
+   <li>Garantir a entrega dos projetos no prazo definido: alinhando escopo e desafios paralelos que possam surgir.</li>
+   <li>Alinhar com a equipe de desenvolvimento sobre "como fazer", em vez de todos os engenheiros trabalharem em diferentes problemas e projetos, cada um do seu jeito.</li>
+  </ul>
+
+  <summary>
+    <b>Responsabilidades com pessoas (focado em itens técnicos)</b>
+  </summary>
+  <ul>
+    <li>Orientar a equipe, gerenciar o projeto e manter a comunicação fluida com outras equipes (quando necessário).</li>
+    <li>Fazer 1:1s regulares (quinzenais, ou a próprio critério).</li>
+    <li>Transmitir as necessidades da equipe aos líderes para qual reporta.</li>
+    <li>Fornecer feedbacks regulares sobre o crescimento da carreira, progressão em direção às metas e áreas de melhoria.</li>
+    <li>Se concentrar na produtividade de toda a equipe com objetivo de aumentar a velocidade e qualidade.</li>
+    <li>Ajudar nas contratações de novos engenheiros para o seu time.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>
+    <b>Responsabilidades com pessoas (focado em itens técnicos)</b>
+  </summary>
+  <ul>
+    <li>Orientar a equipe, gerenciar o projeto e manter a comunicação fluida com outras equipes (quando necessário).</li>
+    <li>Fazer 1:1s regulares (quinzenais, ou a próprio critério).</li>
+    <li>Transmitir as necessidades da equipe aos líderes para qual reporta.</li>
+    <li>Fornecer feedbacks regulares sobre o crescimento da carreira, progressão em direção às metas e áreas de melhoria.</li>
+    <li>Se concentrar na produtividade de toda a equipe com objetivo de aumentar a velocidade e qualidade.</li>
+    <li>Ajudar nas contratações de novos engenheiros para o seu time.</li>
   </ul>
 </details>
 
