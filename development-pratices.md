@@ -1,6 +1,6 @@
 # Best development practices
 
-O documento a seguir descreve as regras de escrita nas linguagens de desenvolvimento no Skore que são utilizadas com nossa estrutura em Vuex. Nosso maior desafio é permitir que os desenvolvedores de front-end, façam que cada linha de código deva parecer ter sido escrita por uma única pessoa, não importa o número de contribuidores. Facilitando assim, a legibilidade e padrões que beneficiam o projeto como um todo, permitindo assim uma inclusão de novos contribuidores, a leitura e escrita no momento de desenvolvimento.
+O documento a seguir descreve as regras de escrita nas linguagens de desenvolvimento no Skore que são utilizadas no projeto estruturado em Vuex. Nosso maior desafio é permitir que os desenvolvedores de front-end, façam que cada linha de código deva parecer ter sido escrita por uma única pessoa, não importa o número de contribuidores. Facilitando assim, a legibilidade e padrões que beneficiam o projeto como um todo, permitindo assim uma inclusão de novos contribuidores, a leitura e escrita no momento de desenvolvimento.
 
 Este é um documento ativo e alterações podem ocorrer a qualquer momento.
 
@@ -18,11 +18,11 @@ Este é um documento ativo e alterações podem ocorrer a qualquer momento.
 Para facilitar a contribuição de qualquer pessoa em um projeto, todas os commits, títulos de pull request devem estar em **inglês**.
 
 A seguir existe uma ADR que detalha melhor como deve ser seguido esses padrões:
-[Ler Padrões de commit](https://github.com/skore-io/adrs/blob/master/doc/adr/0005-padroes-de-commits.md)
+[Ler Padrões de Commits](https://github.com/skore-io/adrs/blob/master/doc/adr/0005-padroes-de-commits.md)
 
 ```javascript
 // Good
-git commit -m "feat(readme): add best development practices"
+git commit -m "feat(doc): add best development practices"
 
 // Bad
 git commit -m "Added Best development practices"
@@ -114,7 +114,7 @@ Nossa estrutura em HTML não utiliza comentários entre os blocos, evite esta pr
 <!-- Bad -->
 <div class="container">
   <div class="row">
-    <!-- item student -->
+    <!-- user item -->
     <UserItem />
   </div><!-- end row -->
 </div><!-- end container -->
@@ -166,7 +166,7 @@ Sempre use aspas duplas para manter a semântica.
 [class^="..."]
 
 .nav-item:after {
-  content: "";
+  content: "bilú";
 }
 
 /* Bad */
@@ -174,7 +174,7 @@ Sempre use aspas duplas para manter a semântica.
 [class^='...']
 
 .nav-item:after {
-  content: '';
+  content: 'bilú';
 }
 ```
 
@@ -267,13 +267,13 @@ Separe cada conjunto de regras por uma linha em branco, assim como seu aninhamen
 <a name="css-order"></a>
 ### 3.2. Ordem de declaração
 
-O ideal é que as declarações sejam adicionadas em ordem alfabética, facilitando a leitura.
+O ideal é que as declarações de propriedades sejam adicionadas em ordem alfabética, facilitando a leitura.
 
 ```css
 /* Good */
 .selector-1 {
   background: #fff;
-  border: solid 1px #333333;
+  border: 1px solid #333333;
   color: #333;
   display: block;
   height: 200px;
@@ -290,7 +290,7 @@ O ideal é que as declarações sejam adicionadas em ordem alfabética, facilita
   background: #fff;
   margin: 5px;
   color: #333;
-  border: solid 1px #333333;
+  border: 1px solid #333333;
   display: block;
 }
 ```
@@ -342,7 +342,6 @@ Evite aninhamento com mais de três elementos, isso deixa mais complexo o seu c�
 
 ```css
 /* Good */
-a.navbar-link { ... }
 .navbar-link { ... }
 
 /* Bad */
@@ -358,7 +357,7 @@ a.navbar-link { ... }
 <a name="css-media-queries"></a>
 ### 3.5 Media Queries
 
-Inicie o desenvolvimento com regras genéricas e adicione consultas de mídia com dispositivos móveis primeiro.
+Inicie o desenvolvimento com regras genéricas das propriedades e adicione consultas de mídia com dispositivos móveis primeiro.
 
 ```css
 /* Good */
@@ -387,9 +386,9 @@ Inicie o desenvolvimento com regras genéricas e adicione consultas de mídia co
 ```
 
 <a name="js"></a>
-## 4. Script
+## 4. Scripts
 
-Atualmente é utilizado em nosso projeto de front-end bibliotecas como ESLint, Prettier, então muitas regras de códigos são corrigidas automaticamente ao utilizar essas ferramentas. Nos assuntos abaixo, são regras personalizadas que devem ser observadas no momento do desenvolvimento, que foram definidas por nossos contribuidores.
+Atualmente são utilizadas em nosso projeto bibliotecas como ESLint e Prettier, então muitas regras de códigos são corrigidas automaticamente ao utiliza-las no editor de código. Nos assuntos abaixo, são regras personalizadas que devem ser observadas no momento do desenvolvimento, sendo elas seguidas pela equipe.
 
 ### Sumário
 
@@ -452,7 +451,7 @@ if (foo == 'foo') {
 ```
 
 <a name="js-variables"></a>
-### 4.2. Variáveis (terminar de escrever...)
+### 4.2. Variáveis
 
 Todas as variáveis devem ser declaradas antes de serem usadas.
 
@@ -460,11 +459,9 @@ Todas as variáveis devem ser declaradas antes de serem usadas.
 // Good
 const { name, age } = this.getUser(this.id)
 const minAge = 18
-let check = false
-
-if (age >= minAge) check = true
 
 console.log(`Oi ${name}, bem-vindo.`)
+...
 
 // Bad
 const { name, age } = this.getUser(this.id)
@@ -472,9 +469,7 @@ const { name, age } = this.getUser(this.id)
 console.log(`Oi ${name}, bem-vindo.`)
 
 const minAge = 18
-let check = false
-
-if (age >= minAge) check = true
+...
 
 ```
 
@@ -493,7 +488,7 @@ try {
 
 ### 4.4. Imports
 
-Sempre utiliza caminhos absolutos na chamada de componentes e outros, evitando refatorações caso o arquivo seja movido de pasta e até para entender de onde está sendo sua origem.
+Sempre utiliza caminhos absolutos na chamada de outros arquivos, evitando refatorações caso o arquivo seja movido de pasta e facilitando entender de onde está sendo sua origem.
 
 ```js
 /* Good */
@@ -513,7 +508,7 @@ import AudienceModal from '../Enrollment/Type'
 
 Sempre utilize o padrão de abertura de tags para i18n com a linguagem em yaml. A sequência de traduções atual é en, pt e es.
 
-```js
+```html
 <i18n lang="yaml">
 en:
   title: Manage the list
@@ -528,7 +523,7 @@ es:
 
 Evite utiliza-las em todas as traduções, a menos que a mesma possui outras aspas dentro da frase.
 
-```js
+```html
 <i18n lang="yaml">
 en:
   title: 'Manage the list to "all users"'
