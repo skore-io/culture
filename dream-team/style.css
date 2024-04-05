@@ -73,6 +73,14 @@ h2 {
   border-left: 3px solid #f000bc;
 }
 
+.row-data {
+  border-left: 3px solid #f04400;
+}
+
+.row-operation {
+  border-left: 3px solid #00f01c;
+}
+
 .wrapper {
   padding: 2em 0;
 }
@@ -209,14 +217,14 @@ img.avatar {
   color: #adbac7;
 }
 
-.job {
+.role {
   color: ghostwhite;
   line-height: 1;
   font-size: 13px;
   margin-top: 0.2rem;
 }
 
-.job:after {
+.role:after {
   content: "_";
 }
 
