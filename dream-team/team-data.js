@@ -20,10 +20,10 @@ const dataTeam = [
     avatar: "https://avatars.githubusercontent.com/u/117781230"
   },
   {
-    name: "Lucas Bernardes Silva",
+    name: "Lucas Bernardes",
     role: dataRoles.da,
-    description: "Lorem Ipsum...",
-    social: "https://github.com/bernardesls",
-    avatar: "https://avatar.iran.liara.run/public/48"
+    description: "Sou o Lucas, mineiro e tenho getTotalYears('29/09/1993'). Sou formado em Economia e venho trabalhando com dados a alguns anos. Nas horas vagas tô sempre fazendo uma corridinha por aí (no máximo 5km, mais que isso beira a loucura), gosto de ler sobre finanças e com um pouco de sorte, arriscar algo novo na cozinha, mas foco mesmo para a palavra arriscar. Gosto de bater papo sobre qualquer assunto, principalmente se eu aprender algo novo.",
+    social: "https://www.linkedin.com/in/lucasbernardess",
+    avatar: "https://avatars.githubusercontent.com/u/145584808?v=4"
   }
 ]
