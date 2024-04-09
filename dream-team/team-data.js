@@ -13,9 +13,9 @@ const dataTeam = [
     avatar: "https://avatars.githubusercontent.com/u/43047145"
   },
   {
-    name: "Gyovana Santos Do Prado",
+    name: "Gyovana Prado",
     role: dataRoles.de,
-    description: "Lorem Ipsum...",
+    description: "Olá, 안녕하세요! Sou Gyovana Prado, nasci no interior de SP e tenho getTotalYears('28/06/2000') anos. Gosto muito de assistir esportes de todos os tipos (mas pratico só o e-sports). Sou formada em ADS, e atuo na área de dados e tecnologia há 5 anos. Amo o Twice e escuto muito kpop no geral. Gosto muito de ser desafiada e aprender sobre coisas novas. Também amo sair com as pessoas, seja num barzinho ou num campeonato de UNO. Acredito que o SPFC é minha maior fonte de alegria e depressão.",
     social: "https://github.com/gyprado",
     avatar: "https://avatars.githubusercontent.com/u/117781230"
   },
