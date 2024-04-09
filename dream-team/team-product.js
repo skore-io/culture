@@ -27,7 +27,7 @@ const productTeam = [
   {
     name: "Luíza Sernizon Guimarães",
     role: productRoles.project_manager,
-    description: "Lorem Ipsum...",
+    description: "Oiee, meu nome é Luíza, mas quase todo mundo me chama de Lu. Sou mineira e amo bastante meu estado, mas também sou fascinada por viagens. Qualquer brecha que tenho estou na estrada! Sou bem curiosa e bem desinquieta, me formei em engenharia de controle e automação, fiz mestrado em engenharia elétrica, fui professora, desenvolvedora e pesquisadora, e depois disso vi que o que realmente gosto é de resolver problemas. Migrei para a gestão de projetos e agora estou me aventurando no mundo de produto :)",
     social: "https://www.linkedin.com/in/luizasernizonguimaraes",
     avatar: "https://media.licdn.com/dms/image/C4E03AQHwX2VR-7wAWQ/profile-displayphoto-shrink_800_800/0/1637876000507?e=1717632000&v=beta&t=kTYw6LcsfgcVY2o2ofbJj4wrgGcIZqJMplkFocg6Suk"
   },
