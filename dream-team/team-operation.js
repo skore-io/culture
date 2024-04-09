@@ -23,8 +23,8 @@ const operationTeam = [
   {
     name: "Samuel Augusto Benvindo Da Silva",
     role: operationRoles.support,
-    description: "Lorem Ipsum...",
+    description: "Sou Samuel, mas podem me chamar de Samu ou Samuca. Sou do interior de MG, mas atualmente moro em BH. Sou apaixonado por música e futebol, arranho no violão e jogo bem no meio de campo. Também gosto de animes e programas de culinária...Já fui do time de QA e hoje estou em Suporte N2.",
     social: "",
-    avatar: "https://avatar.iran.liara.run/public/22"
+    avatar: "https://avatars.githubusercontent.com/u/156446767?v=4"
   }
 ]
