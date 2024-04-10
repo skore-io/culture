@@ -20,7 +20,15 @@ const productTeam = [
   {
     name: "Thiago Cassimiro",
     role: productRoles.pm,
-    description: "Lorem Ipsum...",
+    description: `Olá! Meu nome é Thiago mas conhecido como Cassi devido ao meu sobrenome, sou mineiro, torcedor do Cruzeirão cabuloso.
+      Sou casado e tenho uma filha linda de getTotalYears('13/04/2023') ano, que considero um verdadeiro presente de Deus em minha vida.
+      Sempre fui apaixonado por tecnologia e inovação.
+      Com uma formação em Sistemas da Informação e uma ampla experiência em diversas áreas, desde suporte técnico até gerenciamento de produtos, estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente.
+      Nas horas vagas, adoro me aventurar em trilhas de moto e explorar novos lugares com minha família, gosto de viajar e conhecer pessoas.
+      Além disso, sou um entusiasta da boa comida e da boa música, e aprecio desde os clássicos do jazz até os ritmos animados do funk.
+      Sou uma pessoa feliz e realizada, sempre grato pelas bênçãos que recebo em minha vida.
+      <br/>
+      Este sou eu, e estou ansioso para conectar e aprender mais sobre vocês! Me chame para um bate-papo!`,
     social: "https://www.linkedin.com/in/thiago-cassimiro-vieira",
     avatar: "https://media.licdn.com/dms/image/C4D03AQGa1K0zYRh-bg/profile-displayphoto-shrink_800_800/0/1530189808723?e=1717632000&v=beta&t=pXQxXOgNDRmYuHkAjRbUcJM43Dm4piduAHy9-HiS_qo"
   },

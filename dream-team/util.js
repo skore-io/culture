@@ -9,5 +9,5 @@ function getTotalYears(dateString) {
     year--
   }
 
-  return year
+  return year || 1
 }
