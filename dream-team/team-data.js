@@ -20,7 +20,7 @@ const dataTeam = [
     avatar: "https://avatars.githubusercontent.com/u/117781230"
   },
   {
-    name: "Lucas Bernardes Silva",
+    name: "Lucas Bernardes",
     role: dataRoles.da,
     description: "Sou o Lucas, mineiro e tenho getTotalYears('29/09/1993'). Sou formado em Economia e venho trabalhando com dados a alguns anos. Nas horas vagas tô sempre fazendo uma corridinha por aí (no máximo 5km, mais que isso acho que beira a loucura). Gosto de ler sobre finanças e com um pouco de sorte, arriscar algo novo na cozinha. Gosto de bater papo sobre qualquer assunto, principalmente se eu aprender algo novo. Nunca dispenso um barzinho e um sushi.",
     social: "https://github.com/bernardesls",

@@ -65,7 +65,7 @@ const devTeam = [
     avatar: "https://avatars.githubusercontent.com/u/16930654"
   },
   {
-    name: "Leticia Alves Paulino Silva",
+    name: "Leticia Alves",
     role: devRoles.qa,
     description: `Hey pessoal, meu nome é Letícia, tenho xx anos, nasci e cresci em São Paulo.
       Nas horas vagas, gosto de assistir filmes/séries, também sou uma grande fã de viagens e bebidas (principalmente cerveja).
@@ -75,7 +75,7 @@ const devTeam = [
     avatar: "https://i.imgur.com/FiNeOy1.jpg"
   },
   {
-    name: "Vanderlei Jesus de Andrade",
+    name: "Vanderlei Andrade",
     role: devRoles.qa,
     description: `Oi, me chamo Vanderlei, mas pode me chamar de Vand! Sou de SP - Zona Oeste.
       Sou graduado em ciencia da computação. São Paulino… em alguns momentos vou para o estádio sofrer um pouco.
@@ -114,7 +114,7 @@ const devTeam = [
     avatar: "https://i.imgur.com/WbfktOG.jpg"
   },
   {
-    name: "Tiago Elias Carvalho Oliveira",
+    name: "Tiago Elias",
     role: devRoles.tl,
     description: `Aoopa, sou o Tiago! Tenho getTotalYears('01/01/1996') anos e sou natural do triângulo mineiro.
       Recentemente me mudei pra Ribeirão Preto, mas não abro mão do pão de queijo de minas.
@@ -123,7 +123,7 @@ const devTeam = [
     avatar: "https://i.imgur.com/X6kakdT.jpg"
   },
   {
-    name: "Oziel Pontes Da Silva Filho",
+    name: "Oziel Pontes",
     role: devRoles.mobile,
     description: `Fala, galerinha! Me chamo Oziel e sou natural de Fortal ou mais conhecida como a capital do Ceará.
       Desde muito novo me interesso por tecnologia e hoje estou quase concluindo o curso de Ciência da Computação.
@@ -132,7 +132,7 @@ const devTeam = [
     avatar: "https://i.imgur.com/iVafkj8.jpg"
   },
   {
-    name: "Ruan Carlos dos Santos",
+    name: "Ruan Carlos",
     role: devRoles.mobile,
     description: `Salvee! Suavera? Me chamo Ruan, mas pode me chamar de Ruan, tenho getTotalYears('01/01/1998') anos e sou de Blumenau - SC.
       Sou curioso desde sempre, talvez seja por isso que sou um pouco hiperativo.

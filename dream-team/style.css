@@ -153,6 +153,7 @@ h2 {
   padding: 0.875em;
   position: relative;
   transition: 0.2s ease-out all;
+  height: 340px;
 }
 
 .card:hover {
