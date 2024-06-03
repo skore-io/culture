@@ -116,15 +116,6 @@ const devTeam = [
     avatar: "https://i.imgur.com/X6kakdT.jpg"
   },
   {
-    name: "Oziel Pontes",
-    role: devRoles.mobile,
-    description: `Fala, galerinha! Me chamo Oziel e sou natural de Fortal ou mais conhecida como a capital do Ceará.
-      Desde muito novo me interesso por tecnologia e hoje estou quase concluindo o curso de Ciência da Computação.
-      Nos tempos livres gosto de sair com meus amigos, conhecer lugares novos (restaurantes principalmente), ir ao jogo do Ceará, jogar cs e as vezes só ficar de boas.`,
-    social: "https://www.linkedin.com/in/oziel-filho-8427991a2",
-    avatar: "https://i.imgur.com/iVafkj8.jpg"
-  },
-  {
     name: "Ruan Carlos",
     role: devRoles.mobile,
     description: `Salvee! Suavera? Me chamo Ruan, mas pode me chamar de Ruan, tenho getTotalYears('01/01/1998') anos e sou de Blumenau - SC.
