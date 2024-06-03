@@ -91,13 +91,6 @@ const devTeam = [
     avatar: "https://avatars.githubusercontent.com/u/26258891?s=400&u=e3183c153235a1fd84bd7074800e4aadd31a9c39&v=4"
   },
   {
-    name: "Mauricio Henrique",
-    role: devRoles.back,
-    description: "Fala aee gurizada, meu nome é Mauricio, tenho getTotalYears('09/11/1996') anos e sou do Rio Grande do Sul. Curto bastante programar, comecei com uns 13 anos por hobby e hoje virou meu trampo, estou desde 2016 na área de desenvolvimento. Curto também um game, jogar um LoL, comer um sushizinho, etc. Qualquer coisa só chamar, tamo junto!!",
-    social: "https://github.com/xXMauricioHXx",
-    avatar: "https://i.imgur.com/3dTd1Q6.jpg"
-  },
-  {
     name: "Ismael Felipe Hepp",
     role: devRoles.tl,
     description: "Opa! Meu nome é Ismael, nasci em Lajeado - RS, mas morei minha vida toda em Passo Fundo - RS, menos um breve período em que fiz um intercâmbio no Canadá (não cheguei a conhecer a Luiza). Trabalho há getTotalYears('01/09/2017') anos na área. Gosto de ouvir podcasts (muito bom para lavar louça), assistir séries, filmes, ler (mais ficção), jogar jogos de estratégia ou rpg (tanto eletrônico, como de mesa), só não sobra tempo pra tanta coisa.",
