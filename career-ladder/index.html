@@ -1,57 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Path - Y Model</title>
+    <title>Plano de Carreira - Modelo Y</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Career Path - Y Model</h1>
-        <p>Engineering Team</p>
+        <h1>Como funciona a carreira em Y na nossa empresa?</h1>
+        <p>Entenda as possíveis trajetórias e níveis de crescimento.</p>
     </header>
     <main>
         <section class="y-path">
-            <div class="column">
-                <h2>Management Path</h2>
-                <div class="box">Director</div>
-                <div class="box">Head</div>
-                <div class="box">Senior Manager</div>
-                <div class="box">Manager</div>
-                <div class="box">Associate Manager</div>
+            <div class="levels">
+                <div class="level">
+                    <h2>Níveis Operacionais</h2>
+                    <div class="box">Estagiário</div>
+                    <div class="box">Júnior</div>
+                    <div class="box">Pleno</div>
+                    <div class="box">Sênior</div>
+                </div>
+                <div class="level">
+                    <h2>Níveis Táticos</h2>
+                    <div class="box">Associate Manager</div>
+                    <div class="box">Manager</div>
+                    <div class="box">Senior Manager</div>
+                    <div class="box">Staff</div>
+                    <div class="box">Senior Staff</div>
+                </div>
+                <div class="level">
+                    <h2>Níveis Estratégicos</h2>
+                    <div class="box">Head</div>
+                    <div class="box">Diretor</div>
+                    <div class="box">Principal</div>
+                    <div class="box">Senior Principal</div>
+                </div>
             </div>
-            <div class="column">
-                <h2>Technical Path</h2>
-                <div class="box">Senior Principal</div>
-                <div class="box">Principal</div>
-                <div class="box">Senior Staff</div>
-                <div class="box">Staff</div>
-            </div>
-            <div class="center-column">
-                <div class="box">Senior</div>
-                <div class="box">Mid-Level</div>
-                <div class="box">Junior</div>
-                <div class="box">Intern</div>
-            </div>
+            <svg viewBox="0 0 1000 800" class="timeline-svg">
+                <!-- Linhas principais da carreira em Y -->
+                <line x1="500" y1="100" x2="500" y2="300" stroke="#333" stroke-width="2"/>
+                <line x1="500" y1="300" x2="300" y2="500" stroke="#333" stroke-width="2"/>
+                <line x1="500" y1="300" x2="700" y2="500" stroke="#333" stroke-width="2"/>
+                <!-- Linhas da carreira de gestão -->
+                <line x1="300" y1="500" x2="200" y2="700" stroke="#333" stroke-width="2"/>
+                <line x1="300" y1="500" x2="400" y2="700" stroke="#333" stroke-width="2"/>
+                <!-- Linhas da carreira técnica -->
+                <line x1="700" y1="500" x2="600" y2="700" stroke="#333" stroke-width="2"/>
+                <line x1="700" y1="500" x2="800" y2="700" stroke="#333" stroke-width="2"/>
+
+                <!-- Círculos para os níveis -->
+                <circle cx="500" cy="100" r="10" fill="#4a90e2"/>
+                <circle cx="500" cy="300" r="10" fill="#4a90e2"/>
+                <circle cx="300" cy="500" r="10" fill="#4a90e2"/>
+                <circle cx="700" cy="500" r="10" fill="#4a90e2"/>
+                <circle cx="200" cy="700" r="10" fill="#4a90e2"/>
+                <circle cx="400" cy="700" r="10" fill="#4a90e2"/>
+                <circle cx="600" cy="700" r="10" fill="#4a90e2"/>
+                <circle cx="800" cy="700" r="10" fill="#4a90e2"/>
+
+                <!-- Texto para os níveis -->
+                <text x="480" y="90" fill="#333" font-size="14">Estagiário</text>
+                <text x="480" y="290" fill="#333" font-size="14">Júnior</text>
+                <text x="270" y="490" fill="#333" font-size="14">Pleno</text>
+                <text x="670" y="490" fill="#333" font-size="14">Sênior</text>
+                <text x="180" y="690" fill="#333" font-size="14">Assoc. Manager</text>
+                <text x="380" y="690" fill="#333" font-size="14">Manager</text>
+                <text x="580" y="690" fill="#333" font-size="14">Staff</text>
+                <text x="780" y="690" fill="#333" font-size="14">Senior Staff</text>
+            </svg>
         </section>
         <section class="details">
             <div class="role">
-                <h3>Director</h3>
-                <p><strong>Responsible:</strong> Overseeing entire departments, strategy development, and high-level decision making.</p>
-                <p><strong>Accountable:</strong> Company-wide initiatives and results.</p>
+                <h3>Estagiário</h3>
+                <p><strong>Responsável:</strong> Apoiar em tarefas básicas e aprender com a equipe.</p>
+                <p><strong>Consultado:</strong> Júnior, Pleno, Sênior.</p>
+                <p><strong>Informado:</strong> Tech Lead.</p>
             </div>
             <div class="role">
-                <h3>Senior Principal</h3>
-                <p><strong>Responsible:</strong> Leading large projects, setting technical standards, and mentoring principal engineers.</p>
-                <p><strong>Accountable:</strong> Major technical decisions and innovations.</p>
+                <h3>Associate Manager</h3>
+                <p><strong>Responsável:</strong> Assistir os gerentes em tarefas de supervisão e coordenação.</p>
+                <p><strong>Responsável por:</strong> Projetos específicos e tarefas delegadas.</p>
             </div>
-            <!-- Add more role descriptions as needed -->
+            <div class="role">
+                <h3>Staff</h3>
+                <p><strong>Responsável:</strong> Executar tarefas técnicas especializadas e colaborar com outros membros da equipe.</p>
+                <p><strong>Responsável por:</strong> Resultados técnicos e inovações.</p>
+            </div>
+            <!-- Adicione mais descrições de funções conforme necessário -->
         </section>
     </main>
     <footer>
-        <p>© 2023 Engineering Team - Career Path</p>
+        <p>© 2023 Time de Engenharia - Plano de Carreira</p>
     </footer>
 </body>
 </html>
