@@ -1,73 +1,996 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plano de Carreira - Modelo Y</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>Como funciona a carreira em Y na nossa empresa?</h1>
-    </header>
-    <main>
-        <section class="y-path">
-          <svg width="100%" height="500" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-            <line x1="500" y1="100" x2="500" y2="200" stroke="#333" stroke-width="2"/>
-            <line x1="500" y1="200" x2="300" y2="300" stroke="#333" stroke-width="2"/>
-            <line x1="500" y1="200" x2="700" y2="300" stroke="#333" stroke-width="2"/>
-            <line x1="300" y1="300" x2="200" y2="400" stroke="#333" stroke-width="2"/>
-            <line x1="300" y1="300" x2="400" y2="400" stroke="#333" stroke-width="2"/>
-            <line x1="700" y1="300" x2="600" y2="400" stroke="#333" stroke-width="2"/>
-            <line x1="700" y1="300" x2="800" y2="400" stroke="#333" stroke-width="2"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            <circle cx="500" cy="100" r="10" fill="#4a90e2"/>
-            <circle cx="500" cy="200" r="10" fill="#4a90e2"/>
-            <circle cx="300" cy="300" r="10" fill="#ff6f61"/>
-            <circle cx="700" cy="300" r="10" fill="#4a90e2"/>
-            <circle cx="200" cy="400" r="10" fill="#ff6f61"/>
-            <circle cx="400" cy="400" r="10" fill="#ff6f61"/>
-            <circle cx="600" cy="400" r="10" fill="#4a90e2"/>
-            <circle cx="800" cy="400" r="10" fill="#4a90e2"/>
+    <title>Career Plan</title>
 
-            <text x="470" y="90" fill="#333" font-size="14">Estagiário</text>
-            <text x="470" y="190" fill="#333" font-size="14">Júnior</text>
-            <text x="270" y="290" fill="#333" font-size="14">Pleno</text>
-            <text x="670" y="290" fill="#333" font-size="14">Sênior</text>
-            <text x="170" y="390" fill="#333" font-size="14">Assoc. Manager</text>
-            <text x="370" y="390" fill="#333" font-size="14">Manager</text>
-            <text x="570" y="390" fill="#333" font-size="14">Staff</text>
-            <text x="770" y="390" fill="#333" font-size="14">Senior Staff</text>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper gradient-default">
+      <header>
+        <h1>Nosso plano de carreira 🚀</h1>
+      </header>
+
+      <section class="summary">
+        <h2>Sumário</h2>
+        <ul>
+          <li><a href="#career-path" class="smooth-scroll">Carreira em Y</a></li>
+          <li>
+            <a href="#level-responsibilities" class="smooth-scroll">Responsabilidades dos níveis</a>
+          </li>
+          <li><a href="#job-descriptions" class="smooth-scroll">Papéis e responsabilidades</a></li>
+          <li><a href="#functional-roles" class="smooth-scroll">Papéis funcionais</a></li>
+          <li><a href="#raci-table" class="smooth-scroll">Tabela RACI</a></li>
+        </ul>
+      </section>
+
+      <section id="career-path">
+        <h2 align="left">Carreira em Y_</h2>
+
+        <svg
+          width="100%"
+          height="750"
+          viewBox="0 0 800 750"
+          xmlns="http://www.w3.org/2000/svg"
+          style="display: block; margin: 0"
+        >
+          <!-- Linhas principais da carreira em Y -->
+          <line x1="400" y1="600" x2="400" y2="530" stroke="#fff" stroke-width="4" />
+          <line x1="400" y1="530" x2="400" y2="460" stroke="#fff" stroke-width="4" />
+          <line x1="400" y1="460" x2="250" y2="370" stroke="#fff" stroke-width="4" />
+          <line x1="400" y1="460" x2="550" y2="370" stroke="#fff" stroke-width="4" />
+          <line x1="250" y1="370" x2="250" y2="310" stroke="#fff" stroke-width="4" />
+          <line x1="550" y1="370" x2="550" y2="310" stroke="#fff" stroke-width="4" />
+          <line x1="250" y1="310" x2="250" y2="250" stroke="#fff" stroke-width="4" />
+          <line x1="550" y1="310" x2="550" y2="250" stroke="#fff" stroke-width="4" />
+          <line x1="250" y1="250" x2="250" y2="190" stroke="#fff" stroke-width="4" />
+          <line x1="550" y1="250" x2="550" y2="230" stroke="#fff" stroke-width="4" />
+          <line x1="250" y1="190" x2="250" y2="160" stroke="#fff" stroke-width="4" />
+          <line x1="550" y1="230" x2="550" y2="240" stroke="#fff" stroke-width="4" />
+
+          <!-- Retângulos para os níveis com links -->
+          <a href="#description_junior">
+            <rect x="360" y="580" width="80" height="40" rx="10" ry="10" fill="#4a90e2" />
+            <text
+              x="400"
+              y="605"
+              fill="#fff"
+              font-size="14"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              Júnior
+            </text>
+          </a>
+          <a href="#description_pleno">
+            <rect x="360" y="510" width="80" height="40" rx="10" ry="10" fill="#4a90e2" />
+            <text
+              x="400"
+              y="535"
+              fill="#fff"
+              font-size="14"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              Pleno
+            </text>
+          </a>
+          <a href="#description_senior">
+            <rect x="360" y="440" width="80" height="40" rx="10" ry="10" fill="#4a90e2" />
+            <text
+              x="400"
+              y="465"
+              fill="#fff"
+              font-size="14"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              Sênior
+            </text>
+          </a>
+          <a href="#description_coordinator">
+            <rect x="170" y="370" width="160" height="40" rx="10" ry="10" fill="#ff6f61" />
+            <text
+              x="250"
+              y="395"
+              fill="#fff"
+              font-size="14"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              Coordenador
+            </text>
+          </a>
+          <a href="#description_specialist1">
+            <rect x="470" y="370" width="160" height="40" rx="10" ry="10" fill="#ff6f61" />
+            <text
+              x="550"
+              y="395"
+              fill="#fff"
+              font-size="14"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              Especialista I
+            </text>
+          </a>
+          <a href="#description_manager">
+            <rect x="170" y="300" width="160" height="40" rx="10" ry="10" fill="#ff6f61" />
+            <text
+              x="250"
+              y="325"
+              fill="#fff"
+              font-size="14"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              Gerente
+            </text>
+          </a>
+          <a href="#description_specialist2">
+            <rect x="470" y="300" width="160" height="40" rx="10" ry="10" fill="#ff6f61" />
+            <text
+              x="550"
+              y="325"
+              fill="#fff"
+              font-size="14"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              Especialista II
+            </text>
+          </a>
+          <a href="#description_general_manager">
+            <rect x="170" y="230" width="160" height="40" rx="10" ry="10" fill="#8bc34a" />
+            <text
+              x="250"
+              y="255"
+              fill="#fff"
+              font-size="14"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              Gerente Geral
+            </text>
+          </a>
+          <a href="#description_specialist3">
+            <rect x="470" y="230" width="160" height="40" rx="10" ry="10" fill="#8bc34a" />
+            <text
+              x="550"
+              y="255"
+              fill="#fff"
+              font-size="14"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              Especialista III
+            </text>
+          </a>
+          <a href="#description_director">
+            <rect x="170" y="160" width="160" height="40" rx="10" ry="10" fill="#8bc34a" />
+            <text
+              x="250"
+              y="185"
+              fill="#fff"
+              font-size="14"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              Diretor
+            </text>
+          </a>
+
+          <!-- Braces para os níveis -->
+          <path
+            d="M 20 580 C 30 580, 40 560, 40 540 S 30 500, 40 470, 30 450, 20 450"
+            fill="none"
+            stroke="#4a90e2"
+            stroke-width="4"
+          />
+          <text
+            x="20"
+            y="515"
+            fill="#4a90e2"
+            font-size="16"
+            font-weight="bold"
+            text-anchor="middle"
+            transform="rotate(-90, 20, 515)"
+          >
+            Operacional
+          </text>
+
+          <path
+            d="M 20 420 C 30 420, 40 400, 40 380 S 30 350, 40 320, 30 310, 20 310"
+            fill="none"
+            stroke="#ff6f61"
+            stroke-width="4"
+          />
+          <text
+            x="20"
+            y="375"
+            fill="#ff6f61"
+            font-size="16"
+            font-weight="bold"
+            text-anchor="middle"
+            transform="rotate(-90, 20, 375)"
+          >
+            Tático
+          </text>
+
+          <path
+            d="M 20 290 C 30 290, 40 270, 40 240 S 30 210, 40 190, 30 150, 20 150"
+            fill="none"
+            stroke="#8bc34a"
+            stroke-width="4"
+          />
+          <text
+            x="20"
+            y="220"
+            fill="#8bc34a"
+            font-size="16"
+            font-weight="bold"
+            text-anchor="middle"
+            transform="rotate(-90, 20, 220)"
+          >
+            Estratégico
+          </text>
         </svg>
+      </section>
 
-            <div class="container">
-                <div class="track operational">
-                    <div class="box">Estagiário</div>
-                    <div class="box">Júnior</div>
-                    <div class="box">Pleno</div>
-                    <div class="box">Sênior</div>
-                </div>
-                <div class="track management">
-                    <h2>Carreira de Gestão</h2>
-                    <div class="box">Associate Manager</div>
-                    <div class="box">Manager</div>
-                    <div class="box">Senior Manager</div>
-                    <div class="box">Head</div>
-                    <div class="box">Diretor</div>
-                </div>
-                <div class="track technical">
-                    <h2>Carreira Técnica</h2>
-                    <div class="box">Staff</div>
-                    <div class="box">Senior Staff</div>
-                    <div class="box">Principal</div>
-                    <div class="box">Senior Principal</div>
-                </div>
+      <section id="level-responsibilities">
+        <h2 align="left">Responsabilidades dos níveis_</h2>
+
+        <div class="levels">
+          <div class="level-container">
+            <h3 class="level-title strategic-title">Estratégico</h3>
+            <div class="level level-strategic">
+              <div class="responsibility">
+                <i class="material-icons">groups</i>
+                <p>Desenvolve líderes</p>
+              </div>
+              <div class="responsibility">
+                <i class="material-icons">trending_up</i>
+                <p>Define estratégias</p>
+              </div>
+              <div class="responsibility">
+                <i class="material-icons">gavel</i>
+                <p>Toma decisões</p>
+              </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>© 2023 Time de Engenharia - Plano de Carreira</p>
-    </footer>
-</body>
+          </div>
+          <div class="level-container">
+            <h3 class="level-title tactical-title">Tático</h3>
+            <div class="level level-tactical">
+              <div class="responsibility">
+                <i class="material-icons">school</i>
+                <p>É referência no time</p>
+              </div>
+              <div class="responsibility">
+                <i class="material-icons">build</i>
+                <p>Define processos</p>
+              </div>
+              <div class="responsibility">
+                <i class="material-icons">groups</i>
+                <p>Lidera pessoas ou projetos</p>
+              </div>
+            </div>
+          </div>
+          <div class="level-container">
+            <h3 class="level-title operational-title">Operacional</h3>
+            <div class="level level-operational">
+              <div class="responsibility">
+                <i class="material-icons">done_all</i>
+                <p>Executa a estratégia</p>
+              </div>
+              <div class="responsibility">
+                <i class="material-icons">assignment_turned_in</i>
+                <p>Mantém procedimentos</p>
+              </div>
+              <div class="responsibility">
+                <i class="material-icons">autorenew</i>
+                <p>Atua na melhoria de processos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="job-descriptions">
+        <h2 align="left">Papéis e responsabilidades_</h2>
+
+        <div class="job">
+          <div id="description_junior" class="job-description job-operational">
+            <h4>Júnior</h4>
+            <p>
+              O Desenvolvedor Júnior é responsável por contribuir com tarefas básicas de
+              desenvolvimento sob supervisão. Ele participa do aprendizado contínuo e ajuda em
+              pequenas partes dos projetos.
+            </p>
+            <button class="toggle-details"><span class="material-icons">expand_more</span></button>
+
+            <div class="competencies">
+              <h5>Responsabilidades:</h5>
+              <ul>
+                <li>Aprender e seguir padrões de código.</li>
+                <li>Implementar funcionalidades simples.</li>
+                <li>Colaborar com a equipe em tarefas menores.</li>
+                <li>Participar de treinamentos e reuniões.</li>
+              </ul>
+              <h5>Comportamentos:</h5>
+              <ul>
+                <li>Comunicar progresso e bloqueios de forma clara.</li>
+                <li>Comprometer-se com prazos e priorizar tarefas.</li>
+                <li>Buscar entender a raiz dos problemas apresentados.</li>
+                <li>Pedir feedbacks frequentes e celebrar conquistas.</li>
+                <li>Estudar as necessidades dos clientes e sugerir melhorias.</li>
+              </ul>
+            </div>
+          </div>
+          <div id="description_pleno" class="job-description job-operational">
+            <h4>Pleno</h4>
+            <p>
+              O Desenvolvedor Pleno possui um nível intermediário de experiência e é capaz de
+              trabalhar de forma independente em tarefas complexas. Ele começa a participar mais
+              ativamente do planejamento e da tomada de decisões técnicas.
+            </p>
+            <button class="toggle-details"><span class="material-icons">expand_more</span></button>
+
+            <div class="competencies">
+              <h5>Responsabilidades:</h5>
+              <ul>
+                <li>Desenvolver e implementar funcionalidades complexas.</li>
+                <li>Colaborar no design e arquitetura do software.</li>
+                <li>Revisar o código de colegas juniores.</li>
+                <li>Mentorar desenvolvedores juniores.</li>
+              </ul>
+              <h5>Comportamentos:</h5>
+              <ul>
+                <li>Facilitar a comunicação dentro do time e com outras equipes.</li>
+                <li>Gerenciar e entregar tarefas complexas com qualidade.</li>
+                <li>Solucionar problemas de média complexidade de forma independente.</li>
+                <li>Fornecer feedbacks construtivos para desenvolvedores juniores.</li>
+                <li>Propor melhorias com base no feedback dos clientes.</li>
+              </ul>
+            </div>
+          </div>
+          <div id="description_senior" class="job-description job-operational">
+            <h4>Sênior</h4>
+            <p>
+              O Desenvolvedor Sênior tem um alto nível de experiência e é responsável por liderar
+              tecnicamente projetos. Ele toma decisões críticas sobre a arquitetura e serve como
+              mentor para os membros mais jovens da equipe.
+            </p>
+            <button class="toggle-details"><span class="material-icons">expand_more</span></button>
+
+            <div class="competencies">
+              <h5>Responsabilidades:</h5>
+              <ul>
+                <li>Liderar tecnicamente projetos e equipes.</li>
+                <li>Definir a arquitetura e os padrões do sistema.</li>
+                <li>Revisar e aprovar códigos complexos.</li>
+                <li>Mentorar desenvolvedores plenos e juniores.</li>
+              </ul>
+              <h5>Comportamentos:</h5>
+              <ul>
+                <li>Ser um elo de comunicação entre a equipe e a gestão.</li>
+                <li>Assumir e liderar tarefas críticas garantindo qualidade.</li>
+                <li>Resolver problemas complexos e orientar a equipe em soluções eficazes.</li>
+                <li>Promover o desenvolvimento contínuo da equipe.</li>
+                <li>Liderar iniciativas que impactem positivamente a experiência do cliente.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="job-pairs">
+          <div class="job-description job-tactical">
+            <h4>Coordenador</h4>
+            <p>
+              O Coordenador de Desenvolvimento é responsável por supervisionar a execução de
+              projetos específicos. Ele garante que as metas e os prazos sejam cumpridos e atua como
+              um elo de comunicação entre a equipe e a gerência.
+            </p>
+            <button class="toggle-details"><span class="material-icons">expand_more</span></button>
+
+            <div class="competencies">
+              <h5>Responsabilidades:</h5>
+              <ul>
+                <li>Supervisionar a execução de projetos.</li>
+                <li>Garantir o cumprimento de prazos e metas.</li>
+                <li>Comunicar-se com a equipe e a gerência.</li>
+                <li>Resolver problemas operacionais.</li>
+              </ul>
+              <h5>Comportamentos:</h5>
+              <ul>
+                <li>Garantir a comunicação eficaz entre diferentes squads e áreas.</li>
+                <li>
+                  Supervisionar a execução dos projetos e garantir a entrega no prazo e com
+                  qualidade.
+                </li>
+                <li>
+                  Facilitar a resolução de problemas entre squads e promover soluções integradas.
+                </li>
+                <li>Desenvolver líderes dentro das squads e promover a troca de conhecimento.</li>
+                <li>Implementar melhorias com base no feedback dos clientes.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-description job-tactical" id="description_specialist1">
+            <h4>Especialista I</h4>
+            <p>
+              O Especialista I é um profissional com conhecimentos profundos em uma área específica
+              da tecnologia. Ele é responsável por resolver problemas complexos e inovar dentro de
+              sua especialidade.
+            </p>
+            <button class="toggle-details"><span class="material-icons">expand_more</span></button>
+
+            <div class="competencies">
+              <h5>Responsabilidades:</h5>
+              <ul>
+                <li>Resolver problemas complexos na sua área.</li>
+                <li>Inovar e propor novas soluções técnicas.</li>
+                <li>Servir como referência técnica.</li>
+                <li>Compartilhar conhecimento com a equipe.</li>
+              </ul>
+              <h5>Comportamentos:</h5>
+              <ul>
+                <li>Ser referência técnica e comunicar complexidades de forma clara.</li>
+                <li>Desenvolver soluções técnicas inovadoras e de alta qualidade.</li>
+                <li>Resolver problemas técnicos complexos.</li>
+                <li>Compartilhar conhecimento técnico avançado com a equipe.</li>
+                <li>
+                  Contribuir para o desenvolvimento de soluções que melhorem a experiência do
+                  cliente.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-description job-tactical" id="description_manager">
+            <h4>Gerente</h4>
+            <p>
+              O Gerente de Desenvolvimento é responsável por liderar uma ou mais equipes, garantindo
+              a entrega de projetos dentro do prazo e com qualidade. Ele gerencia recursos, define
+              prioridades e atua na resolução de conflitos.
+            </p>
+            <button class="toggle-details"><span class="material-icons">expand_more</span></button>
+
+            <div class="competencies">
+              <h5>Responsabilidades:</h5>
+              <ul>
+                <li>Liderar equipes de desenvolvimento.</li>
+                <li>Gerenciar recursos e definir prioridades.</li>
+                <li>Garantir a entrega de projetos no prazo.</li>
+                <li>Resolver conflitos e problemas da equipe.</li>
+              </ul>
+              <h5>Comportamentos:</h5>
+              <ul>
+                <li>Gerenciar a comunicação entre a equipe e a gestão.</li>
+                <li>
+                  Coordenar várias squads, garantindo a entrega de projetos no prazo e com
+                  qualidade.
+                </li>
+                <li>Facilitar a resolução de conflitos e problemas complexos.</li>
+                <li>Promover o desenvolvimento contínuo dos membros da equipe.</li>
+                <li>Liderar iniciativas que melhorem a experiência do cliente.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-description job-tactical" id="description_specialist2">
+            <h4>Especialista II</h4>
+            <p>
+              O Especialista II possui um nível avançado de conhecimento e experiência em sua área.
+              Ele é responsável por liderar iniciativas técnicas complexas e colaborar com outros
+              especialistas para resolver desafios técnicos.
+            </p>
+            <button class="toggle-details"><span class="material-icons">expand_more</span></button>
+
+            <div class="competencies">
+              <h5>Responsabilidades:</h5>
+              <ul>
+                <li>Liderar iniciativas técnicas complexas.</li>
+                <li>Colaborar com outros especialistas.</li>
+                <li>Resolver desafios técnicos avançados.</li>
+                <li>Mentorar desenvolvedores mais juniores.</li>
+              </ul>
+              <h5>Comportamentos:</h5>
+              <ul>
+                <li>Comunicar avanços e desafios técnicos para a equipe.</li>
+                <li>Entregar soluções técnicas avançadas dentro do prazo.</li>
+                <li>Resolver problemas técnicos de alta complexidade.</li>
+                <li>Mentorar desenvolvedores juniores e plenos.</li>
+                <li>
+                  Desenvolver soluções técnicas focadas na melhoria da experiência do cliente.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-description job-strategic" id="description_general_manager">
+            <h4>Gerente Geral</h4>
+            <p>
+              O Gerente Geral de Desenvolvimento é responsável pela gestão estratégica de várias
+              equipes ou departamentos. Ele define a visão de longo prazo e garante que todos os
+              projetos estejam alinhados com os objetivos da empresa.
+            </p>
+            <button class="toggle-details"><span class="material-icons">expand_more</span></button>
+
+            <div class="competencies">
+              <h5>Responsabilidades:</h5>
+              <ul>
+                <li>Definir a visão e estratégia de longo prazo.</li>
+                <li>Gerenciar múltiplas equipes ou departamentos.</li>
+                <li>Garantir o alinhamento dos projetos com os objetivos da empresa.</li>
+                <li>Tomar decisões estratégicas críticas.</li>
+              </ul>
+              <h5>Comportamentos:</h5>
+              <ul>
+                <li>Representar o departamento de desenvolvimento na alta gestão.</li>
+                <li>Definir a visão e direção geral do departamento.</li>
+                <li>Tomar decisões estratégicas críticas.</li>
+                <li>Desenvolver líderes e promover a cultura de inovação.</li>
+                <li>
+                  Garantir que a estratégia do departamento esteja alinhada com a melhoria da
+                  experiência do cliente.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-description job-strategic" id="description_specialist3">
+            <h4>Especialista III</h4>
+            <p>
+              O Especialista III é um dos profissionais mais experientes da empresa, com uma
+              profunda compreensão de sua área de atuação. Ele lidera projetos de inovação e atua
+              como consultor para a alta gestão.
+            </p>
+            <button class="toggle-details"><span class="material-icons">expand_more</span></button>
+
+            <div class="competencies">
+              <h5>Responsabilidades:</h5>
+              <ul>
+                <li>Liderar projetos de inovação e desenvolver soluções de ponta.</li>
+                <li>Atuar como consultor para a alta gestão.</li>
+                <li>Desenvolver soluções de ponta.</li>
+                <li>Compartilhar conhecimento com a organização.</li>
+              </ul>
+              <h5>Comportamentos:</h5>
+              <ul>
+                <li>Comunicar com clareza e precisão as soluções inovadoras.</li>
+                <li>Desenvolver soluções técnicas de ponta dentro dos prazos estabelecidos.</li>
+                <li>Resolver problemas técnicos altamente complexos.</li>
+                <li>Promover a troca de conhecimento e inovação dentro da organização.</li>
+                <li>
+                  Desenvolver soluções técnicas que proporcionem valor significativo para os
+                  clientes.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="job-pairs">
+          <div
+            class="job-description job-strategic"
+            id="description_director"
+            style="grid-column: span 2"
+          >
+            <h4>Diretor</h4>
+            <p>
+              O Diretor de Desenvolvimento é responsável pela visão e direção geral do departamento
+              de desenvolvimento. Ele garante a execução da estratégia da empresa e promove a
+              inovação contínua.
+            </p>
+            <button class="toggle-details"><span class="material-icons">expand_more</span></button>
+
+            <div class="competencies">
+              <h5>Responsabilidades:</h5>
+              <ul>
+                <li>Definir a visão e direção geral do departamento.</li>
+                <li>Promover a inovação contínua.</li>
+                <li>Garantir a execução da estratégia da empresa.</li>
+                <li>Representar o departamento na alta gestão.</li>
+              </ul>
+              <h5>Comportamentos:</h5>
+              <ul>
+                <li>Representar o departamento de desenvolvimento na alta gestão.</li>
+                <li>Definir a visão e direção geral do departamento.</li>
+                <li>Tomar decisões estratégicas críticas.</li>
+                <li>Desenvolver líderes e promover a cultura de inovação.</li>
+                <li>
+                  Garantir que a estratégia do departamento esteja alinhada com a melhoria da
+                  experiência do cliente.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="functional-roles">
+        <h2 align="left">Papéis funcionais_</h2>
+        <p class="explanation-text">
+          Além dos cargos ocupados formalmente, existem funções que podem ser assumidas
+          temporariamente, conforme as necessidades estratégicas da squad ou tribo. Chamamos essas
+          funções de <span class="highlight-text">papéis funcionais</span>. Eles não
+          <span class="highlight-text"> resultam em acúmulo de função ou promoção </span>, mas
+          trazem responsabilidades específicas e são essenciais para garantir a liderança técnica e
+          gerencial das squads e tribos. Esses papéis são atribuídos com base na experiência e nas
+          habilidades de liderança dos colaboradores.
+        </p>
+
+        <div class="roles-container">
+          <div class="roles">
+            <div class="role-description full-width">
+              <h3>Head</h3>
+              <p>
+                Responsável por definir a visão e estratégia global do departamento de engenharia.
+              </p>
+              <ul>
+                <li>Definir a visão e estratégia global</li>
+                <li>Garantir a alocação eficaz de recursos</li>
+                <li>Promover a inovação e a melhoria contínua</li>
+                <li>Representar o departamento na alta gestão</li>
+              </ul>
+            </div>
+            <div class="role-description half-width">
+              <h3>Tribe Tech Lead (TTL)</h3>
+              <p>
+                Coordena atividades técnicas entre várias squads e define padrões de arquitetura.
+              </p>
+              <ul>
+                <li>Coordenar atividades técnicas entre várias squads</li>
+                <li>Definir padrões de arquitetura e melhores práticas</li>
+                <li>Garantir a integração entre diferentes squads</li>
+                <li>Servir como ponto de referência técnica para a tribo</li>
+              </ul>
+            </div>
+            <div class="role-description half-width">
+              <h3>Engineering Manager Senior (EMS)</h3>
+              <p>Supervisa múltiplos Engineering Managers e define estratégias de longo prazo.</p>
+              <ul>
+                <li>Supervisar múltiplos Engineering Managers</li>
+                <li>Definir estratégias de médio a longo prazo</li>
+                <li>Garantir a execução de iniciativas críticas</li>
+                <li>Desenvolver líderes e promover a cultura de inovação</li>
+              </ul>
+            </div>
+            <div class="role-description full-width">
+              <h3>Engineering Manager (EM)</h3>
+              <p>Gerencia uma ou mais squads e garante a entrega de projetos com qualidade.</p>
+              <ul>
+                <li>Gerenciar uma ou mais squads</li>
+                <li>Garantir a entrega de projetos no prazo e com qualidade</li>
+                <li>Desenvolver e mentorizar membros da equipe</li>
+                <li>Gerir conflitos e promover a colaboração dentro da equipe</li>
+              </ul>
+            </div>
+            <div class="role-description full-width">
+              <h3>Tech Lead (TL)</h3>
+              <p>Lidera tecnicamente uma squad e garante a qualidade das entregas.</p>
+              <ul>
+                <li>Liderar tecnicamente uma squad</li>
+                <li>Garantir a qualidade e eficiência técnica das entregas</li>
+                <li>Definir a arquitetura e padrões técnicos do projeto</li>
+                <li>Mentorizar desenvolvedores menos experientes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="raci-table">
+        <h2 align="left">Tabela RACI</h2>
+
+        <p class="explanation-text">
+          Utilizamos o <span class="highlight-text">modelo RACI</span> para definir claramente as
+          responsabilidades de cada papel em relação às tarefas e decisões. O RACI é uma ferramenta
+          de gestão que ajuda a garantir que todos saibam quem é responsável, quem tem autoridade,
+          quem deve ser consultado e quem precisa ser informado sobre cada atividade. Isso promove
+          transparência e eficiência, minimizando conflitos e garantindo que todos os colaboradores
+          estejam alinhados com seus deveres e expectativas.
+        </p>
+
+        <div class="raci-legend">
+          <div class="raci-legend-item">
+            <span class="raci-bar r-color"></span>
+            <span class="raci-legend-text">
+              <span class="highlight r-color-text"><strong>R</strong>esponsável</span> - quem
+              executa?
+            </span>
+          </div>
+          <div class="raci-legend-item">
+            <span class="raci-bar a-color"></span>
+            <span class="raci-legend-text">
+              <span class="highlight a-color-text"><strong>A</strong>utoridade</span> - quem tem a
+              decisão final?
+            </span>
+          </div>
+          <div class="raci-legend-item">
+            <span class="raci-bar c-color"></span>
+            <span class="raci-legend-text">
+              <span class="highlight c-color-text"><strong>C</strong>onsultado</span> - quem opina?
+            </span>
+          </div>
+          <div class="raci-legend-item">
+            <span class="raci-bar i-color"></span>
+            <span class="raci-legend-text">
+              <span class="highlight i-color-text"><strong>I</strong>nformado</span> - quem é
+              informado?
+            </span>
+          </div>
+        </div>
+
+        <div class="filter">
+          <label for="roleFilter">Filtrar por papel:</label>
+          <select id="roleFilter">
+            <option value="all">Todos</option>
+            <option value="Head">Head</option>
+            <option value="TTL">TTL</option>
+            <option value="EM">EM</option>
+            <option value="EMS">EMS</option>
+            <option value="TL">TL</option>
+          </select>
+        </div>
+
+        <table class="raci-table">
+          <thead>
+            <tr>
+              <th>Tarefa / Papel</th>
+              <th>Head</th>
+              <th>TTL</th>
+              <th>EM</th>
+              <th>EMS</th>
+              <th>TL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Definir a visão e estratégia global</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+            </tr>
+            <tr>
+              <td>Garantir a alocação eficaz de recursos</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+            </tr>
+            <tr>
+              <td>Promover a inovação e a melhoria contínua</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+            </tr>
+            <tr>
+              <td>Representar o departamento na alta gestão</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+            </tr>
+            <tr>
+              <td>Coordenar atividades técnicas entre squads</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+            </tr>
+            <tr>
+              <td>Gerenciar orçamentos e custos</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#ff9800">I</span></td>
+            </tr>
+            <tr>
+              <td>Desenvolver a estratégia de tecnologia</td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#2196f3">C</span></td>
+            </tr>
+            <tr>
+              <td>Supervisionar a implementação de projetos</td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+            </tr>
+            <tr>
+              <td>Garantir a conformidade com políticas de segurança</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#ff9800">I</span></td>
+            </tr>
+            <tr>
+              <td>Gerenciar contratos e fornecedores</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#ff9800">I</span></td>
+            </tr>
+            <tr>
+              <td>Promover a cultura de inovação</td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#2196f3">C</span></td>
+            </tr>
+            <tr>
+              <td>Desenvolver e manter a documentação técnica</td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#ff9800">I</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+            </tr>
+            <tr>
+              <td>Coordenar a integração entre sistemas</td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+            </tr>
+            <tr>
+              <td>Gerenciar o desempenho da equipe</td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#2196f3">C</span></td>
+            </tr>
+            <tr>
+              <td>Definir e acompanhar KPIs</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+            </tr>
+            <tr>
+              <td>Conduzir reuniões de revisão de sprint</td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#ff9800">I</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+            </tr>
+            <tr>
+              <td>Gerenciar mudanças e versões de software</td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#ff9800">I</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+            </tr>
+            <tr>
+              <td>Desenvolver e implementar políticas de governança</td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#ff9800">I</span></td>
+            </tr>
+            <tr>
+              <td>Realizar avaliações de desempenho</td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#2196f3">C</span></td>
+            </tr>
+            <tr>
+              <td>Identificar e mitigar riscos</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+            </tr>
+            <tr>
+              <td>Promover treinamentos e desenvolvimento contínuo</td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#2196f3">C</span></td>
+            </tr>
+            <tr>
+              <td>Monitorar a satisfação do cliente</td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#ff9800">I</span></td>
+            </tr>
+            <tr>
+              <td>Definir e implementar processos de qualidade</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#2196f3">C</span></td>
+            </tr>
+            <tr>
+              <td>Fomentar a colaboração interdepartamental</td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#2196f3">C</span></td>
+            </tr>
+            <tr>
+              <td>Garantir a escalabilidade das soluções</td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+            </tr>
+            <tr>
+              <td>Acompanhar tendências e inovações tecnológicas</td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#ff9800">I</span></td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#2196f3">C</span></td>
+            </tr>
+            <tr>
+              <td>Gerenciar crises e incidentes</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#ff9800">I</span></td>
+            </tr>
+            <tr>
+              <td>Garantir a conformidade com regulações</td>
+              <td><span class="raci-cell raci-a" data-original-color="#f44336">A</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+              <td><span class="raci-cell raci-r" data-original-color="#4caf50">R</span></td>
+              <td><span class="raci-cell raci-i" data-original-color="#2196f3">I</span></td>
+              <td><span class="raci-cell raci-c" data-original-color="#ff9800">C</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer>
+        <p><span id="current-year"></span> - Engineer's culture ♥</p>
+        <script>
+          document.getElementById('current-year').textContent = new Date().getFullYear()
+        </script>
+      </footer>
+    </div>
+
+    <button id="back-to-top">
+      <span class="material-icons">arrow_upward</span>
+    </button>
+  </body>
 </html>

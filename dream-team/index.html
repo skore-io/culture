@@ -1,37 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Team</title>
 
-  <title>Dream Team</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <script src="team-dev.js"></script>
+    <script src="team-product.js"></script>
+    <script src="team-data.js"></script>
+    <script src="team-operation.js"></script>
+    <script src="util.js"></script>
 
-<body>
-  <script src="team-dev.js"></script>
-  <script src="team-product.js"></script>
-  <script src="team-data.js"></script>
-  <script src="team-operation.js"></script>
-  <script src="util.js"></script>
+    <script>
+      function renderTeam(containerId, team) {
+        const container = document.getElementById(containerId)
 
-  <script>
-    function renderTeam(containerId, team) {
-      const container = document.getElementById(containerId)
+        team.forEach((member) => {
+          const updatedDescription = member.description.replace(
+            /getTotalYears\('(\d{2}\/\d{2}\/\d{4})'\)/g,
+            (match, birthDateString) => `${getTotalYears(birthDateString)}`,
+          )
 
-      team.forEach(member => {
-        const updatedDescription = member.description.replace(
-          /getTotalYears\('(\d{2}\/\d{2}\/\d{4})'\)/g,
-          (match, birthDateString) => `${getTotalYears(birthDateString)}`
-        )
-
-        const colDiv = document.createElement('div')
-        colDiv.classList.add('col')
-        colDiv.innerHTML = `
+          const colDiv = document.createElement('div')
+          colDiv.classList.add('col')
+          colDiv.innerHTML = `
           <div class="card">
             <div class="content">
               <div class="scroll">
@@ -50,55 +52,61 @@
             </div>
           </div>
         `
-        container.appendChild(colDiv)
-      })
-    }
-  </script>
+          container.appendChild(colDiv)
+        })
+      }
+    </script>
 
-  <div class="wrapper gradient-default">
-    <div class="container">
-      <div id="devTeamContainer" class="row">
-        <div class="col-wide">
-          <a class="culture" href="https://github.com/skore-io/culture">culture</a>
-          <h1 class="title-team">Conheça nosso 'Dream Team' 🚀</h1>
-          <h2 align="left">Pessoas da Engenharia_</h2>
+    <div class="wrapper gradient-default">
+      <div class="container">
+        <div id="devTeamContainer" class="row">
+          <div class="col-wide">
+            <h1 class="title-team">Nosso Dream Team 🚀</h1>
+            <h2 align="left">Pessoas da Engenharia_</h2>
+          </div>
+
+          <script>
+            renderTeam('devTeamContainer', devTeam)
+          </script>
         </div>
 
-        <script>
-          renderTeam('devTeamContainer', devTeam)
-        </script>
-      </div>
+        <div id="productTeamContainer" class="row">
+          <div class="col-wide">
+            <h2 class="row-product" align="left">Pessoas de Produto_</h2>
+          </div>
 
-      <div id="productTeamContainer" class="row">
-        <div class="col-wide">
-          <h2 class="row-product" align="left">Pessoas de Produto_</h2>
+          <script>
+            renderTeam('productTeamContainer', productTeam)
+          </script>
         </div>
 
-        <script>
-          renderTeam('productTeamContainer', productTeam)
-        </script>
-      </div>
+        <div id="dataTeamContainer" class="row">
+          <div class="col-wide">
+            <h2 class="row-data" align="left">Pessoas de Dados_</h2>
+          </div>
 
-      <div id="dataTeamContainer" class="row">
-        <div class="col-wide">
-          <h2 class="row-data" align="left">Pessoas de Dados_</h2>
+          <script>
+            renderTeam('dataTeamContainer', dataTeam)
+          </script>
         </div>
 
-        <script>
-          renderTeam('dataTeamContainer', dataTeam)
-        </script>
-      </div>
+        <div id="operationTeamContainer" class="row">
+          <div class="col-wide">
+            <h2 class="row-operation" align="left">Pessoas de Operações_</h2>
+          </div>
 
-      <div id="operationTeamContainer" class="row">
-        <div class="col-wide">
-          <h2 class="row-operation" align="left">Pessoas de Operações_</h2>
+          <script>
+            renderTeam('operationTeamContainer', operationTeam)
+          </script>
         </div>
-
-        <script>
-          renderTeam('operationTeamContainer', operationTeam)
-        </script>
       </div>
+
+      <footer>
+        <p><span id="current-year"></span> - Engineer's culture ♥</p>
+        <script>
+          document.getElementById('current-year').textContent = new Date().getFullYear()
+        </script>
+      </footer>
     </div>
-  </div>
-</body>
+  </body>
 </html>

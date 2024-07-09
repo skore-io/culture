@@ -39,11 +39,11 @@ git checkout -b docs/{SEU_NOME}-profile
 
 ```js
 {
-  name: "Et Bilu",
+  name: 'Et Bilu',
   role: devRoles.full_stack,
-  description: "Lorem Ipsum...",
-  social: "URL do linkedin ou github",
-  avatar: "URL de uma imagem"
+  description: 'Lorem Ipsum...',
+  social: 'URL do linkedin ou github',
+  avatar: 'URL de uma imagem'
 }
 ```
 

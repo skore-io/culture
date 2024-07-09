@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": ["javascript", "html", "css"],
+  "prettier.requireConfig": true,
+  "prettier.documentSelectors": ["**/*.html", "**/*.css"]
+}
