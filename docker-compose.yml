@@ -1,0 +1,11 @@
+services:
+  jekyll:
+    image: jekyll/builder:stable
+    ports:
+      - '4000:4000'
+    volumes:
+      - .:/srv/jekyll
+    environment:
+      - PAGES_REPO_NWO=skore-io/culture
+      - JEKYLL_ENV=production
+    command: jekyll serve --watch --host 0.0.0.0

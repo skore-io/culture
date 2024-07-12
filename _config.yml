@@ -1,5 +1,5 @@
 title: Learning Rocks Engenharia
-description: >-
+description: >
   Conheça melhor o time de engenharia da plataforma LXM do Learning Rocks,
   seus desafios técnicos e aprendizados
 github_username: skore-io
@@ -13,3 +13,7 @@ minima:
 
 plugins:
   - jekyll-feed
+  - github-pages
+
+repository: skore-io/culture
+baseurl: '/culture'
