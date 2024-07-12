@@ -212,8 +212,7 @@ const functionalRoles = [
   {
     id: 'head',
     name: 'Head',
-    description:
-      'Responsável por definir a visão e estratégia global do tribo de engenharia.',
+    description: 'Responsável por definir a visão e estratégia global do tribo de engenharia.',
     responsibilities: [
       'Definir a visão e estratégia global',
       'Garantir a alocação eficaz de recursos',
@@ -225,8 +224,7 @@ const functionalRoles = [
   {
     id: 'ttl',
     name: 'Tribe Tech Lead (TTL)',
-    description:
-      'Lidera atividades técnicas entre várias squads e define padrões de arquitetura.',
+    description: 'Lidera atividades técnicas entre várias squads e define padrões de arquitetura.',
     responsibilities: [
       'Liderar atividades técnicas entre várias squads',
       'Definir padrões de arquitetura e melhores práticas',
@@ -446,7 +444,7 @@ const raciData = [
     EMS: 'I',
     EM: 'R',
     TL: 'R',
-  }
+  },
 ]
 
 document.addEventListener('DOMContentLoaded', function () {
