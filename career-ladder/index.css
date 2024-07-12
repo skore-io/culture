@@ -435,7 +435,7 @@ section:nth-of-type(6) h2 {
 .roles-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
 .roles {
@@ -458,6 +458,12 @@ section:nth-of-type(6) h2 {
   justify-content: space-between;
   color: #d4d4d4;
   font-size: 16px;
+}
+
+.role-pairs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .role-description:hover {
