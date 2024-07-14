@@ -52,6 +52,7 @@ body ::-webkit-scrollbar {
     radial-gradient(ellipse at center left, rgba(214, 51, 132, 0.5), transparent 50%);
   position: relative;
   min-height: 100vh;
+  background-size: cover;
 }
 
 .gradient-default:after {
@@ -210,19 +211,6 @@ section:nth-of-type(6) h2 {
   color: #007acc;
 }
 
-.levels {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.level-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
-
 .level-title {
   font-size: 1.2em;
   margin-bottom: 10px;
@@ -241,6 +229,14 @@ section:nth-of-type(6) h2 {
   color: #007acc;
 }
 
+.level-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 200px;
+}
+
 .level {
   background: #252526;
   border-radius: 15px;
@@ -255,8 +251,15 @@ section:nth-of-type(6) h2 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: 200px;
+  height: 100%;
   color: #d4d4d4;
+}
+
+.levels {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: stretch;
 }
 
 .responsibility {

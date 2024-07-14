@@ -1,0 +1,55 @@
+@media (max-width: 768px) {
+  .summary,
+  section {
+    width: 90%;
+  }
+
+  .levels,
+  .roles,
+  .job-pairs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .job-pairs,
+  .role-pairs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .raci-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .raci-table th,
+  .raci-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .level,
+  .role-description,
+  .job-description {
+    width: 100%;
+  }
+
+  .level-container {
+    min-width: 100%;
+  }
+
+  .levels {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .competencies.expanded {
+    max-height: 500px;
+  }
+
+  .gradient-default {
+    background-size: cover;
+    background-position: center;
+  }
+}
