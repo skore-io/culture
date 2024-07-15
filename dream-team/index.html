@@ -1,110 +1,88 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+---
+layout: default
+title: Dream Team
+header_title: Nosso Dream Team 🚀
+---
 
-    <title>Dream Team</title>
+<section class="container">
+  <link rel="stylesheet" href="index.css" />
+  <script src="team-dev.js"></script>
+  <script src="team-product.js"></script>
+  <script src="team-data.js"></script>
+  <script src="team-operation.js"></script>
+  <script src="util.js"></script>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-  </head>
+  <script>
+    function renderTeam(containerId, team) {
+      const container = document.getElementById(containerId)
 
-  <body>
-    <script src="team-dev.js"></script>
-    <script src="team-product.js"></script>
-    <script src="team-data.js"></script>
-    <script src="team-operation.js"></script>
-    <script src="util.js"></script>
+      team.forEach((member) => {
+        const updatedDescription = member.description.replace(
+          /getTotalYears\('(\d{2}\/\d{2}\/\d{4})'\)/g,
+          (match, birthDateString) => `${getTotalYears(birthDateString)}`,
+        )
+
+        const colDiv = document.createElement('div')
+        colDiv.classList.add('col')
+        colDiv.innerHTML = `
+          <div class="card">
+            <div class="content">
+              <div class="scroll">
+                <p>${updatedDescription}</p>
+              </div>
+            </div>
+            <a class="card-footer" href="${member.social}" target="_blank" rel="noopener noreferrer">
+              <img class="avatar" src="${member.avatar}" alt="avatar">
+              <div class="author">
+                <span class="name">${member.name}</span>
+                <span class="role">${member.role}</span>
+              </div>
+              <img class="uol" src="https://i.imgur.com/8OjyFNE.png" alt="uol" />
+            </a>
+          </div>
+        `
+        container.appendChild(colDiv)
+      })
+    }
+  </script>
+
+  <div id="devTeamContainer" class="row">
+    <div class="col-wide">
+      <h2 align="left">Pessoas da Engenharia_</h2>
+    </div>
 
     <script>
-      function renderTeam(containerId, team) {
-        const container = document.getElementById(containerId)
-
-        team.forEach((member) => {
-          const updatedDescription = member.description.replace(
-            /getTotalYears\('(\d{2}\/\d{2}\/\d{4})'\)/g,
-            (match, birthDateString) => `${getTotalYears(birthDateString)}`,
-          )
-
-          const colDiv = document.createElement('div')
-          colDiv.classList.add('col')
-          colDiv.innerHTML = `
-            <div class="card">
-              <div class="content">
-                <div class="scroll">
-                  <p>${updatedDescription}</p>
-                </div>
-              </div>
-              <a class="card-footer" href="${member.social}" target="_blank" rel="noopener noreferrer">
-                <img class="avatar" src="${member.avatar}" alt="avatar">
-                <div class="author">
-                  <span class="name">${member.name}</span>
-                  <span class="role">${member.role}</span>
-                </div>
-                <img class="uol" src="https://i.imgur.com/8OjyFNE.png" alt="uol" />
-              </a>
-            </div>
-          `
-          container.appendChild(colDiv)
-        })
-      }
+      renderTeam('devTeamContainer', devTeam)
     </script>
+  </div>
 
-    <div class="wrapper gradient-default">
-      <div class="container">
-        <div id="devTeamContainer" class="row">
-          <div class="col-wide">
-            <h1 class="title-team">Nosso Dream Team 🚀</h1>
-            <h2 align="left">Pessoas da Engenharia_</h2>
-          </div>
-
-          <script>
-            renderTeam('devTeamContainer', devTeam)
-          </script>
-        </div>
-
-        <div id="productTeamContainer" class="row">
-          <div class="col-wide">
-            <h2 class="row-product" align="left">Pessoas de Produto_</h2>
-          </div>
-
-          <script>
-            renderTeam('productTeamContainer', productTeam)
-          </script>
-        </div>
-
-        <div id="dataTeamContainer" class="row">
-          <div class="col-wide">
-            <h2 class="row-data" align="left">Pessoas de Dados_</h2>
-          </div>
-
-          <script>
-            renderTeam('dataTeamContainer', dataTeam)
-          </script>
-        </div>
-
-        <div id="operationTeamContainer" class="row">
-          <div class="col-wide">
-            <h2 class="row-operation" align="left">Pessoas de Operações_</h2>
-          </div>
-
-          <script>
-            renderTeam('operationTeamContainer', operationTeam)
-          </script>
-        </div>
-      </div>
-
-      <footer>
-        <p><span id="current-year"></span> - Engineer's culture ♥</p>
-        <script>
-          document.getElementById('current-year').textContent = new Date().getFullYear()
-        </script>
-      </footer>
+  <div id="productTeamContainer" class="row">
+    <div class="col-wide">
+      <h2 class="row-product" align="left">Pessoas de Produto_</h2>
     </div>
-  </body>
-</html>
+
+    <script>
+      renderTeam('productTeamContainer', productTeam)
+    </script>
+  </div>
+
+  <div id="dataTeamContainer" class="row">
+    <div class="col-wide">
+      <h2 class="row-data" align="left">Pessoas de Dados_</h2>
+    </div>
+
+    <script>
+      renderTeam('dataTeamContainer', dataTeam)
+    </script>
+  </div>
+
+  <div id="operationTeamContainer" class="row">
+    <div class="col-wide">
+      <h2 class="row-operation" align="left">Pessoas de Operações_</h2>
+    </div>
+
+    <script>
+      renderTeam('operationTeamContainer', operationTeam)
+    </script>
+  </div>
+</section>

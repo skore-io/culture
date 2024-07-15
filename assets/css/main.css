@@ -98,20 +98,20 @@ header img {
   margin: auto;
 }
 
-.content {
+.home-content {
   padding: 50px 0;
   width: 50%;
   position: relative;
   margin: auto;
 }
 
-.content h1 {
+.home-content h1 {
   margin: 0;
   font-size: 2.5em;
   color: #fff;
 }
 
-.content h2 {
+.home-content h2 {
   margin: 30px;
   margin-left: 0;
   padding: 0 20px;
@@ -120,7 +120,7 @@ header img {
   text-align: left !important;
 }
 
-.content p {
+.home-content p {
   font-size: 18px;
   color: #ccc;
   margin-bottom: 20px;
@@ -186,8 +186,14 @@ footer {
   text-align: center;
 }
 
+footer p {
+  color: #626c74;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
-  .content {
+  .home-content {
     width: 90%;
   }
 }
