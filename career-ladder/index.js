@@ -559,9 +559,9 @@ document.addEventListener('DOMContentLoaded', function () {
       case 'A':
         return '#f44336'
       case 'C':
-        return '#ff9800'
-      case 'I':
         return '#2196f3'
+      case 'I':
+        return '#ff9800'
       default:
         return '#444'
     }
