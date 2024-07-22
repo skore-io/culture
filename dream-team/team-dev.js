@@ -150,4 +150,11 @@ const devTeam = [
     social: 'https://www.linkedin.com/in/rodrigo-batini-ba543061/',
     avatar: 'https://avatars.githubusercontent.com/u/4341744',
   },
+  {
+    name: 'Rennan Santos',
+    role: devRoles.full_stack,
+    description: `Fala pessoal! De boa? Me chamo Rennan, tenho getTotalYears('25/01/1996') anos e sou nascido e criado no Rio de Janeiro-RJ, aprendi a programar com Pascal e POO em Delphi assim comos os maias e incas em 2012. Praticante de Muay-Thai e com nenhum talento artesanal ou musical, amo filmes de mafia, sou torcedor do pioneiro no esporte e berço do futebol brasileiro, do primeiro e unico tricolor do Brasil (segundo Nelson Rodrigues), o das laranjeiras, o colossal Fluminense Football Club e nada mais! E eu acho LOST a melhor serie feita em todos os tempos ` ,
+    social: 'https://www.linkedin.com/in/rennandossantos/',
+    avatar: 'https://avatars.githubusercontent.com/u/40223602',
+  },
 ]
