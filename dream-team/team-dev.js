@@ -107,15 +107,6 @@ const devTeam = [
     avatar: 'https://avatars.githubusercontent.com/u/93400303',
   },
   {
-    name: 'Rodrigo Miyashiro',
-    role: devRoles.em,
-    description: `E aí, beleza!? Sou o Rodrigo! Gosto de apreciar um bom café, e também, técnicas/métodos de preparo.
-      Curto bastante filmes e series principalmente olhando pontos como atuação, história, fotografia, enquadramento da cena, etc.
-      Eventualmente vejo algumas coisas para automatizar residências e fico testando, logo tenho Arduinos, Raspberry Pi, vários tipos sensores, relé wireless, fechadura eletrônica etc.`,
-    social: 'https://www.linkedin.com/in/rodrigomiyashiro',
-    avatar: 'https://i.imgur.com/WbfktOG.jpg',
-  },
-  {
     name: 'Tiago Elias',
     role: devRoles.tl,
     description: `Aoopa, sou o Tiago! Tenho getTotalYears('01/01/1996') anos e sou natural do triângulo mineiro.
