@@ -7,17 +7,6 @@ const productRoles = {
 
 const productTeam = [
   {
-    name: 'Taís Hamamoto',
-    role: productRoles.pm,
-    description: `Oi, sou a Tais. getTotalYears('27/06/1989') anos. Corintiana fajuta (só sei o nome do Cássio), adoradora de cervejas amargas mas não recuso aquela Glacial e Polar que estiverem na mesa.
-      A louca dos gatos, rockeira que curte Anitta, investidora com carteira de performance negativa, formada em Engenharia Ambiental, Mestre em Eng de Produção, já fui consultora do Sebrae de inovação, CS em duas startups e agora sou Aprendiz de produteira.
-      O próprio caos!
-      Joguei volei durante minha gradução e mestrado (sim, com meu 1,58m de altura), mas agora sou do time arquibancada. Mas aceito convites para um bate bola.
-      Adoro uma fofoca e fazer N cursos, a depender da fase de vida que estou. Mas curto mesmo é a mesa do bar!`,
-    social: 'https://www.linkedin.com/in/ta%C3%ADs-hamamoto',
-    avatar: 'https://i.imgur.com/LZ7QfhJ.png',
-  },
-  {
     name: 'Thiago Cassimiro',
     role: productRoles.pm,
     description: `Olá! Meu nome é Thiago mas conhecido como Cassi devido ao meu sobrenome, sou mineiro, torcedor do Cruzeirão cabuloso.

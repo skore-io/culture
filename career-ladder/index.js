@@ -214,9 +214,9 @@ const functionalRoles = [
   {
     id: 'head',
     name: 'Head',
-    description: 'Responsável por definir a visão e estratégia global do tribo de engenharia.',
+    description: 'Responsável por definir a visão e estratégia da tribo de engenharia.',
     responsibilities: [
-      'Definir a visão e estratégia global.',
+      'Definir a visão e estratégia da engenharia.',
       'Garantir a alocação eficaz de recursos.',
       'Promover a inovação e a melhoria contínua.',
       'Representar o tribo na alta gestão.',
@@ -309,7 +309,6 @@ const functionalRoles = [
       'Promover a adoção e aprendizado das melhores tecnologias e práticas para melhorar continuamente os processos e produtos.',
       'Garantir que as entregas técnicas cumpram com os padrões de qualidade e segurança estabelecidos.',
       'Responder prontamente a problemas e incidentes, ajudando a identificar as causas e incentivando soluções na raiz.',
-      'Liderar sessões de planejamento e refinamento para assegurar um backlog bem organizado e priorizado.',
       'Tomar decisões técnicas que aumentem a eficiência e a velocidade do desenvolvimento dentro da squad.',
     ],
     pair: null,
