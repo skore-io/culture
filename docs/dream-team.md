@@ -55,7 +55,7 @@ Caso queira adicionar idade ou tempo em que atua na área, use `getTotalYears('d
 }
 ```
 
-5. Abra o arquivo `dream-team/index.html` no seu navegador para validar se está tudo correto!
+5. Siga os passos do README.md para rodar o projeto, e abra o caminho `/culture/dream-team/` no seu navegador para validar se está tudo correto!
 
    Validar o que fazemos é uma ação muito importante em nosso dia-a-dia 😉
 

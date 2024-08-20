@@ -1,11 +1,22 @@
 const productRoles = {
-  lead: 'Product Lead',
+  gpm: 'Group Product Manager',
   pm: 'Product Manager',
   project_manager: 'Project Manager',
   designer: 'Product Designer',
 }
 
 const productTeam = [
+  {
+    name: 'Fabrizio Akkari',
+    role: productRoles.gpm,
+    description: `
+      E aee galera, eu sou o Fabrizio, getTotalYears('08/02/1984') anos e, apesar de nascer e viver quase a vida toda em São Paulo, hoje moro em Arujá com minha esposa e minha enteada.
+      Sou formado em Sistemas de Informação e MBA em Gestão de Projetos e Negócios.
+      Trabalhei em Produtos nos últimos 10 anos de vida.
+      Tenho muito mais hobbies do que tempo, e por isso cada hora estou priorizando um diferente, mas curto muito assistir futebol americano, tocar violão, games, muita série e principalmente viajar com a família.`,
+    social: 'https://www.linkedin.com/in/fabriziotassitano',
+    avatar: 'https://i.imgur.com/OeaF3Tq.png',
+  },
   {
     name: 'Thiago Cassimiro',
     role: productRoles.pm,
