@@ -91,7 +91,7 @@ const devTeam = [
   },
   {
     name: 'André Martins',
-    role: devRoles.front,
+    role: devRoles.full_stack,
     description:
       "E ai pessoal, meu nome é André, tenho getTotalYears('10/09/1997') anos e natural de viçosa-MG. Comecei na area da técnologia aos 20 anos, trabalhei 2 anos como suporte e já tenho 3 anos na programação, meu hobby é jogar futebol (o pai da aula sqn) e curto aeromodelismo.",
     social: 'https://www.linkedin.com/in/andr%C3%A9-martins-aa1884216',
@@ -108,7 +108,7 @@ const devTeam = [
   },
   {
     name: 'Tiago Elias',
-    role: devRoles.tl,
+    role: devRoles.full_stack,
     description: `Aoopa, sou o Tiago! Tenho getTotalYears('01/01/1996') anos e sou natural do triângulo mineiro.
       Recentemente me mudei pra Ribeirão Preto, mas não abro mão do pão de queijo de minas.
       Curto muito assistir a todo tipo de série pra relaxar um pouco e também ver um futebolzinho, nada como sofrer bastante com o Corinthians.`,
@@ -117,7 +117,7 @@ const devTeam = [
   },
   {
     name: 'Ruan Carlos',
-    role: devRoles.mobile,
+    role: devRoles.full_stack,
     description: `Salvee! Suavera? Me chamo Ruan, mas pode me chamar de Ruan, tenho getTotalYears('01/01/1998') anos e sou de Blumenau - SC.
       Sou curioso desde sempre, talvez seja por isso que sou um pouco hiperativo.
       Meus hobbies são: cozinhar, programar, viajar e curto degustar whisky.`,
