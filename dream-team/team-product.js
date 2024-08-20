@@ -33,6 +33,18 @@ const productTeam = [
     avatar: 'https://i.imgur.com/hwOGo9z.png',
   },
   {
+    name: 'Giovanni Attina',
+    role: productRoles.pm,
+    description: `
+      Opa! Sou Giovanni, normalmente me chamam de Gio ou Gi, não tenho uma preferência.
+      Tenho getTotalYears('19/06/1996') anos. Sou de São Paulo, já morei em 6 cidades diferentes e hoje moro em Cerquilho, no interior.
+      Sou formado em Ciência da Computação, fui desenvolvedor por alguns anos até migrar para área de Produto.
+      Gosto bastante de cozinhar principalmente tudo que vai farinha, tipo massa e pão, também gosto de ler e assistir filmes e séries, quando tenho tempo.
+      Uma curiosidade é que gosto de meios de transportes e cidades, tipo trem e metro, e meu sonho é poder viajar pelo Estado de SP pelas linhas férreas desativadas.`,
+    social: 'https://www.linkedin.com/in/giovanni-attina-do-nascimento-600b02109',
+    avatar: 'https://i.imgur.com/otJkCY2.png',
+  },
+  {
     name: 'Luíza Sernizon',
     role: productRoles.project_manager,
     description:

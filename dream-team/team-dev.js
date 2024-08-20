@@ -144,14 +144,15 @@ const devTeam = [
   {
     name: 'Rennan Santos',
     role: devRoles.full_stack,
-    description: `Fala pessoal! De boa? Me chamo Rennan, tenho getTotalYears('25/01/1996') anos e sou nascido e criado no Rio de Janeiro-RJ, aprendi a programar com Pascal e POO em Delphi assim comos os maias e incas em 2012. Praticante de Muay-Thai e com nenhum talento artesanal ou musical, amo filmes de mafia, sou torcedor do pioneiro no esporte e berço do futebol brasileiro, do primeiro e unico tricolor do Brasil (segundo Nelson Rodrigues), o das laranjeiras, o colossal Fluminense Football Club e nada mais! E eu acho LOST a melhor serie feita em todos os tempos ` ,
+    description: `Fala pessoal! De boa? Me chamo Rennan, tenho getTotalYears('25/01/1996') anos e sou nascido e criado no Rio de Janeiro-RJ, aprendi a programar com Pascal e POO em Delphi assim comos os maias e incas em 2012. Praticante de Muay-Thai e com nenhum talento artesanal ou musical, amo filmes de mafia, sou torcedor do pioneiro no esporte e berço do futebol brasileiro, do primeiro e unico tricolor do Brasil (segundo Nelson Rodrigues), o das laranjeiras, o colossal Fluminense Football Club e nada mais! E eu acho LOST a melhor serie feita em todos os tempos `,
     social: 'https://www.linkedin.com/in/rennandossantos/',
     avatar: 'https://avatars.githubusercontent.com/u/40223602',
   },
   {
     name: 'Pedro Rasera',
     role: devRoles.full_stack,
-    description: "Olá, pessoal! Sou Pedro Rasera, pode chamar de 'Pedro' ou de 'Rasera' (criativo, eu sei), tenho getTotalYears('10/04/1989') anos, e sou nascido em e residente de São Paulo, capital. Já passei por muitos papéis na minha carreira, comecei em Engenharia de Software, depois tentei empreender em Data Science, depois fui para Gestão de Produto, onde passei alguns anos sendo tanto PM de produto próprio quanto sendo consultor para outras empresas, e recentemente entendi que o que eu gosto mesmo é de escrever software, então estou retornando às raízes! Fora isso, jogo video-games faz getTotalYears('10/04/1995') anos, e ultimamente meu principal jogo é o MMO Final Fantasy XIV.",
+    description:
+      "Olá, pessoal! Sou Pedro Rasera, pode chamar de 'Pedro' ou de 'Rasera' (criativo, eu sei), tenho getTotalYears('10/04/1989') anos, e sou nascido em e residente de São Paulo, capital. Já passei por muitos papéis na minha carreira, comecei em Engenharia de Software, depois tentei empreender em Data Science, depois fui para Gestão de Produto, onde passei alguns anos sendo tanto PM de produto próprio quanto sendo consultor para outras empresas, e recentemente entendi que o que eu gosto mesmo é de escrever software, então estou retornando às raízes! Fora isso, jogo video-games faz getTotalYears('10/04/1995') anos, e ultimamente meu principal jogo é o MMO Final Fantasy XIV.",
     social: 'https://www.linkedin.com/in/pedro-rasera-2970b968/',
     avatar: 'https://avatars.githubusercontent.com/u/6819599',
   },
