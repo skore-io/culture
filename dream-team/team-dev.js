@@ -156,4 +156,12 @@ const devTeam = [
     social: 'https://www.linkedin.com/in/pedro-rasera-2970b968/',
     avatar: 'https://avatars.githubusercontent.com/u/6819599',
   },
+  {
+    name: 'Fabio Junior da Silva',
+    role: devRoles.full_stack,
+    description: `Eae, sou o Fabio Jr. (Dev e não o cantor....), tenho getTotalYears('25/06/1984') anos sou formado em ADS e tenho 2 MBA's, Desenvolvimento de Software para Web
+    e Engenheiro de Dados Cloud. Trabalho na área de TI à mais de 10 anos. Moro em São Paulo mais precisamente em Osasco (OZ para os intimos), sou entusiasta em tecnologia e games, colecionador de consoles de mesa e portáteis, gosto de assistir filmes, séries, animes ler livros e mangás, e adoro um rodízio de comida Japonesa (fica a dica).`,
+    social: 'https://www.linkedin.com/in/fabiojrdasilva/',
+    avatar: 'https://avatars.githubusercontent.com/u/31805516'
+  }
 ]
