@@ -136,7 +136,7 @@ const devTeam = [
   },
   {
     name: 'Rodrigo Batini',
-    role: devRoles.full_stack,
+    role: devRoles.em,
     description: `Fala galera! Sou Rodrigo, mas todo mundo me chama de Batini - apesar que dado que já existe outro que pela primeira vez chegou antes de mim, talvez aqui seja diferente hahaha Sou apaixonado por música, jogos digitais e analógicos, filmes, séries e tudo que envolve Tolkien. Trabalho com tecnologia desde 2011, mas já passei por produto, comercial, financeiro, empreendi, um pouco de tudo e muito de nada hahaha E antes que eu me esqueça, VAI CORINTHIANS`,
     social: 'https://www.linkedin.com/in/rodrigo-batini-ba543061/',
     avatar: 'https://avatars.githubusercontent.com/u/4341744',
