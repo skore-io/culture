@@ -2,6 +2,8 @@
 
 A collection of guides, standards and rules.
 
+To access the website with the information compiled here, visit: https://skore-io.github.io/culture/
+
 ## Development
 
 ### Prerequisites
