@@ -155,13 +155,5 @@ const devTeam = [
       "Olá, pessoal! Sou Pedro Rasera, pode chamar de 'Pedro' ou de 'Rasera' (criativo, eu sei), tenho getTotalYears('10/04/1989') anos, e sou nascido em e residente de São Paulo, capital. Já passei por muitos papéis na minha carreira, comecei em Engenharia de Software, depois tentei empreender em Data Science, depois fui para Gestão de Produto, onde passei alguns anos sendo tanto PM de produto próprio quanto sendo consultor para outras empresas, e recentemente entendi que o que eu gosto mesmo é de escrever software, então estou retornando às raízes! Fora isso, jogo video-games faz getTotalYears('10/04/1995') anos, e ultimamente meu principal jogo é o MMO Final Fantasy XIV.",
     social: 'https://www.linkedin.com/in/pedro-rasera-2970b968/',
     avatar: 'https://i.imgur.com/mkcZZcW.png',
-  },
-  {
-    name: 'Fabio Junior da Silva',
-    role: devRoles.full_stack,
-    description: `Eae, sou o Fabio Jr. (Dev e não o cantor....), tenho getTotalYears('25/06/1984') anos sou formado em ADS e tenho 2 MBA's, Desenvolvimento de Software para Web
-    e Engenheiro de Dados Cloud. Trabalho na área de TI à mais de 10 anos. Moro em São Paulo mais precisamente em Osasco (OZ para os intimos), sou entusiasta em tecnologia e games, colecionador de consoles de mesa e portáteis, gosto de assistir filmes, séries, animes ler livros e mangás, e adoro um rodízio de comida Japonesa (fica a dica).`,
-    social: 'https://www.linkedin.com/in/fabiojrdasilva/',
-    avatar: 'https://avatars.githubusercontent.com/u/31805516'
   }
 ]
