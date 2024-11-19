@@ -53,19 +53,6 @@ const productTeam = [
     avatar: 'https://i.imgur.com/5EfpNty.png',
   },
   {
-    name: 'Guilherme Farina',
-    role: productRoles.designer,
-    description: `Meu nome é Guilherme Farina, daí você escolhe me chamar de Farina, Guifa, Gif, ja me perdi no personagem tem anos! KKK.
-      Sou o designer de produto do time e amo design em geral.
-      Como um bom geminiano, falo demais, faço piada demais, mas sou também muito prático e acho que isso me torna um bom revolvedor de problemas.
-      Então se deseja resolver algum problema daqui do trampo ou conselho sobre a vida, posso te ajudar (em conselhos amorosos não indico muito, pois sou muito drástico).
-      Sou apaixonado por música e artistas que não são hypados, meus amigos falam que escuto musicas da décima camada da deepweb, mas é bom, juro!
-      Além de música, sou a criança do tablet, faço tudo assistindo programas inúteis, que vai de patrulha do consumidor até coreanos solteiros em uma ilha deserta.
-      Tenho dois gatinhos, o Ponyo e o Kiki e todos os protótipos e telas que vocês veem e verão, são para pagar os sachê dos mesmos.`,
-    social: 'https://www.linkedin.com/in/guilherme-farina-2734329a',
-    avatar: 'https://i.imgur.com/hir4dcA.png',
-  },
-  {
     name: 'Rodrigo Fros',
     role: productRoles.designer,
     description: `Oi, meu nome é Rodrigo, mas se me chamarem pelo meu nome posso ter um delay pra atender porque acabei me acostumando a ouvir me chamarem de Fros ou Rô.
