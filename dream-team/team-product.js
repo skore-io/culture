@@ -63,4 +63,13 @@ const productTeam = [
     social: 'https://www.linkedin.com/in/rodrigofros',
     avatar: 'https://i.imgur.com/gOo62hB.jpg',
   },
+  {
+    name: 'Gustavo Dinelli',
+    role: productRoles.designer,
+    description: `Olá, meu nome é Gustavo, mas muitos me conhecem pelo sobrenome Dinelli. Formado em design gráfico e pós-graduado em UX. Com os avanços da tecnologia, fiz a transição do impresso e produtos físicos para o mundo digital.
+      Ao longo da minha carreira, tive a oportunidade de trabalhar com marcas renomadas como Disney, Marvel, Turma da Mônica, Globo, FIFA e diversos times de futebol. Atualmente, na Uol EdTech, já passei por todas as plataformas da empresa e participei de várias iniciativas, incluindo layout para PowerBI, criação de materiais de conteúdo, estudo de cores e desenvolvimento de logotipos para o marketing.
+      No meu tempo livre, sou um colecionador de moedas, cédulas, action figures e vinis (os famosos LPs). Meus hobbies incluem ouvir música (Rock, Blues, Jazz, Reggae, Indie Rock, Música Clássica e Eletrônica), assistir corridas como MotoGP, F1 e Turismo, além de jogar gêneros como gerenciamento de cidades, fps, corrida ou RPGs.`,
+    social: 'https://www.linkedin.com/in/gustavodinelli',
+    avatar: 'https://i.imgur.com/OEru0kL.png',
+  },
 ]
