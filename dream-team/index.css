@@ -52,8 +52,8 @@ h2 {
 }
 
 .card {
-  background-color: rgb(31 37 44 / 80%);
-  border-radius: 0.625em;
+  background-color: rgb(31 37 44 / 51%);
+  border-radius: 0.3em;
   border: 3px solid transparent;
   color: #d2d9e0;
   display: flex;
@@ -63,74 +63,124 @@ h2 {
   padding: 0.875em;
   position: relative;
   transition: 0.2s ease-out all;
-  height: 340px;
+  height: 360px;
 }
 
 .card:hover {
-  box-shadow: 1px 0 20px 2px #afb3b624;
-  border-color: #444c56;
-  transform: scale(1.05);
+  box-shadow: 0.1px 0 10px 0.1px #afb3b624;
+  transform: scale(1.01);
 }
 
 .card .content {
-  background-color: #444c56;
-  border-radius: 0.625em;
+  background-color: #444c5657;
+  border-radius: 0.3em;
   overflow: hidden;
-  display: block;
+  display: flex;
+  flex-direction: column;
   font-size: 14px;
   position: relative;
+  min-height: 180px;
+  max-height: 180px;
 }
 
 .card .scroll {
   overflow-y: auto;
-  height: 210px;
+  flex-grow: 1;
   padding: 1.25em 1em;
+  scrollbar-width: thin;
+  scrollbar-color: #626c74 transparent;
+  scroll-behavior: smooth;
 }
 
+.card .scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card .scroll::-webkit-scrollbar-thumb {
+  background: #626c74;
+  border-radius: 4px;
+}
+
+.card .scroll::-webkit-scrollbar-thumb:hover {
+  background: #4e565d;
+}
+
+.card .scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
 .card-footer {
-  align-items: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 0.938em;
   position: relative;
 }
 
+.info-section {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0.5em;
+}
+
 img.avatar {
   border-radius: 50%;
-  margin-right: 0.625em;
-  width: 3.125em;
-  height: 3.125em;
+  width: 3em;
+  height: 3em;
   object-fit: cover;
-  aspect-ratio: 1 / 1;
 }
 
 .author {
   display: flex;
   flex-direction: column;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-right: 6px;
+  text-align: left;
 }
 
 .name {
   color: #adbac7;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .role {
   color: ghostwhite;
-  line-height: 1;
-  font-size: 13px;
-  margin-top: 0.2rem;
+  font-size: 0.6rem;
+  margin-top: 0.2em;
 }
 
-.role:after {
-  content: '_';
+.social-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.8em;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #67d0b3;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #4caf50;
 }
 
 img.uol {
-  align-self: flex-end;
-  margin-left: auto;
-  margin-bottom: 0.625em;
-  width: 30%;
+  width: 50px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+img.uol:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {

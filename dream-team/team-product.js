@@ -1,8 +1,7 @@
 const productRoles = {
   gpm: 'Group Product Manager',
   pm: 'Product Manager',
-  project_manager: 'Project Manager',
-  designer: 'Product Designer',
+  ux: 'UX',
 }
 
 const productTeam = [
@@ -14,7 +13,7 @@ const productTeam = [
       Sou formado em Sistemas de Informação e MBA em Gestão de Projetos e Negócios.
       Trabalhei em Produtos nos últimos 10 anos de vida.
       Tenho muito mais hobbies do que tempo, e por isso cada hora estou priorizando um diferente, mas curto muito assistir futebol americano, tocar violão, games, muita série e principalmente viajar com a família.`,
-    social: 'https://www.linkedin.com/in/fabriziotassitano',
+    linkedin: 'https://www.linkedin.com/in/fabriziotassitano',
     avatar: 'https://i.imgur.com/OeaF3Tq.png',
   },
   {
@@ -29,7 +28,7 @@ const productTeam = [
       Sou uma pessoa feliz e realizada, sempre grato pelas bênçãos que recebo em minha vida.
       <br/>
       Este sou eu, e estou ansioso para conectar e aprender mais sobre vocês! Me chame para um bate-papo!`,
-    social: 'https://www.linkedin.com/in/thiago-cassimiro-vieira',
+    linkedin: 'https://www.linkedin.com/in/thiago-cassimiro-vieira',
     avatar: 'https://i.imgur.com/hwOGo9z.png',
   },
   {
@@ -41,35 +40,35 @@ const productTeam = [
       Sou formado em Ciência da Computação, fui desenvolvedor por alguns anos até migrar para área de Produto.
       Gosto bastante de cozinhar principalmente tudo que vai farinha, tipo massa e pão, também gosto de ler e assistir filmes e séries, quando tenho tempo.
       Uma curiosidade é que gosto de meios de transportes e cidades, tipo trem e metro, e meu sonho é poder viajar pelo Estado de SP pelas linhas férreas desativadas.`,
-    social: 'https://www.linkedin.com/in/giovanni-attina-do-nascimento-600b02109',
+    linkedin: 'https://www.linkedin.com/in/giovanni-attina-do-nascimento-600b02109',
     avatar: 'https://i.imgur.com/otJkCY2.png',
   },
   {
     name: 'Luíza Sernizon',
-    role: productRoles.project_manager,
+    role: productRoles.pm,
     description:
       'Oiee, meu nome é Luíza, mas quase todo mundo me chama de Lu. Sou mineira e amo bastante meu estado, mas também sou fascinada por viagens. Qualquer brecha que tenho estou na estrada! Sou bem curiosa e bem desinquieta, me formei em engenharia de controle e automação, fiz mestrado em engenharia elétrica, fui professora, desenvolvedora e pesquisadora, e depois disso vi que o que realmente gosto é de resolver problemas. Migrei para a gestão de projetos e agora estou me aventurando no mundo de produto :)',
-    social: 'https://www.linkedin.com/in/luizasernizonguimaraes',
+    linkedin: 'https://www.linkedin.com/in/luizasernizonguimaraes',
     avatar: 'https://i.imgur.com/5EfpNty.png',
   },
   {
     name: 'Rodrigo Fros',
-    role: productRoles.designer,
+    role: productRoles.ux,
     description: `Oi, meu nome é Rodrigo, mas se me chamarem pelo meu nome posso ter um delay pra atender porque acabei me acostumando a ouvir me chamarem de Fros ou Rô.
       Sou de Manaus e atualmente moro em São Paulo.
       Depois de alguns anos trabalhando como arquiteto, voltei pra área de design e tecnologia porque é minha paixão desde muito novo.
       Assim como meus colegas aqui, também gosto resolver problemas, e como isso gera dopamina, acaba sendo um pouco viciante, mas tento equilibrar minha vida com atividades físicas diárias e rolês com amigos.
       Gosto de conversar sobre tudo um pouco e ultimamente estou obcecado por livros e assuntos sobre psicologia, como comportamento humano e transtornos mentais.`,
-    social: 'https://www.linkedin.com/in/rodrigofros',
+    linkedin: 'https://www.linkedin.com/in/rodrigofros',
     avatar: 'https://i.imgur.com/gOo62hB.jpg',
   },
   {
     name: 'Gustavo Dinelli',
-    role: productRoles.designer,
+    role: productRoles.ux,
     description: `Olá, meu nome é Gustavo, mas muitos me conhecem pelo sobrenome Dinelli. Formado em design gráfico e pós-graduado em UX. Com os avanços da tecnologia, fiz a transição do impresso e produtos físicos para o mundo digital.
       Ao longo da minha carreira, tive a oportunidade de trabalhar com marcas renomadas como Disney, Marvel, Turma da Mônica, Globo, FIFA e diversos times de futebol. Atualmente, na Uol EdTech, já passei por todas as plataformas da empresa e participei de várias iniciativas, incluindo layout para PowerBI, criação de materiais de conteúdo, estudo de cores e desenvolvimento de logotipos para o marketing.
       No meu tempo livre, sou um colecionador de moedas, cédulas, action figures e vinis (os famosos LPs). Meus hobbies incluem ouvir música (Rock, Blues, Jazz, Reggae, Indie Rock, Música Clássica e Eletrônica), assistir corridas como MotoGP, F1 e Turismo, além de jogar gêneros como gerenciamento de cidades, fps, corrida ou RPGs.`,
-    social: 'https://www.linkedin.com/in/gustavodinelli',
+    linkedin: 'https://www.linkedin.com/in/gustavodinelli',
     avatar: 'https://i.imgur.com/OEru0kL.png',
   },
 ]

@@ -31,16 +31,37 @@ header_title: Nosso Dream Team 🚀
                 <p>${updatedDescription}</p>
               </div>
             </div>
-            <a class="card-footer" href="${member.social}" target="_blank" rel="noopener noreferrer">
-              <img class="avatar" src="${member.avatar}" alt="avatar">
-              <div class="author">
-                <span class="name">${member.name}</span>
-                <span class="role">${member.role}</span>
+            <div class="card-footer">
+              <div class="info-section">
+                <img class="avatar" src="${member.avatar}" alt="avatar">
+                <div class="author">
+                  <p class="name">${member.name}</p>
+                  <span class="role">${member.role}_</span>
+                </div>
               </div>
-              <img class="uol" src="https://i.imgur.com/8OjyFNE.png" alt="uol" />
-            </a>
+              <div class="social-section">
+                <div class="social-links">
+                  ${
+                    member.linkedin
+                      ? `<a href="${member.linkedin}" target="_blank" rel="noopener noreferrer">
+                          <i class="fab fa-linkedin"></i>
+                        </a>`
+                      : ''
+                  }
+                  ${
+                    member.github
+                      ? `<a href="${member.github}" target="_blank" rel="noopener noreferrer">
+                          <i class="fab fa-github"></i>
+                        </a>`
+                      : ''
+                  }
+                </div>
+                <img class="uol" src="https://i.imgur.com/8OjyFNE.png" alt="uol" />
+              </div>
+            </div>
           </div>
         `
+
         container.appendChild(colDiv)
       })
     }
@@ -48,7 +69,7 @@ header_title: Nosso Dream Team 🚀
 
   <div id="devTeamContainer" class="row">
     <div class="col-wide">
-      <h2 align="left">Pessoas da Engenharia_</h2>
+      <h2 align="left">Engenharia_</h2>
     </div>
 
     <script>
@@ -58,7 +79,7 @@ header_title: Nosso Dream Team 🚀
 
   <div id="productTeamContainer" class="row">
     <div class="col-wide">
-      <h2 class="row-product" align="left">Pessoas de Produto_</h2>
+      <h2 class="row-product" align="left">Produto_</h2>
     </div>
 
     <script>
@@ -68,7 +89,7 @@ header_title: Nosso Dream Team 🚀
 
   <div id="dataTeamContainer" class="row">
     <div class="col-wide">
-      <h2 class="row-data" align="left">Pessoas de Dados_</h2>
+      <h2 class="row-data" align="left">Dados_</h2>
     </div>
 
     <script>
@@ -78,7 +99,7 @@ header_title: Nosso Dream Team 🚀
 
   <div id="operationTeamContainer" class="row">
     <div class="col-wide">
-      <h2 class="row-operation" align="left">Pessoas de Operações_</h2>
+      <h2 class="row-operation" align="left">Operações_</h2>
     </div>
 
     <script>

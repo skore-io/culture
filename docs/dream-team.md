@@ -42,7 +42,8 @@ git checkout -b docs/{SEU_NOME}-profile
   name: 'Et Bilu',
   role: devRoles.full_stack,
   description: 'Lorem Ipsum...',
-  social: 'URL do linkedin ou github',
+  github: 'URL do github (se tiver)',
+  linkedin: 'URL do linkedin (se tiver)',
   avatar: 'URL de uma imagem'
 }
 ```
