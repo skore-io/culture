@@ -2,6 +2,7 @@ const productRoles = {
   gpm: 'Group Product Manager',
   pm: 'Product Manager',
   ux: 'UX',
+  ux_lead: 'UX Lead',
 }
 
 const productTeam = [
@@ -15,6 +16,17 @@ const productTeam = [
       Tenho muito mais hobbies do que tempo, e por isso cada hora estou priorizando um diferente, mas curto muito assistir futebol americano, tocar violão, games, muita série e principalmente viajar com a família.`,
     linkedin: 'https://www.linkedin.com/in/fabriziotassitano',
     avatar: 'https://i.imgur.com/OeaF3Tq.png',
+  },
+  {
+    name: 'Hendrik Funari',
+    role: productRoles.ux_lead,
+    description: `
+      Fala, pessoal! Sou o Hendrik, mas podem me chamar como preferirem — já ouvi de tudo, desde ‘Endrique’ até ‘Rendrick’, então fiquem à vontade!
+      Sou mineiro de nascença e sempre vivi em Minas Gerais; hoje moro em Uberlândia, cidade pela qual tenho um grande carinho.
+      Me formei em Sistemas de Informação pela UFU, mas foi no design que encontrei minha verdadeira paixão, onde já atuo há mais de getTotalYears('01/01/2018') anos.
+      Além disso, sou fã de viagens e corrida, e um dos meus maiores sonhos é participar das grandes maratonas pelo mundo!`,
+    linkedin: 'https://www.linkedin.com/in/rendrike',
+    avatar: 'https://i.imgur.com/5JeOq3X.png',
   },
   {
     name: 'Thiago Cassimiro',
