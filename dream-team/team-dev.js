@@ -174,4 +174,13 @@ const devTeam = [
     linkedin: 'https://www.linkedin.com/in/pedro-rasera-2970b968',
     avatar: 'https://i.imgur.com/mkcZZcW.png',
   },
+  {
+    name: 'Jeferson Nascimento',
+    role: devRoles.full_stack,
+    description: 
+      "E ai pessoal! Sou o Jeferson, tenho getTotalYears('14/04/1993) anos, sou formado em Sistemas da Informação e trabalho com desenvolvimento de software desde 2014. Já trabalhei com algumas linguagens em especial o PHP (que não vai morrer) e o maldito angularjs... A um tempo atrás, eu gostava muito de jogar video game (FIFA e COD), mas com a idade isso vai mudando e atualmente gosto de ler, assistir filmes/séries e alguns esportes, principalmente de futebol e F1.",
+    github: 'https://github.com/jeferson-n',
+    linkedin: 'https://www.linkedin.com/in/jeferson-nascimento-179b36149',
+    avatar: 'https://avatars.githubusercontent.com/u/18485370',
+  },
 ]
