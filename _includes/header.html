@@ -1,6 +1,46 @@
 <header>
-  <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Logo" />
-  <h1>{{ page.header_title | default: page.title }}</h1>
-</header>
+  <div class="header-container">
+    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Site Logo" class="site-logo" />
 
-<div class="divider"></div>
+    <nav class="topbar">
+      <ul class="nav-links">
+        <li>
+          <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}"> Home </a>
+        </li>
+        <li>
+          <a
+            href="{{ site.baseurl }}/dream-team"
+            class="{% if page.url == '/dream-team/' %}active{% endif %}"
+          >
+            Dream Team
+          </a>
+        </li>
+        <li>
+          <a
+            href="{{ site.baseurl }}/career-ladder"
+            class="{% if page.url == '/career-ladder/' %}active{% endif %}"
+          >
+            Career Ladder
+          </a>
+        </li>
+        <li>
+          <a
+            href="{{ site.baseurl }}/stacks"
+            class="{% if page.url == '/stacks/' %}active{% endif %}"
+          >
+            Stacks
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://learning.rocks/plataforma-lxm"
+            target="_blank"
+            class="{% if page.url == '/plataforma-lxm/' %}active{% endif %}"
+          >
+            Nosso Produto
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

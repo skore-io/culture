@@ -1,11 +1,10 @@
 services:
   jekyll:
-    image: jekyll/builder:stable
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - '4000:4000'
     volumes:
-      - .:/srv/jekyll
-    environment:
-      - PAGES_REPO_NWO=skore-io/culture
-      - JEKYLL_ENV=production
-    command: jekyll serve --watch --host 0.0.0.0
+      - .:/usr/src/app
+    command: bundle exec jekyll serve --host 0.0.0.0 --watch

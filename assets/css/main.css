@@ -71,15 +71,11 @@ body {
 }
 
 header {
+  background-color: transparent;
+  padding: 10px 20px;
   color: #fff;
   padding: 20px;
-  text-align: center;
   position: relative;
-}
-
-header h1 {
-  color: #fff;
-  text-align: center;
 }
 
 header:after {
@@ -95,7 +91,58 @@ header:after {
 
 header img {
   max-width: 100px;
-  margin: auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.topbar {
+  flex: unset;
+  text-align: center;
+}
+
+.site-logo {
+  max-width: 80px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--color-primary);
+}
+
+.nav-links li a.active {
+  color: var(--color-primary);
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.nav-links li a {
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
 }
 
 .home-content {
@@ -196,4 +243,46 @@ footer p {
   .home-content {
     width: 90%;
   }
+}
+
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2c2c54;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li span {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.sidebar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
 }
