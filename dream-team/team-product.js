@@ -64,17 +64,6 @@ const productTeam = [
     avatar: 'https://i.imgur.com/5EfpNty.png',
   },
   {
-    name: 'Rodrigo Fros',
-    role: productRoles.ux,
-    description: `Oi, meu nome é Rodrigo, mas se me chamarem pelo meu nome posso ter um delay pra atender porque acabei me acostumando a ouvir me chamarem de Fros ou Rô.
-      Sou de Manaus e atualmente moro em São Paulo.
-      Depois de alguns anos trabalhando como arquiteto, voltei pra área de design e tecnologia porque é minha paixão desde muito novo.
-      Assim como meus colegas aqui, também gosto resolver problemas, e como isso gera dopamina, acaba sendo um pouco viciante, mas tento equilibrar minha vida com atividades físicas diárias e rolês com amigos.
-      Gosto de conversar sobre tudo um pouco e ultimamente estou obcecado por livros e assuntos sobre psicologia, como comportamento humano e transtornos mentais.`,
-    linkedin: 'https://www.linkedin.com/in/rodrigofros',
-    avatar: 'https://i.imgur.com/gOo62hB.jpg',
-  },
-  {
     name: 'Gustavo Dinelli',
     role: productRoles.ux,
     description: `Olá, meu nome é Gustavo, mas muitos me conhecem pelo sobrenome Dinelli. Formado em design gráfico e pós-graduado em UX. Com os avanços da tecnologia, fiz a transição do impresso e produtos físicos para o mundo digital.
