@@ -34,6 +34,11 @@ h2 {
   margin: 0 auto;
 }
 
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
 .col,
 .col-wide {
   flex: 0 0 auto;

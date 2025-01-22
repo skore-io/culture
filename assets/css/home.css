@@ -1,6 +1,9 @@
 .home-content {
+  padding: 50px 0;
+  width: 70%;
+  position: relative;
   text-align: center;
-  padding: 40px 20px;
+  margin: auto;
 }
 
 .home-content .title {
