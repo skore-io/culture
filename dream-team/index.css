@@ -52,7 +52,7 @@ h2 {
 }
 
 .card {
-  background-color: rgb(31 37 44 / 51%);
+  background-color: rgb(31 37 44 / 73%);
   border-radius: 0.3em;
   border: 3px solid transparent;
   color: #d2d9e0;
@@ -108,6 +108,7 @@ h2 {
 .card .scroll::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .card-footer {
   display: flex;
   flex-direction: column;

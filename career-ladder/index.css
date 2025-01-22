@@ -159,7 +159,7 @@ section:nth-of-type(6) h2 {
 }
 
 .level {
-  background: #252526;
+  background-color: rgb(31 37 44 / 80%);
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -235,8 +235,8 @@ section:nth-of-type(6) h2 {
 }
 
 .job-description:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .job-description h4 {
@@ -274,8 +274,8 @@ section:nth-of-type(6) h2 {
 
 .job-description {
   padding: 20px;
-  background-color: #252526;
-  border-radius: 10px;
+  background-color: rgb(31 37 44 / 80%);
+  border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.3s,
@@ -336,17 +336,17 @@ section:nth-of-type(6) h2 {
 }
 
 .job-operational {
-  border-left: 4px solid var(--link-color);
+  border-left: 3px solid var(--link-color);
   color: var(--link-color) !important;
 }
 
 .job-tactical {
-  border-left: 4px solid #ff6f61;
+  border-left: 3px solid #ff6f61;
   color: #ff6f61 !important;
 }
 
 .job-strategic {
-  border-left: 4px solid #8bc34a;
+  border-left: 3px solid #8bc34a;
   color: #8bc34a !important;
 }
 
@@ -369,8 +369,8 @@ section:nth-of-type(6) h2 {
 }
 
 .role-description {
-  background: #252526;
-  border-radius: 15px;
+  background-color: rgb(31 37 44 / 80%);
+  border-radius: 5px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition:
@@ -391,8 +391,8 @@ section:nth-of-type(6) h2 {
 }
 
 .role-description:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .role-description h3 {
@@ -472,13 +472,13 @@ section:nth-of-type(6) h2 {
 }
 
 .raci-table th {
-  background-color: #333;
+  background-color: rgb(0 20 44);
   color: #fff;
   font-weight: bold;
 }
 
 .raci-table td {
-  background-color: #252526;
+  background-color: rgb(31 37 44 / 80%);
   color: #d4d4d4;
 }
 

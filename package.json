@@ -1,0 +1,16 @@
+{
+  "name": "culture",
+  "version": "1.0.0",
+  "description": "A collection of guides, standards and rules.",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "npx prettier --write \"**/*.{js,ts,html,css}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
