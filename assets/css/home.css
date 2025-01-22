@@ -1,0 +1,70 @@
+.home-content {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.home-content .title {
+  font-size: 22px;
+  color: #ffcb00;
+  margin-bottom: 20px;
+}
+
+.home-content .intro {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.home-content .fun-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.home-content .card {
+  background-color: #252c32;
+  border: 1px solid #3a3f47;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 calc(33.333% - 40px);
+  max-width: calc(33.333% - 40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-content .card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.home-content .card .icon {
+  font-size: 2.5rem;
+  color: #67d0b3;
+  margin-bottom: 15px;
+}
+
+.home-content .card h3 {
+  font-size: 1.5rem;
+  color: #ffcb00;
+  margin-bottom: 10px;
+}
+
+.home-content .card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+@media (max-width: 992px) {
+  .home-content .card {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
