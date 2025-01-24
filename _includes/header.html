@@ -1,48 +1,55 @@
-<header>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/navbar.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/navbar.css" />
 
+<header>
   <div class="header-container">
     <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Site Logo" class="site-logo" />
+
+    <div id="hamburger-btn" class="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
     <nav class="topbar">
       <ul class="nav-links">
         <li>
-          <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}"> Home </a>
-        </li>
-        <li>
-          <a
-            href="{{ site.baseurl }}/dream-team"
-            class="{% if page.url == '/dream-team/' %}active{% endif %}"
-          >
-            Dream Team
+          <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">
+            <i class="fas fa-home"></i> Home
           </a>
         </li>
         <li>
-          <a
-            href="{{ site.baseurl }}/career-ladder"
-            class="{% if page.url == '/career-ladder/' %}active{% endif %}"
-          >
-            Career Ladder
+          <a href="{{ site.baseurl }}/dream-team" class="{% if page.url == '/dream-team/' %}active{% endif %}">
+            <i class="fas fa-users"></i> Dream Team
           </a>
         </li>
         <li>
-          <a
-            href="{{ site.baseurl }}/stacks"
-            class="{% if page.url == '/stacks/' %}active{% endif %}"
-          >
-            Stacks
+          <a href="{{ site.baseurl }}/career-ladder" class="{% if page.url == '/career-ladder/' %}active{% endif %}">
+            <i class="fas fa-sitemap"></i> Career Ladder
           </a>
         </li>
         <li>
-          <a
-            href="https://learning.rocks/plataforma-lxm"
-            target="_blank"
-            class="{% if page.url == '/plataforma-lxm/' %}active{% endif %}"
-          >
-            Product
+          <a href="{{ site.baseurl }}/stacks" class="{% if page.url == '/stacks/' %}active{% endif %}">
+            <i class="fas fa-layer-group"></i> Stacks
+          </a>
+        </li>
+        <li>
+          <a href="https://learning.rocks/plataforma-lxm" target="_blank" class="{% if page.url == '/plataforma-lxm/' %}active{% endif %}">
+            <i class="fas fa-box"></i> Product
           </a>
         </li>
       </ul>
     </nav>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburgerBtn = document.getElementById('hamburger-btn')
+      const navLinks = document.querySelector('.nav-links')
+
+      hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active')
+        navLinks.classList.toggle('open')
+      })
+    })
+  </script>
 </header>

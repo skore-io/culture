@@ -68,6 +68,10 @@
 }
 
 @media (max-width: 768px) {
+  .home-content {
+    width: 90%;
+  }
+
   .home-content .card {
     flex: 1 1 100%;
     max-width: 100%;
