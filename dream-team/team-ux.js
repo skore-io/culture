@@ -27,8 +27,9 @@ const uxTeam = [
   {
     name: 'Iryna Bastos',
     role: uxRoles.ux,
-    description: 'Oie! Me chamo Iryna mas pode me chamar pelo meu apelido que é Iry. Tenho 25 anos, sou do Rio de Janeiro e formada em Comunicação Visual Design pela UFRJ. Concilio minha vida sendo Product Designer e nas horas vagas artista 3D, que é uma das minhas paixões dentro da arte. Além disos, também tento tirar um tempinho pra fazer cerâmica, aprender sobre música, pintura, serigrafia e outras coisas a mais, é terapêutico!',
+    description: 'Oie! Me chamo Iryna mas pode me chamar pelo meu apelido que é Iry. Tenho 25 anos, sou do Rio de Janeiro e formada em Comunicação Visual Design pela UFRJ. Concilio minha vida sendo Product Designer e nas horas vagas artista 3D, que é uma das minhas paixões dentro da arte. Além disso, também tento tirar um tempinho pra fazer cerâmica, aprender sobre música, pintura, serigrafia e outras coisas a mais, é terapêutico!',
     avatar: 'https://i.imgur.com/QDL3ESu.jpeg',
+    linkedin: 'https://www.linkedin.com/in/iryna-bastos-%F0%9F%8F%B3%EF%B8%8F%E2%80%8D%E2%9A%A7%EF%B8%8F-4382461a3'
   }
 
 ]
