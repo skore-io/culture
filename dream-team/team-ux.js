@@ -24,4 +24,11 @@ const uxTeam = [
     linkedin: 'https://www.linkedin.com/in/gustavodinelli',
     avatar: 'https://i.imgur.com/OEru0kL.png',
   },
+  {
+    name: 'Iryna Bastos',
+    role: uxRoles.ux,
+    description: 'Oie! Me chamo Iryna mas pode me chamar pelo meu apelido que é Iry. Tenho 25 anos, sou do Rio de Janeiro e formada em Comunicação Visual Design pela UFRJ. Concilio minha vida sendo Product Designer e nas horas vagas artista 3D, que é uma das minhas paixões dentro da arte. Além disos, também tento tirar um tempinho pra fazer cerâmica, aprender sobre música, pintura, serigrafia e outras coisas a mais, é terapêutico!',
+    avatar: 'https://imgur.com/a/UEEiTla.png',
+  }
+
 ]
