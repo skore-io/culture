@@ -1,5 +1,14 @@
 FROM ruby:3.1
 
+# Copy zscaler certificates to container
+COPY .dockerdev/certificates /certificates
+
+# Update trusted certificates if any exist
+RUN if [ -d /certificates ] && [ "$(ls -A /certificates/*.crt 2>/dev/null)" ]; then \
+  cp /certificates/*.crt /usr/local/share/ca-certificates/ && \
+  update-ca-certificates; \
+fi
+
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
