@@ -11,4 +11,6 @@ services:
       - PAGES_REPO_NWO=skore-io/culture
       - JEKYLL_ENV=production
       - JEKYLL_FORCE_POLLING=true
+      - SSL_CERT_DIR=/etc/ssl/certs
+      - SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
     command: bundle exec jekyll serve --host 0.0.0.0 --watch
