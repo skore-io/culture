@@ -1,7 +1,7 @@
 ## Dream Team
 
 Nossa página com todas as pessoas de todas as
-áreas do LXM: https://skore-io.github.io/culture/dream-team/index.html
+áreas do LXM: https://skore-io.github.io/culture/dream-team
 
 Como parte do onboarding de um novo colaborador, nós usamos essa página do dream team para que a pessoa faça seu `first commit`. Assim ela já testa seu acesso ao GitHub, abre seu primeiro Pull Request e conta um pouco de si mesma como forma de apresentação 🙂
 
@@ -56,7 +56,7 @@ Caso queira adicionar idade ou tempo em que atua na área, use `getTotalYears('d
 }
 ```
 
-5. Siga os passos do README.md para rodar o projeto, e abra o caminho `/culture/dream-team/` no seu navegador para validar se está tudo correto!
+5. Siga os passos do [README](../README.md) para rodar o projeto, e abra o caminho `/culture/dream-team/` no seu navegador para validar se está tudo correto!
 
    Validar o que fazemos é uma ação muito importante em nosso dia-a-dia 😉
 
