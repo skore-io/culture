@@ -185,7 +185,12 @@ const devTeam = [
   {
     name: 'Dominic Monteiro',
     role: devRoles.em,
-    description: `Aoba, bão? Meu nome é Dominic, mas pode me chamar de Dom. Possuo duas formação, sendo Engenharia da Computação e Gestão & Empreendedorismo. Trabalho com tecnologia desde 2016, tive experiências nos ramos da educação e bancário. No tempo livre costumo pescar, andar de bike, estudar alguma tecnologia ou viajar para algum cidade interiorana para tomar cerveja/chopp artesanal. PS: Vou cobrar R$5 cada vez que me chamar de Toretto.`,
+    description: `Aoba, bão?
+    Meu nome é Dominic, mas pode me chamar de Dom.
+    Possuo duas formações: Engenharia da Computação e Gestão & Empreendedorismo.
+    Trabalho com tecnologia desde 2016 e tive experiências nos ramos da educação e bancário.
+    No tempo livre, costumo pescar, andar de bike, estudar alguma tecnologia ou viajar para alguma cidade interiorana para tomar cerveja/chopp artesanal.
+    PS: Vou cobrar R$5 cada vez que me chamar de Toretto! hahah`,
     github: 'https://github.com/dominicmonteiro',
     linkedin: 'https://www.linkedin.com/in/dominic-monteiro',
     avatar: 'https://avatars.githubusercontent.com/u/38115285',
