@@ -197,7 +197,7 @@ const devTeam = [
   },
   {
     name: 'Thiago Freitas Carneiro',
-    role: devRoles.em,
+    role: devRoles.full_stack,
     description: `Faaaaala pessoal, me chamo Thiago, possuo duas formações, 
     Ciências contábeis e Analise e Desenvolvimento de Sistemas, sou um cara tranquilo, gosto de ler, 
     assistir filme, viajar e jogar video game. Gosto de futebol e torço pro maior time do Brasil, A
