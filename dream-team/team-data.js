@@ -32,4 +32,13 @@ const dataTeam = [
     linkedin: 'https://www.linkedin.com/in/lucasbernardess',
     avatar: 'https://avatars.githubusercontent.com/u/145584808',
   },
+  {
+  name: 'Keven Oliveira',
+  role: dataRoles.da,
+  description:
+    "Opaa galera! Sou o Keven, tenho getTotalYears('04/05/1999'), formado em ADS e com pós em CX. Sou paulista da capital, curto fazer churrasco e, agora, estou me arriscando em fazer pizza! Além disso, curto sempre estar em família, curtindo uma bom som, filme, praia, seja lá o que for, o importante no final é estar rodeado de pessoas boas!!",
+  github: 'https://github.com/KevenPOliveira',
+  linkedin: 'https://www.linkedin.com/in/keven-oliveira',
+  avatar: 'https://avatars.githubusercontent.com/u/206888670?v=4',
+},
 ]
