@@ -180,7 +180,7 @@ const devTeam = [
       "Opa, cês tão bem? Me chamo Matheus, tenho getTotalYears('07/05/2004') anos e sou de São Paulo. Sou envolvido com programação desde os 14 anos e amo muito isso. Levo a sério aquele papo de mudar o mundo através da tecnologia e deixar minha marca nele. Já trabalhei com várias coisas: desenvolvimento web, mobile e até para TVs. Gosto muito de jogar basquete (mesmo sem ter altura pra isso), passar um tempo de qualidade com a família e qualquer programa de fim de semana que envolva água. Tô sempre na água que nem peixe!",
     github: 'https://github.com/Borgeta-code',
     linkedin: 'https://www.linkedin.com/in/matheus-borges-guedes/',
-    avatar: 'https://avatars.githubusercontent.com/u/107590628'
+    avatar: 'https://avatars.githubusercontent.com/u/107590628',
   },
   {
     name: 'Dominic Monteiro',
