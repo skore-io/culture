@@ -195,4 +195,15 @@ const devTeam = [
     linkedin: 'https://www.linkedin.com/in/dominic-monteiro',
     avatar: 'https://avatars.githubusercontent.com/u/38115285',
   },
+  {
+    name: 'Thiago Freitas Carneiro',
+    role: devRoles.full_stack,
+    description: `Faaaaala pessoal, me chamo Thiago, possuo duas formações, 
+    Ciências contábeis e Analise e Desenvolvimento de Sistemas, sou um cara tranquilo, gosto de ler, 
+    assistir filme, viajar e jogar video game. Gosto de futebol e torço pro maior time do Brasil, A
+    quele que tem dois mundiais :D `,
+    github: 'https://github.com/thiagofreitascarneiro',
+    linkedin: 'https://www.linkedin.com/in/thiago-freitas-carneiro-39359270/',
+    avatar: 'https://github.com/thiagofreitascarneiro.png',
+  },
 ]
