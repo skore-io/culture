@@ -33,4 +33,13 @@ const uxTeam = [
     linkedin:
       'https://www.linkedin.com/in/iryna-bastos-%F0%9F%8F%B3%EF%B8%8F%E2%80%8D%E2%9A%A7%EF%B8%8F-4382461a3',
   },
+  {
+    name: 'Luciana Guedes',
+    role: uxRoles.ux,
+    description:
+      'Alô! Sou a Luciana, tenho 29 anos, natural do Pará e criada no Amapá. Sou cientista social de formação, com atuação em arqueologia e antropologia. Atuo como designer desde 2019, com foco em UI e visual. Gosto muito de ficar em casa vendo tv, ouvindo música ou assistindo o Mengão. Porém, não nego uma cerveja, praia, banho de rio, alguns shows, ficar horas numa mesa batendo papo e falando besteira.',
+    avatar: 'https://i.imgur.com/bV8mB62.png',
+    linkedin:
+      'https://www.linkedin.com/in/lucianaguedes01/',
+  },
 ]
