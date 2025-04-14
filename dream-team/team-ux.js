@@ -36,10 +36,12 @@ const uxTeam = [
   {
     name: 'Luciana Guedes',
     role: uxRoles.ux,
-    description:
-      'Alô! Sou a Luciana, tenho getTotalYears('01/01/1996') anos, natural do Pará e criada no Amapá. Sou cientista social de formação, com atuação em arqueologia e antropologia. Atuo como designer desde 2019, com foco em UI e visual. Gosto muito de ficar em casa vendo tv, ouvindo música ou assistindo o Mengão. Porém, não nego uma cerveja, praia, banho de rio, alguns shows, ficar horas numa mesa batendo papo e falando besteira.',
+    description: `Alô! Sou a Luciana, tenho getTotalYears('01/01/1996') anos, natural do Pará e criada no Amapá.
+        Sou cientista social de formação, com atuação em arqueologia e antropologia.
+        Atuo como designer desde 2019, com foco em UI e visual.
+        Gosto muito de ficar em casa vendo tv, ouvindo música ou assistindo o Mengão.
+        Porém, não nego uma cerveja, praia, banho de rio, alguns shows, ficar horas numa mesa batendo papo e falando besteira.`,
     avatar: 'https://i.imgur.com/bV8mB62.png',
-    linkedin:
-      'https://www.linkedin.com/in/lucianaguedes01/',
+    linkedin: 'https://www.linkedin.com/in/lucianaguedes01/',
   },
 ]
