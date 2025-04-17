@@ -41,4 +41,13 @@ const dataTeam = [
     linkedin: 'https://www.linkedin.com/in/keven-oliveira',
     avatar: 'https://avatars.githubusercontent.com/u/206888670?v=4',
   },
+  {
+    name: 'Luiz Felipe Baracat Iavarone',
+    role: dataRoles.de,
+    description:
+      "Muito prazer, sou o Luiz, nasci em Belo Horizonte, mas de mineiro só tenho o documento. Tenho hoje getTotalYears('27/04/1997') anos. Sou muito fã de sair para comer, conhecer restaurantes e culinárias novas, e me amarro em um churrasco! Sou um geek nato, adoro animes e jogos — principalmente jogos competitivos de FPS e RPGs. Por isso, muitos dos meus círculos sociais acabam sendo voltados para essa área! Sou engenheiro de dados há getTotalYears('19/02/2019') anos. Atuei com diversas stacks diferentes, então gosto de coisas novas e curto acompanhar tendências e novas tecnologias! ",
+    github: 'https://github.com/LuizIavarone',
+    linkedin: 'https://www.linkedin.com/in/luiz-iavarone',
+    avatar: 'https://avatars.githubusercontent.com/u/50239255?v=4',
+  },
 ]
