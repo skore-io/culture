@@ -198,12 +198,22 @@ const devTeam = [
   {
     name: 'Thiago Freitas Carneiro',
     role: devRoles.full_stack,
-    description: `Faaaaala pessoal, me chamo Thiago, possuo duas formações, 
-    Ciências contábeis e Analise e Desenvolvimento de Sistemas, sou um cara tranquilo, gosto de ler, 
+    description: `Faaaaala pessoal, me chamo Thiago, possuo duas formações,
+    Ciências contábeis e Analise e Desenvolvimento de Sistemas, sou um cara tranquilo, gosto de ler,
     assistir filme, viajar e jogar video game. Gosto de futebol e torço pro maior time do Brasil, A
     quele que tem dois mundiais :D `,
     github: 'https://github.com/thiagofreitascarneiro',
     linkedin: 'https://www.linkedin.com/in/thiago-freitas-carneiro-39359270/',
     avatar: 'https://github.com/thiagofreitascarneiro.png',
+  },
+  {
+    name: 'Thiago Cacio Gomes Sena',
+    role: devRoles.full_stack,
+    description: `Oba! Sou o Thiago, sou um aspirante a polimata e poliglota. Gosto de xadrez, café, moda, livros, etc.
+    Trabalho com desenvolvimento desde 2022. Minha cor favorita é verde e tenho um livro de ficção científica infantojuvenil publicado.
+    Chamado Timerson Cronos.`,
+    github: 'https://github.com/NihilLeaf',
+    linkedin: 'https://br.linkedin.com/in/thiagocacio',
+    avatar: 'https://github.com/NihilLeaf.png',
   },
 ]
