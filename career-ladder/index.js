@@ -159,7 +159,7 @@ const jobs = [
     ],
     behaviors: [
       'Representar o tribo de desenvolvimento na alta gestão.',
-      'Definir a visão e direção geral do tribo.',
+      'Definir a visão e direção geral da tribo.',
       'Tomar decisões estratégicas críticas.',
       'Desenvolver líderes e promover a cultura de inovação.',
       'Garantir que a estratégia do tribo esteja alinhada com a melhoria da experiência do cliente.',
@@ -194,14 +194,14 @@ const jobs = [
     description:
       'O Diretor de Desenvolvimento é responsável pela visão e direção geral do tribo de desenvolvimento. Ele garante a execução da estratégia da empresa e promove a inovação contínua.',
     responsibilities: [
-      'Definir a visão e direção geral do tribo.',
+      'Definir a visão e direção geral da tribo.',
       'Promover a inovação contínua.',
       'Garantir a execução da estratégia da empresa.',
       'Representar o tribo na alta gestão.',
     ],
     behaviors: [
       'Representar o tribo de desenvolvimento na alta gestão.',
-      'Definir a visão e direção geral do tribo.',
+      'Definir a visão e direção geral da tribo.',
       'Tomar decisões estratégicas críticas.',
       'Desenvolver líderes e promover a cultura de inovação.',
       'Garantir que a estratégia do tribo esteja alinhada com a melhoria da experiência do cliente.',
@@ -551,25 +551,48 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function createJobElement(job) {
+    const isGestor = ['coordinator', 'manager', 'general_manager', 'director'].includes(job.id)
+    const levelMap = {
+      operational: {
+        icon: isGestor ? 'supervisor_account' : 'check_circle',
+        class: 'level-operational',
+      },
+      tactical: { icon: isGestor ? 'groups' : 'laptop_mac', class: 'level-tactical' },
+      strategic: { icon: isGestor ? 'groups' : 'laptop_mac', class: 'level-strategic' },
+    }
+    const level = levelMap[job.level] || levelMap.operational
+
     const jobElement = document.createElement('div')
-    jobElement.classList.add('job-description', `job-${job.level}`)
+    jobElement.classList.add('job-card', level.class)
     jobElement.id = `description_${job.id}`
 
     jobElement.innerHTML = `
-      <h4>${job.name}</h4>
-      <p>${job.description}</p>
-      <button class="toggle-details"><span class="material-icons">expand_more</span></button>
-      <div class="competencies">
-        <h5>Responsabilidades:</h5>
-        <ul>
-          ${job.responsibilities.map((item) => `<li>${item}</li>`).join('')}
-        </ul>
-        <h5>Comportamentos:</h5>
-        <ul>
-          ${job.behaviors.map((item) => `<li>${item}</li>`).join('')}
-        </ul>
+      <div style="flex:1">
+        <div class="job-title">
+          <span class="material-icons level-icon">${level.icon}</span>
+          ${job.name}
+          <button class="toggle-details" title="Ver mais" aria-expanded="false" aria-controls="details_${job.id}">
+            <span class="material-icons">expand_more</span>
+          </button>
+        </div>
+        <div class="job-desc">${job.description}</div>
+        <div class="job-details" id="details_${job.id}">
+          <div class="job-section-title"><span class="material-icons">checklist</span>Responsibilities</div>
+          <ul class="job-list" style="margin-bottom: 15px;">
+            ${job.responsibilities.map((item) => `<li><span class="material-icons">check</span>${item}</li>`).join('')}
+          </ul>
+          <div class="job-section-title"><span class="material-icons">psychology</span>Behaviors</div>
+          <ul class="job-list">
+            ${job.behaviors.map((item) => `<li><span class="material-icons">check</span>${item}</li>`).join('')}
+          </ul>
+        </div>
       </div>
     `
+
+    jobElement.querySelector('.toggle-details').onclick = function () {
+      jobElement.classList.toggle('expanded')
+      this.setAttribute('aria-expanded', jobElement.classList.contains('expanded'))
+    }
 
     return jobElement
   }
@@ -585,22 +608,6 @@ document.addEventListener('DOMContentLoaded', function () {
       </ul>
     `
     return roleElement
-  }
-
-  function expandJobDescription() {
-    document.querySelectorAll('.toggle-details').forEach((button) => {
-      button.addEventListener('click', () => {
-        const card = button.closest('.job-description')
-        const details = button.nextElementSibling
-        const isExpanded = details.classList.contains('expanded')
-
-        card.classList.toggle('expanded', !isExpanded)
-        details.classList.toggle('expanded', !isExpanded)
-        button.querySelector('.material-icons').textContent = isExpanded
-          ? 'expand_more'
-          : 'expand_less'
-      })
-    })
   }
 
   function filterTable() {
@@ -643,7 +650,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   renderJobs()
-  expandJobDescription()
   renderFunctionalRoles()
   renderRaciTable()
 })
