@@ -208,4 +208,16 @@ const devTeam = [
     linkedin: 'https://br.linkedin.com/in/thiagocacio',
     avatar: 'https://github.com/NihilLeaf.png',
   },
+  {
+    name: 'Caio Ximenes',
+    role: devRoles.full_stack,
+    description: `Opa, pessoal! Tranquilidade?
+    Me chamo Caio e comecei a estudar programação e fazer freelas por conta própria em 2018. Já em 2019/2020, passei a atuar de forma mais profissional na área.
+    Sou apaixonado por tecnologia e cultura pop — fã de Fullmetal Alchemist e completamente vidrado na franquia Kingdom Hearts.
+    Nas horas vagas, curto jogar videogame/PC, assistir animes e séries, e até mesmo aproveitar o tempo livre pra estudar um pouco mais (sim, eu gosto mesmo!).
+    Sou do Rio de Janeiro - RJ, mais precisamente da Ilha do Governador, no Morro do Dendê, onde vivi a maior parte da minha vida. Atualmente, moro em São Paulo - SP, em busca de novos desafios e oportunidades.`,
+    github: 'https://github.com/caioalvesdev',
+    linkedin: 'https://br.linkedin.com/in/caioximenes',
+    avatar: 'https://github.com/caioalvesdev.png',
+  },
 ]
