@@ -6,115 +6,493 @@ header_title: Nosso Dream Team 🚀
 
 <section class="container">
   <link rel="stylesheet" href="index.css" />
-  <script src="team-dev.js"></script>
-  <script src="team-product.js"></script>
-  <script src="team-ux.js"></script>
-  <script src="team-data.js"></script>
-  <script src="team-operation.js"></script>
   <script src="util.js"></script>
+  <script type="module">
+    import { tribes, squads } from '/culture/dream-team/tribes.js'
+    import { devTeam } from '/culture/dream-team/team-dev.js'
+    import { productTeam } from '/culture/dream-team/team-product.js'
+    import { uxTeam } from '/culture/dream-team/team-ux.js'
+    import { dataTeam } from '/culture/dream-team/team-data.js'
 
-  <script>
-    function renderTeam(containerId, team) {
-      const container = document.getElementById(containerId)
+    function renderMember(member) {
+      const updatedDescription = member.description.replace(
+        /getTotalYears\('(\d{2}\/\d{2}\/\d{4})'\)/g,
+        (match, birthDateString) => `${getTotalYears(birthDateString)}`,
+      )
 
-      team.forEach((member) => {
-        const updatedDescription = member.description.replace(
-          /getTotalYears\('(\d{2}\/\d{2}\/\d{4})'\)/g,
-          (match, birthDateString) => `${getTotalYears(birthDateString)}`,
-        )
-
-        const colDiv = document.createElement('div')
-        colDiv.classList.add('col')
-        colDiv.innerHTML = `
-          <div class="card">
-            <div class="content">
-              <div class="scroll">
-                <p>${updatedDescription}</p>
+      const memberId = `member-${member.name.toLowerCase().replace(/\s+/g, '-')}`
+      const colDiv = document.createElement('div')
+      colDiv.classList.add('col')
+      colDiv.id = memberId
+      colDiv.innerHTML = `
+        <div class="card">
+          <div class="content">
+            <div class="scroll">
+              <p>${updatedDescription}</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="info-section">
+              <img class="avatar" src="${member.avatar}" alt="avatar">
+              <div class="author">
+                <p class="name">${member.name}</p>
+                <span class="role">${member.role}_</span>
               </div>
             </div>
-            <div class="card-footer">
-              <div class="info-section">
-                <img class="avatar" src="${member.avatar}" alt="avatar">
-                <div class="author">
-                  <p class="name">${member.name}</p>
-                  <span class="role">${member.role}_</span>
-                </div>
+            <div class="social-section">
+              <div class="social-links">
+                ${
+                  member.linkedin
+                    ? `<a href="${member.linkedin}" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                      </a>`
+                    : ''
+                }
+                ${
+                  member.github
+                    ? `<a href="${member.github}" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                      </a>`
+                    : ''
+                }
               </div>
-              <div class="social-section">
-                <div class="social-links">
-                  ${
-                    member.linkedin
-                      ? `<a href="${member.linkedin}" target="_blank" rel="noopener noreferrer">
-                          <i class="fab fa-linkedin"></i>
-                        </a>`
-                      : ''
-                  }
-                  ${
-                    member.github
-                      ? `<a href="${member.github}" target="_blank" rel="noopener noreferrer">
-                          <i class="fab fa-github"></i>
-                        </a>`
-                      : ''
-                  }
+              <img class="uol" src="https://i.imgur.com/8OjyFNE.png" alt="uol" />
+            </div>
+          </div>
+        </div>
+      `
+
+      return colDiv
+    }
+
+    function groupMembersByTribeAndSquad(allMembers) {
+      const grouped = {}
+
+      allMembers.forEach((member) => {
+        const tribeKey = member.tribeKey || 'outros'
+        const squadKey = member.squadKey || 'sem-squad'
+
+        if (!grouped[tribeKey]) {
+          grouped[tribeKey] = {}
+        }
+
+        if (!grouped[tribeKey][squadKey]) {
+          grouped[tribeKey][squadKey] = []
+        }
+
+        grouped[tribeKey][squadKey].push(member)
+      })
+
+      return grouped
+    }
+
+    function getTribeLeadership(tribeKey, allMembers) {
+      const leadership = {
+        gpm: null,
+        emSr: null,
+        uxLead: null,
+        pmm: null,
+        da: null,
+      }
+
+      allMembers.forEach((member) => {
+        // Buscar membros da tribo ou líderes sem squadKey (que podem ser líderes da tribo)
+        const isFromTribe = member.tribeKey === tribeKey
+        const isLeaderWithoutSquad = !member.squadKey && (member.role?.toLowerCase().includes('group product manager') ||
+                                                           member.role?.toLowerCase().includes('gpm') ||
+                                                           member.role?.toLowerCase().includes('ux lead') ||
+                                                           member.role?.toLowerCase().includes('data lead'))
+
+        if (!isFromTribe && !isLeaderWithoutSquad) return
+
+        const role = member.role?.toLowerCase() || ''
+        if ((role.includes('group product manager') || role.includes('gpm')) && !leadership.gpm) {
+          leadership.gpm = member
+        } else if ((role.includes('engineering manager') || role.includes('em')) && (role.includes('head') || role.includes('sr') || role.includes('senior'))) {
+          if (!leadership.emSr) {
+            leadership.emSr = member
+          }
+        } else if (role.includes('ux lead') && !leadership.uxLead) {
+          leadership.uxLead = member
+        } else if ((role.includes('product marketing') || role.includes('pmm')) && !leadership.pmm) {
+          leadership.pmm = member
+        } else if ((role.includes('data analytics') || role.includes('data lead') || role.includes('data engineer')) && !leadership.da) {
+          leadership.da = member
+        }
+      })
+
+      return leadership
+    }
+
+    function getTribeSquads(tribeKey, squadsData, groupedMembers, leadership) {
+      const tribeSquads = []
+      // Criar lista de IDs dos líderes da tribo para excluir das squads
+      const leaderIds = new Set()
+      Object.values(leadership).forEach(leader => {
+        if (leader) {
+          leaderIds.add(leader.name)
+        }
+      })
+
+      Object.keys(squadsData).forEach((squadKey) => {
+        const squad = squadsData[squadKey]
+        if (squad.tribeKey === tribeKey) {
+          let members = groupedMembers[tribeKey]?.[squadKey] || []
+          // Remover líderes da tribo das squads
+          members = members.filter(member => !leaderIds.has(member.name))
+          if (members.length > 0) {
+            tribeSquads.push({ squad, members, squadKey })
+          }
+        }
+      })
+      return tribeSquads
+    }
+
+    function groupMembersByRole(members) {
+      const roleMapping = {
+        'pm': ['product manager', 'pm', 'gpm'],
+        'em': ['engineering manager', 'em'],
+        'pd': ['ux', 'product designer', 'designer'],
+        'tl': ['tech lead', 'tl'],
+        'dev': ['developer', 'dev', 'frontend', 'backend', 'full stack', 'qa'],
+      }
+
+      const byRole = {
+        'PM': [],
+        'EM': [],
+        'PD': [],
+        'TL': [],
+        'Dev': [],
+      }
+
+      members.forEach((member) => {
+        const role = (member.role || '').toLowerCase()
+        let assigned = false
+
+        Object.keys(roleMapping).forEach((key) => {
+          if (!assigned && roleMapping[key].some(r => role.includes(r))) {
+            const roleKey = key.toUpperCase()
+            if (roleKey === 'PM') byRole['PM'].push(member)
+            else if (roleKey === 'EM') byRole['EM'].push(member)
+            else if (roleKey === 'PD') byRole['PD'].push(member)
+            else if (roleKey === 'TL') byRole['TL'].push(member)
+            else if (roleKey === 'DEV') byRole['Dev'].push(member)
+            assigned = true
+          }
+        })
+
+        if (!assigned) {
+          byRole['Dev'].push(member)
+        }
+      })
+
+      return byRole
+    }
+
+    function renderPersonNode(member, isLeader) {
+      const nodeClass = isLeader ? 'person-node leader-node' : 'person-node member-node'
+      const iconClass = isLeader ? 'person-icon leader-icon' : 'person-icon member-icon'
+      const memberId = `member-${member.name.toLowerCase().replace(/\s+/g, '-')}`
+      return `
+        <div class="${nodeClass}" title="${member.name} - ${member.role}" onclick="scrollToMember('${memberId}')">
+          <svg class="${iconClass}" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="35" r="18" fill="currentColor" opacity="0.9"/>
+            <ellipse cx="50" cy="75" rx="30" ry="25" fill="currentColor" opacity="0.9"/>
+          </svg>
+          <div class="person-name-small">${member.name.split(' ')[0]}</div>
+        </div>
+      `
+    }
+
+    function renderPersonNodeWithDetails(member, isLeader) {
+      const nodeClass = isLeader ? 'person-node-detail leader-node' : 'person-node-detail member-node'
+      const memberId = `member-${member.name.toLowerCase().replace(/\s+/g, '-')}`
+      const avatarUrl = member.avatar && member.avatar.trim() !== ''
+        ? member.avatar
+        : `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=444c56&color=d6e0eb&size=128`
+      return `
+        <div class="${nodeClass}" onclick="scrollToMember('${memberId}')">
+          <img class="person-avatar" src="${avatarUrl}" alt="${member.name}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=444c56&color=d6e0eb&size=128'" />
+          <div class="person-details">
+            <div class="person-name-detail">${member.name}</div>
+            <div class="person-role-detail">${member.role}</div>
+          </div>
+        </div>
+      `
+    }
+
+    function renderSquadCard(squad, members) {
+      const squadMembersByRole = groupMembersByRole(members)
+
+      // Ordenar membros: PM, PD, EM primeiro (nessa ordem), depois TL, depois Dev
+      const orderedMembers = [
+        ...(squadMembersByRole['PM'] || []),
+        ...(squadMembersByRole['PD'] || []),
+        ...(squadMembersByRole['EM'] || []),
+        ...(squadMembersByRole['TL'] || []),
+        ...(squadMembersByRole['Dev'] || []),
+      ]
+
+      // Dividir em grupos de 3 por linha
+      const rows = []
+      for (let i = 0; i < orderedMembers.length; i += 3) {
+        rows.push(orderedMembers.slice(i, i + 3))
+      }
+
+      return `
+        <div class="squad-card">
+          <div class="squad-label">SQUAD</div>
+          <div class="squad-header">
+            <h4 class="squad-name">${squad.name}</h4>
+            <div class="squad-outcome-badge">${squad.description}</div>
+          </div>
+          <div class="squad-members-visual">
+            <div class="squad-members-all">
+              ${rows.map((row, index) => `
+                <div class="members-row ${index === 0 ? 'first-row' : ''}">
+                  ${row.map(member => renderPersonNodeWithDetails(member, false)).join('')}
                 </div>
-                <img class="uol" src="https://i.imgur.com/8OjyFNE.png" alt="uol" />
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `
+    }
+
+    function renderSquadsLevel(tribeSquads) {
+      return `
+        <div class="organogram-level squads-level">
+          ${tribeSquads.map(({ squad, members, squadKey }) => renderSquadCard(squad, members)).join('')}
+        </div>
+      `
+    }
+
+    function renderTribeLevel(tribeKey, tribeData, leadership, tribeSquads, allMembers) {
+      // Pegar apenas os líderes da tribo
+      const tribeLeaders = [
+        leadership.gpm,
+        leadership.emSr,
+        leadership.uxLead,
+        leadership.pmm,
+        leadership.da,
+      ].filter(Boolean)
+
+      return `
+        <div class="organogram-level tribe-level">
+          <div class="tribe-container-visual">
+            <div class="tribe-label">TRIBO</div>
+            <div class="tribe-content-wrapper">
+              <div class="tribe-content">
+                <div class="tribe-name-large">${tribeData.name}</div>
+                ${tribeData.description ? `<p class="tribe-description-inline">${tribeData.description}</p>` : ''}
+                <div class="tribe-members-horizontal">
+                  ${tribeLeaders.map(member => renderPersonNodeWithDetails(member, false)).join('')}
+                </div>
               </div>
             </div>
           </div>
-        `
-
-        container.appendChild(colDiv)
-      })
+          ${renderSquadsLevel(tribeSquads)}
+        </div>
+      `
     }
+
+    function renderHeadInline(head) {
+      if (!head) return ''
+      return `
+        <div class="head-inline">
+          <div class="head-connection-line"></div>
+          <div class="person-node head-node-inline">
+            <svg class="person-icon head-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="35" r="20" fill="currentColor" opacity="0.9"/>
+              <ellipse cx="50" cy="80" rx="35" ry="30" fill="currentColor" opacity="0.9"/>
+            </svg>
+            <div class="person-info">
+              <div class="person-name">${head.name}</div>
+              <div class="person-role">${head.role}</div>
+            </div>
+          </div>
+        </div>
+      `
+    }
+
+    function renderTribeLeadershipVisual(leadership, head) {
+      const leaders = [
+        { role: 'GPM', member: leadership.gpm },
+        { role: 'EM Sr', member: leadership.emSr },
+        { role: 'UX Lead', member: leadership.uxLead },
+        { role: 'PMM', member: leadership.pmm },
+        { role: 'DA', member: leadership.da },
+      ]
+
+      // Se o head for EM Sr, destacar na lista
+      const headRole = head === leadership.gpm ? 'GPM' : (head === leadership.emSr ? 'EM Sr' : null)
+
+      return `
+        <div class="tribe-leaders">
+          ${leaders.map(leader => {
+            const isHead = leader.role === headRole
+            return `
+              <div class="leader-item ${isHead ? 'head-leader-item' : ''}" ${isHead ? 'data-head-role="true"' : ''}>
+                <div class="leader-role">${leader.role}</div>
+                <div class="leader-name">${leader.member ? leader.member.name : 'Vaga'}</div>
+              </div>
+            `
+          }).join('')}
+        </div>
+      `
+    }
+
+    function renderOrganogram(tribeKey, tribeData, groupedMembers, squadsData, allMembers) {
+      const leadership = getTribeLeadership(tribeKey, allMembers)
+      const tribeSquads = getTribeSquads(tribeKey, squadsData, groupedMembers, leadership)
+
+      return `
+        <div class="organogram-container">
+          ${renderTribeLevel(tribeKey, tribeData, leadership, tribeSquads, allMembers)}
+        </div>
+      `
+    }
+
+    function renderTribe(tribeKey, tribeData, groupedMembers, squadsData, allMembers) {
+      const tribeContainer = document.createElement('div')
+      tribeContainer.classList.add('tribe-container')
+
+      // Adicionar organograma (sem header no topo)
+      const organogramWrapper = document.createElement('div')
+      organogramWrapper.classList.add('tribe-organogram-wrapper')
+      const organogramHtml = renderOrganogram(tribeKey, tribeData, groupedMembers, squadsData, allMembers)
+      organogramWrapper.innerHTML = organogramHtml
+      tribeContainer.appendChild(organogramWrapper)
+
+      return tribeContainer
+    }
+
+    function renderAllTribes() {
+      const container = document.getElementById('workforceContainer')
+      const allMembers = [
+        ...devTeam,
+        ...productTeam,
+        ...uxTeam,
+        ...dataTeam,
+      ]
+      const grouped = groupMembersByTribeAndSquad(allMembers)
+
+      // Renderizar organogramas das tribos
+      const tribeOrder = ['diagnostico', 'desenvolvimento', 'plataforma']
+      tribeOrder.forEach((tribeKey) => {
+        if (tribes[tribeKey]) {
+          const tribeElement = renderTribe(tribeKey, tribes[tribeKey], grouped, squads, allMembers)
+          container.appendChild(tribeElement)
+        }
+      })
+
+      // Adicionar título para seção de cards (todos os times misturados)
+      const cardsSectionTitle = document.createElement('div')
+      cardsSectionTitle.classList.add('col-wide')
+      cardsSectionTitle.style.marginTop = '3em'
+      cardsSectionTitle.innerHTML = '<h2 class="cards-section-title">Membros_</h2>'
+      container.appendChild(cardsSectionTitle)
+
+      // Renderizar todos os cards misturados
+      const allCardsRow = document.createElement('div')
+      allCardsRow.classList.add('row', 'all-members-cards')
+      allMembers.forEach((member) => {
+        allCardsRow.appendChild(renderMember(member))
+      })
+      container.appendChild(allCardsRow)
+    }
+
+    function scrollToMember(memberId) {
+      const memberCard = document.getElementById(memberId)
+      if (memberCard) {
+        // Remover destaque anterior
+        document.querySelectorAll('.card.highlighted').forEach(card => {
+          card.classList.remove('highlighted')
+        })
+
+        // Adicionar destaque no card selecionado
+        const card = memberCard.querySelector('.card')
+        if (card) {
+          card.classList.add('highlighted')
+        }
+
+        // Scroll suave até o card
+        memberCard.scrollIntoView({ behavior: 'smooth', block: 'center' })
+
+        // Remover destaque após 3 segundos
+        setTimeout(() => {
+          if (card) {
+            card.classList.remove('highlighted')
+          }
+        }, 3000)
+      }
+    }
+
+    window.scrollToMember = scrollToMember
+
+    function renderMembersByRole(membersByRole) {
+      const roleOrder = ['PM', 'EM', 'PD', 'TL', 'Dev']
+      let html = ''
+
+      roleOrder.forEach((role) => {
+        const members = membersByRole[role]
+        if (members.length > 0) {
+          html += `
+            <div class="role-group">
+              <span class="role-label">${role}</span>
+              <span class="members-list">${members.map(m => m.name).join(', ')}</span>
+            </div>
+          `
+        }
+      })
+
+      return html
+    }
+
+    function extractTechStack(members) {
+      const techs = new Set()
+      const techMap = {
+        'react': 'REACT',
+        'frontend': 'REACT',
+        'vue': 'VUE',
+        'angular': 'ANG 2+',
+        'angular js': 'ANG JS',
+        'node': 'NODE',
+        'backend': 'NODE',
+        'rails': 'RAILS',
+        'ruby': 'RAILS',
+        'mobile': 'FLUTTER',
+        'flutter': 'FLUTTER',
+        'python': 'PYTHON',
+        '.net': '.NET',
+        'net': '.NET',
+      }
+
+      members.forEach((member) => {
+        if (member.role) {
+          const role = member.role.toLowerCase()
+          Object.keys(techMap).forEach((key) => {
+            if (role.includes(key)) {
+              techs.add(techMap[key])
+            }
+          })
+        }
+      })
+
+      if (techs.size === 0) return null
+      return Array.from(techs).map(tech => `<span class="tech-badge">${tech}</span>`).join('')
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', renderAllTribes)
+    } else {
+      renderAllTribes()
+    }
+
+    window.renderAllTribes = renderAllTribes
   </script>
 
-  <div id="devTeamContainer" class="row">
-    <div class="col-wide">
-      <h2 align="left">Engenharia_</h2>
-    </div>
-
-    <script>
-      renderTeam('devTeamContainer', devTeam)
-    </script>
-  </div>
-
-  <div id="productTeamContainer" class="row">
-    <div class="col-wide">
-      <h2 class="row-product" align="left">Produto_</h2>
-    </div>
-
-    <script>
-      renderTeam('productTeamContainer', productTeam)
-    </script>
-  </div>
-
-  <div id="uxTeamContainer" class="row">
-    <div class="col-wide">
-      <h2 class="row-ux" align="left">UX_</h2>
-    </div>
-
-    <script>
-      renderTeam('uxTeamContainer', uxTeam)
-    </script>
-  </div>
-
-  <div id="dataTeamContainer" class="row">
-    <div class="col-wide">
-      <h2 class="row-data" align="left">Dados_</h2>
-    </div>
-
-    <script>
-      renderTeam('dataTeamContainer', dataTeam)
-    </script>
-  </div>
-
-  <div id="operationTeamContainer" class="row">
-    <div class="col-wide">
-      <h2 class="row-operation" align="left">Operações_</h2>
-    </div>
-
-    <script>
-      renderTeam('operationTeamContainer', operationTeam)
-    </script>
+  <div id="workforceContainer">
+    <!-- As tribos e squads serão renderizadas aqui via JavaScript -->
   </div>
 </section>

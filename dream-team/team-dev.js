@@ -1,19 +1,28 @@
+import { tribes, squads } from '/culture/dream-team/tribes.js'
+
+const productRoles = {
+  gpm: 'Group Product Manager',
+  pm: 'Product Manager',
+}
+
 const devRoles = {
   head: 'Head of Engineering',
-  ttl: 'Tribe Tech Lead',
+  emSr: 'Engineering Manager Sr',
   pe: 'Principal Engineer',
   em: 'Engineering Manager',
   tl: 'Tech Lead',
   front: 'Frontend Developer',
   back: 'Backend Developer',
   full_stack: 'Full Stack Developer',
+  mobile: 'Mobile Developer',
   qa: 'QA',
 }
 
 const devTeam = [
   {
-    name: 'Renato Augusto',
-    role: devRoles.head,
+    name: 'Renato Ames',
+    role: devRoles.emSr,
+    tribeKey: 'diagnostico',
     description:
       "Oi, eu sou Goku. Sul-Mato-Grossense. getTotalYears('26/04/1995') anos. Artesão de software. Formado em engenharia da computação. Colorado 🇦🇹. Workaholic/Go-getter e viciado em platinar games.",
     github: 'https://github.com/renatoaug',
@@ -21,8 +30,27 @@ const devTeam = [
     avatar: 'https://i.imgur.com/sLaJWla.png',
   },
   {
+    name: 'Renato Ames',
+    role: devRoles.emSr,
+    tribeKey: 'plataforma',
+    description:
+      "Oi, eu sou Goku. Sul-Mato-Grossense. getTotalYears('26/04/1995') anos. Artesão de software. Formado em engenharia da computação. Colorado 🇦🇹. Workaholic/Go-getter e viciado em platinar games.",
+    github: 'https://github.com/renatoaug',
+    linkedin: 'https://www.linkedin.com/in/renatoames',
+    avatar: 'https://i.imgur.com/sLaJWla.png',
+  },
+  {
+    name: 'Ricardo Borges',
+    role: devRoles.emSr,
+    tribeKey: 'desenvolvimento',
+    description: '',
+    avatar: '',
+  },
+  {
     name: 'Guilherme Barbosa',
     role: devRoles.em,
+    tribeKey: 'plataforma',
+    squadKey: 'uXIntegrada',
     description:
       "Salve, meu nome é Guilherme, mas podem me chamar de gui, guiado pra tornar as calls mais demoradas. Gosto muito de hablar, tenho getTotalYears('28/06/1997') anos, meu principal hobby é natação (além de levantamento de caneco 🍻), enfim, bora marcar um papinho?!",
     github: 'https://github.com/guiwb',
@@ -32,6 +60,8 @@ const devTeam = [
   {
     name: 'Oscar Silva',
     role: devRoles.tl,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'treinamentos',
     description:
       'Aoba, bom?! Meu nome é Oscar e eu sou do interior do Pará, trabalho com desenvolvimento a mais de 6 anos e sou um entusiasta de tecnologia desde que nasci! Curto bastante praticar futebol, assistir Fórmula 1, tenho interesse em artes marciais e pretendo começar a praticar o quanto antes. Estou cursando faculdade de engenharia da computação. E infelizmente, sou torcedor do São Paulo Futebol Clube.',
     github: 'https://github.com/oscar-silva',
@@ -41,6 +71,7 @@ const devTeam = [
   {
     name: 'Felipe Rossato',
     role: devRoles.pe,
+    tribeKey: 'plataforma',
     description:
       "Paulistano. getTotalYears('28/09/1991') anos. Palmeirense. Bastante caseiro, gosta de ficar em casa vendo filmes, séries, lendo ou ouvindo música, mas não nega um rolê regado a cerveja com os amigos. Acompanha bastante futebol internacional e Fórmula 1.",
     github: 'https://github.com/FelipeRossato',
@@ -50,6 +81,8 @@ const devTeam = [
   {
     name: 'Alexandre Menin',
     role: devRoles.front,
+    tribeKey: 'plataforma',
+    squadKey: 'uXIntegrada',
     description:
       'Olá, sou o Alexandre, as pessoas me chamam de Menin. Gosto muito de praticar atividades físicas e meu maior hobby é ficar em casa assistindo filmes e séries... Mas aceito me chamarem pra um barzinho pra descontrair e rir ou se for pra comer 🍕 então, to dentro!',
     github: 'https://github.com/alexmeninf',
@@ -59,6 +92,8 @@ const devTeam = [
   {
     name: 'Paulo Marchi',
     role: devRoles.qa,
+    tribeKey: 'plataforma',
+    squadKey: 'uXIntegrada',
     description:
       "Aoba galera, sou o Paulo, tenho getTotalYears('31/05/1998') anos e natural do interiorr de SP. Menino do T.I desde os 15 anos. Tenho formação em Técnico de Informática e graduação em Ciência da Computação. Sou apaixonado por tecnologia e inovação. Meus principais hobbies são acompanhar o cenário de CS, ouvir músicas e podcasts, adoro cozinhar, fazer uns drinks e reunir uma galera para fazer tudo isso junto :D",
     github: 'https://github.com/marchipauloh',
@@ -68,6 +103,7 @@ const devTeam = [
   {
     name: 'Leticia Alves',
     role: devRoles.qa,
+    tribeKey: 'plataforma',
     description: `Hey pessoal, meu nome é Letícia, nasci e cresci em São Paulo.
       Nas horas vagas, gosto de assistir filmes/séries, também sou uma grande fã de viagens e bebidas (principalmente cerveja).
       Como uma boa taurina, meu gasto excessivo é definitivamente com comida!
@@ -79,6 +115,8 @@ const devTeam = [
   {
     name: 'André Martins',
     role: devRoles.full_stack,
+    tribeKey: 'plataforma',
+    squadKey: 'uXIntegrada',
     description:
       "E ai pessoal, meu nome é André, tenho getTotalYears('10/09/1997') anos e natural de viçosa-MG. Comecei na area da tecnologia aos 20 anos, trabalhei 2 anos como suporte e já tenho 3 anos na programação, meu hobby é jogar futebol (o pai da aula sqn) e curto aeromodelismo.",
     github: 'https://github.com/andremartinsdev',
@@ -89,6 +127,7 @@ const devTeam = [
   {
     name: 'Ismael Felipe Hepp',
     role: devRoles.tl,
+    tribeKey: 'desenvolvimento',
     description:
       "Opa! Meu nome é Ismael, nasci em Lajeado - RS, mas morei minha vida toda em Passo Fundo - RS, menos um breve período em que fiz um intercâmbio no Canadá (não cheguei a conhecer a Luiza). Trabalho há getTotalYears('01/09/2017') anos na área. Gosto de ouvir podcasts (muito bom para lavar louça), assistir séries, filmes, ler (mais ficção), jogar jogos de estratégia ou rpg (tanto eletrônico, como de mesa), só não sobra tempo pra tanta coisa.",
     github: 'https://github.com/ihepp',
@@ -98,6 +137,8 @@ const devTeam = [
   {
     name: 'Tiago Elias',
     role: devRoles.full_stack,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'treinamentos',
     description: `Aoopa, sou o Tiago! Tenho getTotalYears('01/01/1996') anos e sou natural do triângulo mineiro.
       Recentemente me mudei pra Ribeirão Preto, mas não abro mão do pão de queijo de minas.
       Curto muito assistir a todo tipo de série pra relaxar um pouco e também ver um futebolzinho, nada como sofrer bastante com o Corinthians.`,
@@ -108,6 +149,7 @@ const devTeam = [
   {
     name: 'Ruan Carlos',
     role: devRoles.full_stack,
+    tribeKey: 'desenvolvimento',
     description: `Salvee! Suavera? Me chamo Ruan, mas pode me chamar de Ruan, tenho getTotalYears('01/01/1998') anos e sou de Blumenau - SC.
       Sou curioso desde sempre, talvez seja por isso que sou um pouco hiperativo.
       Meus hobbies são: cozinhar, programar, viajar e curto degustar whisky.`,
@@ -118,6 +160,8 @@ const devTeam = [
   {
     name: 'Leonardo Batini',
     role: devRoles.full_stack,
+    tribeKey: 'plataforma',
+    squadKey: 'core',
     description: `Fala time!! Sou Leonardo, mas todo mundo acaba me chamando de Batinera, que vem do meu sobrenome Batini.
       A primeira coisa e mais importante é que eu torço para o maior clube do Brasil, que é o Corinthians, claro. Sou formado em ADS e estou ingressando na minha primeira oportunidade agora.
       Gosto muito de futebol, jogos eletrônicos, principalmente de FPS, cheguei a competir, alguns dizem que profissionalmente (já eu tenho dúvidas conceitualmente falando hahah).
@@ -129,6 +173,8 @@ const devTeam = [
   {
     name: 'Matheus Borges',
     role: devRoles.full_stack,
+    tribeKey: 'plataforma',
+    squadKey: 'core',
     description:
       "Opa, cês tão bem? Me chamo Matheus, tenho getTotalYears('07/05/2004') anos e sou de São Paulo. Sou envolvido com programação desde os 14 anos e amo muito isso. Levo a sério aquele papo de mudar o mundo através da tecnologia e deixar minha marca nele. Já trabalhei com várias coisas: desenvolvimento web, mobile e até para TVs. Gosto muito de jogar basquete (mesmo sem ter altura pra isso), passar um tempo de qualidade com a família e qualquer programa de fim de semana que envolva água. Tô sempre na água que nem peixe!",
     github: 'https://github.com/Borgeta-code',
@@ -138,6 +184,8 @@ const devTeam = [
   {
     name: 'Thiago Freitas Carneiro',
     role: devRoles.full_stack,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'treinamentos',
     description: `Faaaaala pessoal, me chamo Thiago, possuo duas formações,
     Ciências contábeis e Analise e Desenvolvimento de Sistemas, sou um cara tranquilo, gosto de ler,
     assistir filme, viajar e jogar video game. Gosto de futebol e torço pro maior time do Brasil, A
@@ -149,6 +197,8 @@ const devTeam = [
   {
     name: 'Caio Ximenes',
     role: devRoles.full_stack,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'treinamentos',
     description: `Opa, pessoal! Tranquilidade?
     Me chamo Caio e comecei a estudar programação e fazer freelas por conta própria em 2018. Já em 2019/2020, passei a atuar de forma mais profissional na área.
     Sou apaixonado por tecnologia e cultura pop — fã de Fullmetal Alchemist e completamente vidrado na franquia Kingdom Hearts.
@@ -158,4 +208,220 @@ const devTeam = [
     linkedin: 'https://br.linkedin.com/in/caioximenes',
     avatar: 'https://github.com/caioalvesdev.png',
   },
+  // Diagnóstico Individual
+  {
+    name: 'Luã',
+    role: productRoles.pm,
+    tribeKey: 'diagnostico',
+    squadKey: 'diagnosticoIndividual',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Renan Mascarenhas',
+    role: devRoles.em,
+    tribeKey: 'diagnostico',
+    squadKey: 'diagnosticoIndividual',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Renan Mascarenhas',
+    role: devRoles.em,
+    tribeKey: 'plataforma',
+    squadKey: 'core',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Aghata Germano',
+    role: 'Product Designer',
+    tribeKey: 'diagnostico',
+    squadKey: 'diagnosticoIndividual',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Anthony',
+    role: devRoles.full_stack,
+    tribeKey: 'diagnostico',
+    squadKey: 'diagnosticoIndividual',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Alex',
+    role: devRoles.full_stack,
+    tribeKey: 'diagnostico',
+    squadKey: 'diagnosticoIndividual',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Murilo',
+    role: devRoles.full_stack,
+    tribeKey: 'diagnostico',
+    squadKey: 'diagnosticoIndividual',
+    description: '',
+    avatar: '',
+  },
+  // Protagonismo e Hábito
+  {
+    name: 'Arnaldo Miciano',
+    role: devRoles.em,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'protagonistaismoEHabito',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Renata',
+    role: devRoles.tl,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'protagonistaismoEHabito',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Davidson',
+    role: devRoles.full_stack,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'protagonistaismoEHabito',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Vitor',
+    role: devRoles.full_stack,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'protagonistaismoEHabito',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Priscila',
+    role: devRoles.full_stack,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'protagonistaismoEHabito',
+    description: '',
+    avatar: '',
+  },
+  // UX Integrada
+  {
+    name: 'Math',
+    role: productRoles.pm,
+    tribeKey: 'plataforma',
+    squadKey: 'uXIntegrada',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'João Massaro',
+    role: 'Product Designer',
+    tribeKey: 'plataforma',
+    squadKey: 'uXIntegrada',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Mateus Guedes',
+    role: devRoles.tl,
+    tribeKey: 'plataforma',
+    squadKey: 'uXIntegrada',
+    description: '',
+    avatar: '',
+  },
+  // Resultado
+  {
+    name: 'L. Suzano',
+    role: productRoles.pm,
+    tribeKey: 'diagnostico',
+    squadKey: 'resultado',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Rodrigo Prates',
+    role: devRoles.em,
+    tribeKey: 'diagnostico',
+    squadKey: 'resultado',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Breno Assis',
+    role: 'Product Designer',
+    tribeKey: 'diagnostico',
+    squadKey: 'resultado',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Tiago May',
+    role: devRoles.tl,
+    tribeKey: 'diagnostico',
+    squadKey: 'resultado',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Caio Alves',
+    role: devRoles.full_stack,
+    tribeKey: 'diagnostico',
+    squadKey: 'resultado',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Caio Rocha',
+    role: devRoles.full_stack,
+    tribeKey: 'diagnostico',
+    squadKey: 'resultado',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Fabiano',
+    role: devRoles.full_stack,
+    tribeKey: 'diagnostico',
+    squadKey: 'resultado',
+    description: '',
+    avatar: '',
+  },
+  // Treinamentos
+  {
+    name: 'Wilian Lima',
+    role: devRoles.em,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'treinamentos',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Iryna Santos',
+    role: 'Product Designer',
+    tribeKey: 'desenvolvimento',
+    squadKey: 'treinamentos',
+    description: '',
+    avatar: '',
+  },
+  // Core
+  {
+    name: 'João Batista',
+    role: devRoles.full_stack,
+    tribeKey: 'plataforma',
+    squadKey: 'core',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Leonardo Sanches',
+    role: devRoles.full_stack,
+    tribeKey: 'plataforma',
+    squadKey: 'core',
+    description: '',
+    avatar: '',
+  },
 ]
+
+export { devTeam }

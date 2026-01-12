@@ -15,6 +15,57 @@ h2 {
   padding-left: 1rem;
 }
 
+h3 {
+  color: #d6e0eb;
+  margin: 1em 0 0.5em;
+  border-left: 3px solid #67d0b3;
+  padding-left: 1rem;
+  font-size: 1.2em;
+}
+
+.tribe-container {
+  margin-bottom: 3rem;
+}
+
+.tribe-container .tribe-title,
+.tribe-container .tribe-description {
+  display: none;
+}
+
+.tribe-title {
+  border-left: 3px solid #67d0b3;
+}
+
+.tribe-description {
+  color: #adbac7;
+  font-size: 0.9rem;
+  margin-top: 0.5em;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.squad-container {
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+}
+
+.squad-title {
+  border-left: 3px solid #4caf50;
+  font-size: 1.1em;
+}
+
+.squad-description {
+  color: #adbac7;
+  font-size: 0.85rem;
+  margin-top: 0.3em;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.squad-members {
+  margin-top: 1rem;
+}
+
 .row-product {
   border-left: 3px solid #f000bc;
 }
@@ -78,6 +129,22 @@ h2 {
 .card:hover {
   box-shadow: 0.1px 0 10px 0.1px #afb3b624;
   transform: scale(1.01);
+}
+
+.card.highlighted {
+  border: 3px solid #67d0b3;
+  box-shadow: 0 0 20px rgba(103, 208, 179, 0.5);
+  transform: scale(1.02);
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(103, 208, 179, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(103, 208, 179, 0.8);
+  }
 }
 
 .card .content {
@@ -240,5 +307,518 @@ img.uol:hover {
 
   .col {
     width: 25%;
+  }
+}
+
+
+
+.tribe-organogram-wrapper {
+  margin-top: 2em;
+  padding: 2em;
+  background: rgba(31, 37, 44, 0.5);
+  border-radius: 0.5em;
+  border: 1px solid rgba(103, 208, 179, 0.3);
+}
+
+.cards-section-title {
+  border-left: 3px solid #67d0b3;
+  margin-top: 2em;
+}
+
+.organogram-container {
+  padding: 0;
+  min-height: 100%;
+  position: relative;
+}
+
+
+.organogram-level {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 3em;
+  position: relative;
+}
+
+.head-inline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+}
+
+.head-connection-line {
+  position: absolute;
+  left: -3em;
+  top: 50%;
+  width: 3em;
+  height: 2px;
+  background: #67d0b3;
+  opacity: 0.6;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.head-node-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.head-leader-item {
+  position: relative;
+}
+
+.head-leader-item::after {
+  content: '';
+  position: absolute;
+  right: -3em;
+  top: 50%;
+  width: 3em;
+  height: 2px;
+  background: #67d0b3;
+  opacity: 0.6;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.head-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid #f04400;
+  background: linear-gradient(135deg, rgba(240, 68, 0, 0.2) 0%, rgba(240, 68, 0, 0.05) 100%);
+  color: #f04400;
+  box-shadow: 0 0 20px rgba(240, 68, 0, 0.5);
+}
+
+.head-icon svg {
+  width: 100%;
+  height: 100%;
+  color: currentColor;
+}
+
+.person-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.person-node:hover {
+  transform: translateY(-3px);
+}
+
+.person-node:active {
+  transform: translateY(-1px);
+}
+
+.person-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.person-icon svg {
+  width: 100%;
+  height: 100%;
+  color: currentColor;
+}
+
+.member-icon {
+  border-color: #d6e0eb;
+  color: #d6e0eb;
+}
+
+.leader-icon {
+  border-color: #f04400;
+  color: #f04400;
+  background: linear-gradient(135deg, rgba(240, 68, 0, 0.2) 0%, rgba(240, 68, 0, 0.05) 100%);
+  box-shadow: 0 0 10px rgba(240, 68, 0, 0.4);
+}
+
+.member-icon {
+  border-color: #d6e0eb;
+}
+
+.leader-icon {
+  border-color: #f04400;
+  background: linear-gradient(135deg, rgba(240, 68, 0, 0.2) 0%, rgba(240, 68, 0, 0.05) 100%);
+}
+
+.person-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  border-radius: 50%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.person-icon::after {
+  content: '';
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: currentColor;
+  border-radius: 50% 50% 0 0;
+}
+
+.person-info {
+  text-align: center;
+}
+
+.person-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #adbac7;
+  margin-bottom: 0.2em;
+}
+
+.person-role {
+  font-size: 0.6rem;
+  color: ghostwhite;
+  text-transform: uppercase;
+}
+
+.person-name-small {
+  font-size: 0.7rem;
+  color: #adbac7;
+  text-align: center;
+  max-width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.person-node-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  min-width: 100px;
+  flex: 0 0 auto;
+}
+
+.person-node-detail:hover {
+  transform: translateY(-3px);
+  background-color: rgba(103, 208, 179, 0.1);
+}
+
+.person-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid;
+  background-color: #444c56;
+}
+
+.person-node-detail.member-node .person-avatar {
+  border-color: #d6e0eb;
+}
+
+.person-node-detail.leader-node .person-avatar {
+  border-color: #f04400;
+  box-shadow: 0 0 10px rgba(240, 68, 0, 0.4);
+}
+
+.person-details {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.person-name-detail {
+  font-size: 0.85rem;
+  color: #d6e0eb;
+  font-weight: 500;
+}
+
+.person-role-detail {
+  font-size: 0.7rem;
+  color: #adbac7;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.tribe-level {
+  flex-direction: column;
+  gap: 2em;
+  position: relative;
+}
+
+
+.tribe-container-visual {
+  background-color: rgb(31 37 44 / 73%);
+  border: 2px solid rgba(103, 208, 179, 0.5);
+  border-radius: 0.3em;
+  padding: 2em;
+  position: relative;
+  min-height: 200px;
+}
+
+.tribe-label {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #67d0b3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tribe-content-wrapper {
+  margin-left: 2em;
+  display: flex;
+  gap: 3em;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.tribe-content {
+  flex: 1;
+}
+
+.tribe-name-large {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #d6e0eb;
+  margin-bottom: 0.5em;
+  border-left: 3px solid #67d0b3;
+  padding-left: 1rem;
+}
+
+.tribe-description-inline {
+  color: #adbac7;
+  font-size: 0.9rem;
+  margin-bottom: 1.5em;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.tribe-members-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  padding-left: 1rem;
+  margin-top: 1em;
+  align-items: center;
+}
+
+.tribe-members-horizontal .person-node,
+.tribe-members-horizontal .person-node-detail {
+  margin: 0;
+}
+
+.tribe-leaders {
+  display: none;
+}
+
+.leader-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+  background-color: #444c5657;
+  border-radius: 0.3em;
+  border: 1px solid rgba(103, 208, 179, 0.3);
+  transition: all 0.2s ease-out;
+}
+
+.leader-item:hover {
+  box-shadow: 0.1px 0 10px 0.1px #afb3b624;
+  transform: scale(1.01);
+}
+
+.leader-role {
+  font-size: 0.75rem;
+  color: #adbac7;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.leader-name {
+  font-size: 0.9rem;
+  color: #d6e0eb;
+  font-weight: 400;
+}
+
+.squads-level {
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  position: relative;
+  padding-top: 2em;
+}
+
+.squads-level::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: #4caf50;
+  opacity: 0.3;
+}
+
+.squad-card {
+  background-color: rgb(31 37 44 / 73%);
+  border: 2px solid rgba(76, 175, 80, 0.5);
+  border-radius: 0.3em;
+  padding: 1.5em;
+  min-width: 300px;
+  max-width: 400px;
+  position: relative;
+  flex: 1;
+  transition: all 0.2s ease-out;
+}
+
+.squad-card:hover {
+  box-shadow: 0.1px 0 10px 0.1px #afb3b624;
+  transform: scale(1.01);
+}
+
+.squad-label {
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4caf50;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.squad-header {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.squad-name {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #d6e0eb;
+  margin: 0 0 0.8em 0;
+  border-left: 3px solid #4caf50;
+  padding-left: 1rem;
+}
+
+.squad-outcome-badge {
+  background-color: #444c5657;
+  border-left: 3px solid #4caf50;
+  padding: 0.8em;
+  border-radius: 0.3em;
+  font-size: 0.9rem;
+  color: #d2d9e0;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.squad-members-visual {
+  margin-left: 1.5em;
+}
+
+.squad-members-all {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.members-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  align-items: flex-start;
+}
+
+.members-row.first-row {
+  border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+  padding-bottom: 1em;
+  margin-bottom: 0.5em;
+}
+
+.members-row.second-row {
+  padding-top: 0.5em;
+}
+
+
+@media screen and (max-width: 768px) {
+  .tribe-organogram-wrapper {
+    padding: 1em;
+  }
+
+  .tribe-name-large {
+    font-size: 1.3rem;
+  }
+
+  .tribe-leaders {
+    grid-template-columns: 1fr;
+  }
+
+  .squad-card {
+    min-width: 100%;
+  }
+
+  .members-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .members-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tribe-label,
+  .squad-label {
+    display: none;
+  }
+
+  .tribe-content-wrapper {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .head-inline {
+    margin-top: 2em;
+    min-width: 100%;
+  }
+
+  .head-connection-line {
+    display: none;
+  }
+
+  .tribe-content,
+  .squad-header,
+  .squad-members-visual {
+    margin-left: 0;
   }
 }

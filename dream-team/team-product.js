@@ -5,6 +5,27 @@ const productRoles = {
 
 const productTeam = [
   {
+    name: 'Mario Senhorini',
+    role: productRoles.gpm,
+    tribeKey: 'diagnostico',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Mario Senhorini',
+    role: productRoles.gpm,
+    tribeKey: 'plataforma',
+    description: '',
+    avatar: '',
+  },
+  {
+    name: 'Fábio Pereira',
+    role: productRoles.gpm,
+    tribeKey: 'desenvolvimento',
+    description: '',
+    avatar: '',
+  },
+  {
     name: 'Fabrizio Akkari',
     role: productRoles.gpm,
     description: `
@@ -18,6 +39,8 @@ const productTeam = [
   {
     name: 'Thiago Cassimiro',
     role: productRoles.pm,
+    tribeKey: 'plataforma',
+    squadKey: 'core',
     description: `Olá! Meu nome é Thiago mas conhecido como Cassi devido ao meu sobrenome, sou mineiro, torcedor do Cruzeirão cabuloso.
       Sou casado e tenho uma filha linda de getTotalYears('13/04/2023') ano, que considero um verdadeiro presente de Deus em minha vida.
       Sempre fui apaixonado por tecnologia e inovação.
@@ -33,6 +56,8 @@ const productTeam = [
   {
     name: 'Giovanni Attina',
     role: productRoles.pm,
+    tribeKey: 'desenvolvimento',
+    squadKey: 'treinamentos',
     description: `
       Opa! Sou Giovanni, normalmente me chamam de Gio ou Gi, não tenho uma preferência.
       Tenho getTotalYears('19/06/1996') anos. Sou de São Paulo, já morei em 6 cidades diferentes e hoje moro em Cerquilho, no interior.
@@ -51,3 +76,5 @@ const productTeam = [
     avatar: 'https://i.imgur.com/5EfpNty.png',
   },
 ]
+
+export { productTeam }
