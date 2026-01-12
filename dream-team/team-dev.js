@@ -21,18 +21,6 @@ const devTeam = [
     avatar: 'https://i.imgur.com/sLaJWla.png',
   },
   {
-    name: 'Lucas Arbex',
-    role: devRoles.ttl,
-    description: `Fala galera, meu nome é Lucas, mas todos me chamam de Arbex (meu sobrenome).
-      Sou de São Paulo e corinthiano (obviamente).
-      Sou formado em Psicologia, mas atuo com desenvolvimento há 6
-      anos. Meu maior hobby, sem dúvida, é viajar e conhecer novos lugares, culturas e pessoas.
-      Além disso, curto muito assistir séries, ler livros, ouvir música, comer, jogar tênis, futebol e outros esportes.`,
-    github: 'https://github.com/arbexmb',
-    linkedin: 'https://www.linkedin.com/in/lucas-arbex-044148163',
-    avatar: 'https://i.imgur.com/MlM7k6V.jpeg',
-  },
-  {
     name: 'Guilherme Barbosa',
     role: devRoles.em,
     description:
@@ -89,16 +77,6 @@ const devTeam = [
     avatar: 'https://i.imgur.com/FiNeOy1.jpg',
   },
   {
-    name: 'Vanderlei Andrade',
-    role: devRoles.qa,
-    description: `Oi, me chamo Vanderlei, mas pode me chamar de Vand! Sou de SP - Zona Oeste.
-      Sou graduado em ciencia da computação. São Paulino… em alguns momentos vou para o estádio sofrer um pouco.
-      Gosto de praticar qualquer tipo de esporte, mas não significa que sou bom. Gosto de montar quebra cabeça, tenho alguns que ainda preciso emoldurar. E sempre que surge a oportunidade, estou saindo com alguns amigos.`,
-    github: 'https://github.com/AndradeVan',
-    linkedin: 'https://www.linkedin.com/in/vanderleijandrade',
-    avatar: 'https://i.imgur.com/I5cPcXB.jpg',
-  },
-  {
     name: 'André Martins',
     role: devRoles.full_stack,
     description:
@@ -149,23 +127,6 @@ const devTeam = [
     avatar: 'https://avatars.githubusercontent.com/u/67073834',
   },
   {
-    name: 'Rodrigo Batini',
-    role: devRoles.em,
-    description: `Fala galera! Sou Rodrigo, mas todo mundo me chama de Batini - apesar que dado que já existe outro que pela primeira vez chegou antes de mim, talvez aqui seja diferente hahaha Sou apaixonado por música, jogos digitais e analógicos, filmes, séries e tudo que envolve Tolkien. Trabalho com tecnologia desde 2011, mas já passei por produto, comercial, financeiro, empreendi, um pouco de tudo e muito de nada hahaha E antes que eu me esqueça, VAI CORINTHIANS`,
-    github: 'https://github.com/rodrigobatini',
-    linkedin: 'https://www.linkedin.com/in/rodrigo-batini-ba543061',
-    avatar: 'https://avatars.githubusercontent.com/u/4341744',
-  },
-  {
-    name: 'Jeferson Nascimento',
-    role: devRoles.full_stack,
-    description:
-      "E ai pessoal! Sou o Jeferson, tenho getTotalYears('14/04/1993') anos, sou formado em Sistemas da Informação e trabalho com desenvolvimento de software desde 2014. Já trabalhei com algumas linguagens em especial o PHP (que não vai morrer) e o maldito angularjs... A um tempo atrás, eu gostava muito de jogar video game (FIFA e COD), mas com a idade isso vai mudando e atualmente gosto de ler, assistir filmes/séries e alguns esportes, principalmente de futebol e F1.",
-    github: 'https://github.com/jeferson-n',
-    linkedin: 'https://www.linkedin.com/in/jeferson-nascimento-179b36149',
-    avatar: 'https://avatars.githubusercontent.com/u/18485370',
-  },
-  {
     name: 'Matheus Borges',
     role: devRoles.full_stack,
     description:
@@ -173,19 +134,6 @@ const devTeam = [
     github: 'https://github.com/Borgeta-code',
     linkedin: 'https://www.linkedin.com/in/matheus-borges-guedes/',
     avatar: 'https://avatars.githubusercontent.com/u/107590628',
-  },
-  {
-    name: 'Dominic Monteiro',
-    role: devRoles.em,
-    description: `Aoba, bão?
-    Meu nome é Dominic, mas pode me chamar de Dom.
-    Possuo duas formações: Engenharia da Computação e Gestão & Empreendedorismo.
-    Trabalho com tecnologia desde 2016 e tive experiências nos ramos da educação e bancário.
-    No tempo livre, costumo pescar, andar de bike, estudar alguma tecnologia ou viajar para alguma cidade interiorana para tomar cerveja/chopp artesanal.
-    PS: Vou cobrar R$5 cada vez que me chamar de Toretto! hahah`,
-    github: 'https://github.com/dominicmonteiro',
-    linkedin: 'https://www.linkedin.com/in/dominic-monteiro',
-    avatar: 'https://avatars.githubusercontent.com/u/38115285',
   },
   {
     name: 'Thiago Freitas Carneiro',
@@ -197,16 +145,6 @@ const devTeam = [
     github: 'https://github.com/thiagofreitascarneiro',
     linkedin: 'https://www.linkedin.com/in/thiago-freitas-carneiro-39359270/',
     avatar: 'https://github.com/thiagofreitascarneiro.png',
-  },
-  {
-    name: 'Thiago Cacio Gomes Sena',
-    role: devRoles.full_stack,
-    description: `Oba! Sou o Thiago, sou um aspirante a polimata e poliglota. Gosto de xadrez, café, moda, livros, etc.
-    Trabalho com desenvolvimento desde 2022. Minha cor favorita é verde e tenho um livro de ficção científica infantojuvenil publicado.
-    Chamado Timerson Cronos.`,
-    github: 'https://github.com/NihilLeaf',
-    linkedin: 'https://br.linkedin.com/in/thiagocacio',
-    avatar: 'https://github.com/NihilLeaf.png',
   },
   {
     name: 'Caio Ximenes',
