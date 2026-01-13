@@ -8,6 +8,19 @@ a {
   text-align: center;
 }
 
+.workforce-intro {
+  margin: 2.5em;
+  text-align: center;
+}
+
+.workforce-intro-text {
+  font-size: 1.1rem;
+  color: #adbac7;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
 h2 {
   color: #d6e0eb;
   margin: 1.25em 0 0.438em;
@@ -139,7 +152,8 @@ h3 {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(103, 208, 179, 0.5);
   }
   50% {
@@ -310,8 +324,6 @@ img.uol:hover {
   }
 }
 
-
-
 .tribe-organogram-wrapper {
   margin-top: 2em;
   padding: 2em;
@@ -331,12 +343,10 @@ img.uol:hover {
   position: relative;
 }
 
-
 .organogram-level {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 3em;
   position: relative;
 }
 
@@ -514,10 +524,10 @@ img.uol:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5em;
+  gap: 2px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  padding: 0.5em;
+  padding: 8px;
   border-radius: 0.3em;
   min-width: 100px;
   flex: 0 0 auto;
@@ -533,7 +543,7 @@ img.uol:hover {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid;
+  border: 1px solid;
   background-color: #444c56;
 }
 
@@ -572,6 +582,54 @@ img.uol:hover {
   position: relative;
 }
 
+/* Principal Engineers Section */
+.principal-engineers-section {
+  margin-bottom: 3em;
+}
+
+.pe-container {
+  background-color: rgb(31 37 44 / 73%);
+  border: 2px solid rgba(103, 208, 179, 0.5);
+  border-radius: 0.3em;
+  padding: 2em;
+  position: relative;
+  min-height: 150px;
+  width: 100%;
+}
+
+.pe-label {
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #67d0b3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pe-content {
+  margin-left: 0;
+}
+
+.pe-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #d6e0eb;
+  margin: 0 0 1.2em 0;
+  border-left: 3px solid #67d0b3;
+  padding-left: 1rem;
+}
+
+.pe-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  padding-left: 1rem;
+  align-items: center;
+}
 
 .tribe-container-visual {
   background-color: rgb(31 37 44 / 73%);
@@ -580,6 +638,7 @@ img.uol:hover {
   padding: 2em;
   position: relative;
   min-height: 200px;
+  width: 100%;
 }
 
 .tribe-label {
@@ -595,7 +654,7 @@ img.uol:hover {
 }
 
 .tribe-content-wrapper {
-  margin-left: 2em;
+  margin-left: 0;
   display: flex;
   gap: 3em;
   align-items: flex-start;
@@ -610,7 +669,7 @@ img.uol:hover {
   font-size: 1.8rem;
   font-weight: 600;
   color: #d6e0eb;
-  margin-bottom: 0.5em;
+  margin: 0 0 0.5em 0;
   border-left: 3px solid #67d0b3;
   padding-left: 1rem;
 }
@@ -618,7 +677,7 @@ img.uol:hover {
 .tribe-description-inline {
   color: #adbac7;
   font-size: 0.9rem;
-  margin-bottom: 1.5em;
+  margin: 0 0 1.5em 0;
   padding-left: 1rem;
   font-style: italic;
 }
@@ -628,7 +687,7 @@ img.uol:hover {
   flex-wrap: wrap;
   gap: 1.5em;
   padding-left: 1rem;
-  margin-top: 1em;
+  margin: 0;
   align-items: center;
 }
 
@@ -679,17 +738,6 @@ img.uol:hover {
   padding-top: 2em;
 }
 
-.squads-level::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 10%;
-  right: 10%;
-  height: 2px;
-  background: #4caf50;
-  opacity: 0.3;
-}
-
 .squad-card {
   background-color: rgb(31 37 44 / 73%);
   border: 2px solid rgba(76, 175, 80, 0.5);
@@ -720,7 +768,7 @@ img.uol:hover {
 }
 
 .squad-header {
-  margin: 10px;
+  margin: 0 1.5em 1.2em 1.5em;
 }
 
 .squad-name {
@@ -730,35 +778,40 @@ img.uol:hover {
   margin: 0 0 0.8em 0;
   border-left: 3px solid #4caf50;
   padding-left: 1rem;
+  line-height: 1.2;
 }
 
 .squad-outcome-badge {
   background-color: #444c5657;
   border-left: 3px solid #4caf50;
   padding: 0.8em;
+  min-height: 70px;
   border-radius: 0.3em;
-  font-size: 0.9rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 12px;
   color: #d2d9e0;
+  display: flex;
+  align-items: center;
   line-height: 1.4;
-  font-weight: 400;
 }
 
 .squad-members-visual {
-  margin: 0 9px;
+  margin: 0 1.5em;
 }
 
 .squad-members-top {
   display: flex;
   flex-wrap: nowrap;
-  gap: 1em;
-  margin-bottom: 1em;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .squad-divider {
   height: 1px;
   background-color: rgba(76, 175, 80, 0.2);
-  margin: 1em 0;
+  margin: 1.2em 0;
+  width: 100%;
 }
 
 .squad-members-list {
@@ -773,7 +826,7 @@ img.uol:hover {
   gap: 1em;
   background-color: rgb(31 37 44 / 60%);
   border-radius: 0.4em;
-  padding: 0.8em 1em;
+  padding: 0.6em 0.8em;
   border: 1px solid rgba(76, 175, 80, 0.15);
   transition: all 0.2s ease;
   cursor: pointer;
@@ -835,7 +888,6 @@ img.uol:hover {
 .members-row.second-row {
   padding-top: 0.5em;
 }
-
 
 @media screen and (max-width: 768px) {
   .tribe-organogram-wrapper {

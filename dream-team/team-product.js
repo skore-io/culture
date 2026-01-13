@@ -1,3 +1,5 @@
+import { tribes, squads } from '/culture/dream-team/tribes.js'
+
 const productRoles = {
   gpm: 'Group Product Manager',
   pm: 'Product Manager',
@@ -7,27 +9,24 @@ const productTeam = [
   {
     name: 'Mario Senhorini',
     role: productRoles.gpm,
-    tribeKey: 'diagnostico',
-    description: '',
-    avatar: '',
-  },
-  {
-    name: 'Mario Senhorini',
-    role: productRoles.gpm,
-    tribeKey: 'plataforma',
-    description: '',
+    tribes: [tribes.diagnostico.key, tribes.plataforma.key],
+    squads: [],
+    description: 'Lorem ipsum...',
     avatar: '',
   },
   {
     name: 'Fábio Pereira',
     role: productRoles.gpm,
-    tribeKey: 'desenvolvimento',
-    description: '',
+    tribes: [tribes.desenvolvimento.key],
+    squads: [],
+    description: 'Lorem ipsum...',
     avatar: '',
   },
   {
     name: 'Fabrizio Akkari',
     role: productRoles.gpm,
+    tribes: [],
+    squads: [],
     description: `
       E aee galera, eu sou o Fabrizio, getTotalYears('08/02/1984') anos e, apesar de nascer e viver quase a vida toda em São Paulo, hoje moro em Arujá com minha esposa e minha enteada.
       Sou formado em Sistemas de Informação e MBA em Gestão de Projetos e Negócios.
@@ -39,8 +38,8 @@ const productTeam = [
   {
     name: 'Thiago Cassimiro',
     role: productRoles.pm,
-    tribeKey: 'plataforma',
-    squadKey: 'core',
+    tribes: [tribes.plataforma.key],
+    squads: [squads.core.key],
     description: `Olá! Meu nome é Thiago mas conhecido como Cassi devido ao meu sobrenome, sou mineiro, torcedor do Cruzeirão cabuloso.
       Sou casado e tenho uma filha linda de getTotalYears('13/04/2023') ano, que considero um verdadeiro presente de Deus em minha vida.
       Sempre fui apaixonado por tecnologia e inovação.
@@ -56,8 +55,8 @@ const productTeam = [
   {
     name: 'Giovanni Attina',
     role: productRoles.pm,
-    tribeKey: 'desenvolvimento',
-    squadKey: 'treinamentos',
+    tribes: [tribes.desenvolvimento.key],
+    squads: [squads.treinamentos.key],
     description: `
       Opa! Sou Giovanni, normalmente me chamam de Gio ou Gi, não tenho uma preferência.
       Tenho getTotalYears('19/06/1996') anos. Sou de São Paulo, já morei em 6 cidades diferentes e hoje moro em Cerquilho, no interior.
@@ -70,6 +69,8 @@ const productTeam = [
   {
     name: 'Luíza Sernizon',
     role: productRoles.pm,
+    tribes: [tribes.desenvolvimento.key],
+    squads: [squads.protagonismo.key],
     description:
       'Oiee, meu nome é Luíza, mas quase todo mundo me chama de Lu. Sou mineira e amo bastante meu estado, mas também sou fascinada por viagens. Qualquer brecha que tenho estou na estrada! Sou bem curiosa e bem desinquieta, me formei em engenharia de controle e automação, fiz mestrado em engenharia elétrica, fui professora, desenvolvedora e pesquisadora, e depois disso vi que o que realmente gosto é de resolver problemas. Migrei para a gestão de projetos e agora estou me aventurando no mundo de produto :)',
     linkedin: 'https://www.linkedin.com/in/luizasernizonguimaraes',

@@ -1,27 +1,24 @@
+import { tribes, squads } from '/culture/dream-team/tribes.js'
+
 const uxRoles = {
   ux_lead: 'UX Lead',
-  ux: 'UX',
+  product_designer: 'Product Designer',
 }
 
 const uxTeam = [
   {
     name: 'Priscilla Barella',
     role: uxRoles.ux_lead,
-    tribeKey: 'diagnostico',
-    description: '',
-    avatar: '',
-  },
-  {
-    name: 'Priscilla Barella',
-    role: uxRoles.ux_lead,
-    tribeKey: 'plataforma',
-    description: '',
+    tribes: [tribes.diagnostico.key, tribes.plataforma.key],
+    squads: [],
+    description: 'Lorem ipsum...',
     avatar: '',
   },
   {
     name: 'Hendrik Funari',
     role: uxRoles.ux_lead,
-    tribeKey: 'desenvolvimento',
+    tribes: [tribes.desenvolvimento.key],
+    squads: [],
     description: `
       Fala, pessoal! Sou o Hendrik, mas podem me chamar como preferirem — já ouvi de tudo, desde ‘Endrique’ até ‘Rendrick’, então fiquem à vontade!
       Sou mineiro de nascença e sempre vivi em Minas Gerais; hoje moro em Uberlândia, cidade pela qual tenho um grande carinho.
@@ -31,10 +28,18 @@ const uxTeam = [
     avatar: 'https://i.imgur.com/5JeOq3X.png',
   },
   {
+    name: 'Aghata Germano',
+    role: 'Product Designer',
+    tribes: [tribes.diagnostico.key],
+    squads: [squads.diagnostico_individual.key],
+    description: 'Lorem ipsum...',
+    avatar: '',
+  },
+  {
     name: 'Gustavo Dinelli',
-    role: uxRoles.ux,
-    tribeKey: 'desenvolvimento',
-    squadKey: 'protagonistaismoEHabito',
+    role: uxRoles.product_designer,
+    tribes: [tribes.plataforma.key],
+    squads: [squads.core.key],
     description: `Olá, meu nome é Gustavo, mas muitos me conhecem pelo sobrenome Dinelli. Formado em design gráfico e pós-graduado em UX. Com os avanços da tecnologia, fiz a transição do impresso e produtos físicos para o mundo digital.
       Ao longo da minha carreira, tive a oportunidade de trabalhar com marcas renomadas como Disney, Marvel, Turma da Mônica, Globo, FIFA e diversos times de futebol. Atualmente, na Uol EdTech, já passei por todas as plataformas da empresa e participei de várias iniciativas, incluindo layout para PowerBI, criação de materiais de conteúdo, estudo de cores e desenvolvimento de logotipos para o marketing.
       No meu tempo livre, sou um colecionador de moedas, cédulas, action figures e vinis (os famosos LPs). Meus hobbies incluem ouvir música (Rock, Blues, Jazz, Reggae, Indie Rock, Música Clássica e Eletrônica), assistir corridas como MotoGP, F1 e Turismo, além de jogar gêneros como gerenciamento de cidades, fps, corrida ou RPGs.`,
@@ -42,9 +47,10 @@ const uxTeam = [
     avatar: 'https://i.imgur.com/OEru0kL.png',
   },
   {
-    name: 'Iryna Bastos',
-    role: uxRoles.ux,
-    tribeKey: 'plataforma',
+    name: 'Iryna Santos',
+    role: uxRoles.product_designer,
+    tribes: [tribes.desenvolvimento.key],
+    squads: [squads.treinamentos.key],
     description:
       'Oie! Me chamo Iryna mas pode me chamar pelo meu apelido que é Iry. Tenho 25 anos, sou do Rio de Janeiro e formada em Comunicação Visual Design pela UFRJ. Concilio minha vida sendo Product Designer e nas horas vagas artista 3D, que é uma das minhas paixões dentro da arte. Além disso, também tento tirar um tempinho pra fazer cerâmica, aprender sobre música, pintura, serigrafia e outras coisas a mais, é terapêutico!',
     avatar: 'https://i.imgur.com/QDL3ESu.jpeg',
@@ -53,8 +59,9 @@ const uxTeam = [
   },
   {
     name: 'Luciana Guedes',
-    role: uxRoles.ux,
-    tribeKey: 'plataforma',
+    role: uxRoles.product_designer,
+    tribes: [tribes.desenvolvimento.key],
+    squads: [squads.protagonismo.key],
     description: `Alô! Sou a Luciana, tenho getTotalYears('01/01/1996') anos, natural do Pará e criada no Amapá.
         Sou cientista social de formação, com atuação em arqueologia e antropologia.
         Atuo como designer desde 2019, com foco em UI e visual.
