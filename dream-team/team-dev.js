@@ -182,7 +182,7 @@ const devTeam = [
     avatar: 'https://avatars.githubusercontent.com/u/107590628',
   },
   {
-    name: 'Thiago Freitas Carneiro',
+    name: 'Thiago Freitas',
     role: devRoles.full_stack,
     tribeKey: 'desenvolvimento',
     squadKey: 'treinamentos',

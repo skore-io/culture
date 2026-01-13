@@ -221,23 +221,38 @@ header_title: Nosso Dream Team 🚀
       `
     }
 
+    function renderSquadMemberListItem(member) {
+      const memberId = `member-${member.name.toLowerCase().replace(/\s+/g, '-')}`
+      const avatarUrl = member.avatar && member.avatar.trim() !== ''
+        ? member.avatar
+        : `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=444c56&color=d6e0eb&size=128`
+
+      return `
+        <div class="squad-member-list-item" onclick="scrollToMember('${memberId}')">
+          <img class="squad-member-avatar" src="${avatarUrl}" alt="${member.name}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=444c56&color=d6e0eb&size=128'" />
+          <div class="squad-member-info">
+            <p class="squad-member-name">${member.name}</p>
+            <span class="squad-member-role">${member.role}</span>
+          </div>
+        </div>
+      `
+    }
+
     function renderSquadCard(squad, members) {
       const squadMembersByRole = groupMembersByRole(members)
 
-      // Ordenar membros: PM, PD, EM primeiro (nessa ordem), depois TL, depois Dev
-      const orderedMembers = [
+      // Topo: PM, PD, EM (formato original)
+      const topMembers = [
         ...(squadMembersByRole['PM'] || []),
         ...(squadMembersByRole['PD'] || []),
         ...(squadMembersByRole['EM'] || []),
+      ]
+
+      // Devs: TL e Dev (formato lista)
+      const devMembers = [
         ...(squadMembersByRole['TL'] || []),
         ...(squadMembersByRole['Dev'] || []),
       ]
-
-      // Dividir em grupos de 3 por linha
-      const rows = []
-      for (let i = 0; i < orderedMembers.length; i += 3) {
-        rows.push(orderedMembers.slice(i, i + 3))
-      }
 
       return `
         <div class="squad-card">
@@ -247,13 +262,17 @@ header_title: Nosso Dream Team 🚀
             <div class="squad-outcome-badge">${squad.description}</div>
           </div>
           <div class="squad-members-visual">
-            <div class="squad-members-all">
-              ${rows.map((row, index) => `
-                <div class="members-row ${index === 0 ? 'first-row' : ''}">
-                  ${row.map(member => renderPersonNodeWithDetails(member, false)).join('')}
-                </div>
-              `).join('')}
-            </div>
+            ${topMembers.length > 0 ? `
+              <div class="squad-members-top">
+                ${topMembers.map(member => renderPersonNodeWithDetails(member, false)).join('')}
+              </div>
+            ` : ''}
+            ${devMembers.length > 0 ? `
+              ${topMembers.length > 0 ? '<div class="squad-divider"></div>' : ''}
+              <div class="squad-members-list">
+                ${devMembers.map(member => renderSquadMemberListItem(member)).join('')}
+              </div>
+            ` : ''}
           </div>
         </div>
       `

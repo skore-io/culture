@@ -694,7 +694,7 @@ img.uol:hover {
   background-color: rgb(31 37 44 / 73%);
   border: 2px solid rgba(76, 175, 80, 0.5);
   border-radius: 0.3em;
-  padding: 1.5em;
+  padding: 10px 0;
   min-width: 300px;
   max-width: 400px;
   position: relative;
@@ -720,8 +720,7 @@ img.uol:hover {
 }
 
 .squad-header {
-  margin-left: 1.5em;
-  margin-bottom: 1.5em;
+  margin: 10px;
 }
 
 .squad-name {
@@ -745,7 +744,73 @@ img.uol:hover {
 }
 
 .squad-members-visual {
-  margin-left: 1.5em;
+  margin: 0 9px;
+}
+
+.squad-members-top {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1em;
+  margin-bottom: 1em;
+  align-items: flex-start;
+}
+
+.squad-divider {
+  height: 1px;
+  background-color: rgba(76, 175, 80, 0.2);
+  margin: 1em 0;
+}
+
+.squad-members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.squad-member-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background-color: rgb(31 37 44 / 60%);
+  border-radius: 0.4em;
+  padding: 0.8em 1em;
+  border: 1px solid rgba(76, 175, 80, 0.15);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.squad-member-list-item:hover {
+  background-color: rgb(31 37 44 / 75%);
+  border-color: rgba(76, 175, 80, 0.3);
+  transform: translateX(3px);
+}
+
+.squad-member-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 0.3em;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.squad-member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  flex: 1;
+}
+
+.squad-member-name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #d6e0eb;
+}
+
+.squad-member-role {
+  font-size: 0.8rem;
+  color: #adbac7;
+  font-weight: 400;
 }
 
 .squad-members-all {
@@ -820,5 +885,23 @@ img.uol:hover {
   .squad-header,
   .squad-members-visual {
     margin-left: 0;
+  }
+
+  .squad-member-list-item {
+    padding: 0.6em 0.8em;
+    gap: 0.8em;
+  }
+
+  .squad-member-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .squad-member-name {
+    font-size: 0.9rem;
+  }
+
+  .squad-member-role {
+    font-size: 0.75rem;
   }
 }
