@@ -114,8 +114,9 @@ const devTeam = [
   },
   {
     name: 'Ismael Felipe Hepp',
-    role: devRoles.tl,
+    role: devRoles.back,
     tribes: [tribes.desenvolvimento.key],
+    squads: [squads.treinamentos.key],
     description:
       "Opa! Meu nome é Ismael, nasci em Lajeado - RS, mas morei minha vida toda em Passo Fundo - RS, menos um breve período em que fiz um intercâmbio no Canadá (não cheguei a conhecer a Luiza). Trabalho há getTotalYears('01/09/2017') anos na área. Gosto de ouvir podcasts (muito bom para lavar louça), assistir séries, filmes, ler (mais ficção), jogar jogos de estratégia ou rpg (tanto eletrônico, como de mesa), só não sobra tempo pra tanta coisa.",
     github: 'https://github.com/ihepp',
@@ -123,10 +124,26 @@ const devTeam = [
     avatar: 'https://avatars.githubusercontent.com/u/93400303',
   },
   {
+    name: 'Thiago Caiado',
+    role: devRoles.em,
+    tribes: [tribes.plataforma.key],
+    squads: [squads.mobile.key],
+    description: 'Lorem ipsum...',
+    avatar: '',
+  },
+  {
+    name: 'Mateus Schwade',
+    role: devRoles.mobile,
+    tribes: [tribes.plataforma.key],
+    squads: [squads.mobile.key],
+    description: 'Lorem ipsum...',
+    avatar: '',
+  },
+  {
     name: 'Tiago Elias',
     role: devRoles.mobile,
-    tribes: [tribes.desenvolvimento.key],
-    squads: [squads.treinamentos.key],
+    tribes: [tribes.plataforma.key],
+    squads: [squads.mobile.key],
     description: `Aoopa, sou o Tiago! Tenho getTotalYears('01/01/1996') anos e sou natural do triângulo mineiro.
       Recentemente me mudei pra Ribeirão Preto, mas não abro mão do pão de queijo de minas.
       Curto muito assistir a todo tipo de série pra relaxar um pouco e também ver um futebolzinho, nada como sofrer bastante com o Corinthians.`,

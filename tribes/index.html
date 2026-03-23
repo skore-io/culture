@@ -1,0 +1,510 @@
+---
+layout: default
+title: Tribes
+hide_legacy_chrome: true
+---
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="index.css" />
+<style>
+  .tribes-page {
+    position: relative;
+    min-height: 100vh;
+    background: transparent;
+  }
+
+  .tribes-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(99, 102, 241, 0.08) 0%, transparent 42%),
+      radial-gradient(circle at 82% 10%, rgba(165, 180, 252, 0.06) 0%, transparent 40%),
+      linear-gradient(180deg, rgba(5, 7, 13, 0.72) 0%, rgba(5, 7, 13, 0.64) 55%, rgba(5, 7, 13, 0.6) 100%);
+  }
+
+  .tribes-page > :not(.noise-bg) {
+    position: relative;
+    z-index: 2;
+  }
+
+  .tribes-page .noise-bg {
+    opacity: 0.012;
+    background-size: 240px 240px;
+    mix-blend-mode: soft-light;
+  }
+
+  .tribes-chart-svg {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
+  }
+</style>
+
+<div class="tribes-page font-['Inter'] text-zinc-400 antialiased overflow-x-hidden">
+  <div class="noise-bg"></div>
+  {% include header.html active='tribes' %}
+
+  <main class="pt-28 pb-20 px-6">
+    <section class="max-w-7xl mx-auto mb-14 relative">
+      <div class="hero-glow"></div>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-6">
+        <span class="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
+        <span class="text-xs tracking-wide text-zinc-300">Organization</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-medium text-white tracking-tight leading-[1.1] mb-4">Tribes &amp; squads</h1>
+      <p class="text-lg font-light text-zinc-400 max-w-3xl">
+        How we group domains and outcomes: three tribes own product areas; squads deliver concrete outcomes inside each tribe.
+        People appear under each squad when they’re assigned to that squad in <a href="{{ site.baseurl }}/dream-team" class="text-zinc-300 underline decoration-white/20 underline-offset-4 hover:text-white">Dream Team</a> data.
+        <span class="block mt-3 text-zinc-500 text-base">Tribe leadership lists people with leadership roles who are <strong class="text-zinc-400 font-medium">not</strong> placed in squads; squad members are driven only by the <code class="text-zinc-400">squads</code> field. <strong class="text-zinc-400 font-medium">Principal Engineers</strong> appear in their own band above the tribes.</span>
+      </p>
+    </section>
+
+    <section class="max-w-7xl mx-auto mb-12" aria-label="Tribe structure overview">
+      <div class="rounded-2xl border border-white/10 bg-zinc-900/25 backdrop-blur-sm p-6 md:p-8">
+        <svg class="tribes-chart-svg" viewBox="0 0 960 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M480 12v28" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M120 52h720" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M120 52v18M480 52v18M840 52v18" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" stroke-linecap="round" />
+          <circle cx="120" cy="88" r="4" fill="rgb(249 115 22 / 0.85)" />
+          <circle cx="480" cy="88" r="4" fill="rgb(52 211 153 / 0.85)" />
+          <circle cx="840" cy="88" r="4" fill="rgb(167 139 250 / 0.85)" />
+        </svg>
+        <p class="text-center text-xs text-zinc-500 font-light max-w-2xl mx-auto -mt-2">
+          One engineering organization splits into tribes; each tribe contains squads aligned to measurable outcomes.
+        </p>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto mb-10" id="pe-horizontal-mount" aria-label="Principal Engineers"></section>
+
+    <section class="max-w-7xl mx-auto" id="tribes-mount" aria-live="polite"></section>
+  </main>
+
+  <footer class="border-t border-white/5 bg-black pt-16 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-16">
+        <div class="col-span-2 md:col-span-2">
+          <span class="text-white font-medium tracking-tighter text-lg block mb-6">CULTURE</span>
+          <p class="text-zinc-500 text-xs font-light max-w-xs">A living engineering culture reference to guide technical growth and collaboration.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4 class="text-white text-xs font-medium uppercase tracking-wider">Product</h4>
+          <a href="{{ site.baseurl }}/dream-team" class="text-zinc-500 text-sm hover:text-white transition-colors">Dream Team</a>
+          <a href="{{ site.baseurl }}/tribes" class="text-zinc-500 text-sm hover:text-white transition-colors">Tribes</a>
+          <a href="{{ site.baseurl }}/career-ladder" class="text-zinc-500 text-sm hover:text-white transition-colors">Career Ladder</a>
+          <a href="{{ site.baseurl }}/stacks" class="text-zinc-500 text-sm hover:text-white transition-colors">Stacks</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4 class="text-white text-xs font-medium uppercase tracking-wider">Company</h4>
+          <a href="https://github.com/uoledtech-qulture-rocks/culture" target="_blank" rel="noopener noreferrer" class="text-zinc-500 text-sm hover:text-white transition-colors">Repository</a>
+          <a href="{{ site.baseurl }}/docs/dream-team.html" class="text-zinc-500 text-sm hover:text-white transition-colors">Docs</a>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5">
+        <p class="text-zinc-600 text-xs font-light">© 2026 Engineering Culture.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script type="module">
+  import { tribes, squads } from '{{ site.baseurl }}/dream-team/tribes.js'
+  import { devTeam } from '{{ site.baseurl }}/dream-team/team-dev.js'
+  import { productTeam } from '{{ site.baseurl }}/dream-team/team-product.js'
+  import { uxTeam } from '{{ site.baseurl }}/dream-team/team-ux.js'
+  import { dataTeam } from '{{ site.baseurl }}/dream-team/team-data.js'
+
+  const TRIBE_ORDER = ['diagnostico', 'desenvolvimento', 'plataforma']
+  const THEME = {
+    diagnostico: {
+      accent: 'border-orange-500/35 bg-orange-500/5',
+      chip: 'border-orange-500/25 bg-orange-500/10 text-orange-200/90',
+      line: 'from-orange-500/50',
+      dot: 'bg-orange-500',
+    },
+    desenvolvimento: {
+      accent: 'border-emerald-500/35 bg-emerald-500/5',
+      chip: 'border-emerald-500/25 bg-emerald-500/10 text-emerald-200/90',
+      line: 'from-emerald-500/50',
+      dot: 'bg-emerald-500',
+    },
+    plataforma: {
+      accent: 'border-violet-500/35 bg-violet-500/5',
+      chip: 'border-violet-500/25 bg-violet-500/10 text-violet-200/90',
+      line: 'from-violet-500/50',
+      dot: 'bg-violet-500',
+    },
+  }
+
+  function avatarUrlFor(member) {
+    const raw = member.avatar != null ? String(member.avatar).trim() : ''
+    if (raw) return raw
+    const name = (member.name || 'team').trim() || 'member'
+    const seed = encodeURIComponent(name)
+    const styles = ['notionists', 'micah', 'lorelei', 'avataaars', 'open-peeps']
+    let hash = 0
+    for (let i = 0; i < name.length; i++) hash = (hash << 5) - hash + name.charCodeAt(i)
+    const style = styles[Math.abs(hash) % styles.length]
+    return `https://api.dicebear.com/7.x/${style}/svg?seed=${seed}&backgroundColor=27272a`
+  }
+
+  /** Roles treated as tribe-level leadership (matches Dream Team `role` strings). */
+  const LEADERSHIP_ROLES = new Set([
+    'Group Product Manager',
+    'Engineering Manager Sr',
+    'Principal Engineer',
+    'UX Lead',
+    'Data Lead',
+    'Engineering Manager',
+    'Tech Lead',
+    'Product Manager',
+  ])
+
+  const ROLE_SORT_INDEX = {
+    'Group Product Manager': 0,
+    'Engineering Manager Sr': 1,
+    'Principal Engineer': 2,
+    'UX Lead': 3,
+    'Data Lead': 4,
+    'Engineering Manager': 5,
+    'Tech Lead': 6,
+    'Product Manager': 7,
+  }
+
+  /** Tribe leaders: leadership role + tribe membership + no squad assignment (squads drive IC lists below). PE are excluded — they’re listed in the Principal Engineers band. */
+  function tribeLeaders(allPeople, tribeKey) {
+    return allPeople
+      .filter(
+        (m) =>
+          m.role !== 'Principal Engineer' &&
+          (m.tribes || []).includes(tribeKey) &&
+          LEADERSHIP_ROLES.has(m.role) &&
+          (m.squads || []).length === 0,
+      )
+      .sort((a, b) => {
+        const ra = ROLE_SORT_INDEX[a.role] ?? 99
+        const rb = ROLE_SORT_INDEX[b.role] ?? 99
+        if (ra !== rb) return ra - rb
+        return a.name.localeCompare(b.name, 'pt-BR')
+      })
+  }
+
+  function appendTribeLeadership(container, leaders) {
+    if (!leaders.length) return
+
+    const block = document.createElement('div')
+    block.className = 'mt-4'
+
+    const label = document.createElement('p')
+    label.className = 'text-[11px] uppercase tracking-wider text-zinc-500 mb-1.5'
+    label.textContent = `Tribe leadership (${leaders.length})`
+
+    const panel = document.createElement('div')
+    panel.className =
+      'rounded-lg border border-white/[0.07] bg-black/25 px-2 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]'
+
+    const row = document.createElement('div')
+    row.className = 'flex flex-col gap-1.5'
+
+    leaders.forEach((m) => {
+      const card = document.createElement('div')
+      card.className =
+        'flex items-center gap-2 rounded-md border border-white/[0.06] bg-black/15 px-2 py-1.5'
+
+      const img = document.createElement('img')
+      img.src = avatarUrlFor(m)
+      img.alt = ''
+      img.className = 'h-8 w-8 rounded-full object-cover shrink-0'
+      img.loading = 'lazy'
+      img.decoding = 'async'
+
+      const text = document.createElement('div')
+      text.className = 'min-w-0 flex-1'
+
+      const nm = document.createElement('div')
+      nm.className = 'text-xs font-medium text-white truncate'
+      nm.textContent = m.name
+
+      const rl = document.createElement('div')
+      rl.className = 'text-[10px] text-zinc-500 truncate'
+      rl.textContent = m.role || ''
+
+      text.appendChild(nm)
+      text.appendChild(rl)
+      card.appendChild(img)
+      card.appendChild(text)
+      row.appendChild(card)
+    })
+
+    block.appendChild(label)
+    panel.appendChild(row)
+    block.appendChild(panel)
+    container.appendChild(block)
+  }
+
+  function membersBySquadKey(allPeople) {
+    const map = {}
+    for (const m of allPeople) {
+      if (m.role === 'Principal Engineer') continue
+      for (const sk of m.squads || []) {
+        if (!map[sk]) map[sk] = []
+        map[sk].push(m)
+      }
+    }
+    for (const k of Object.keys(map)) {
+      map[k].sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'))
+    }
+    return map
+  }
+
+  /** Sort order for roles inside a squad (no section headers — uses compact badge on chip). */
+  function squadRoleLane(role) {
+    const r = (role || '').trim()
+    if (r === 'Group Product Manager' || r === 'Product Manager') return { order: 10 }
+    if (r === 'Engineering Manager Sr' || r === 'Engineering Manager') return { order: 20 }
+    if (r === 'Principal Engineer') return { order: 30 }
+    if (r === 'Tech Lead') return { order: 40 }
+    if (r === 'UX Lead' || r === 'Product Designer') return { order: 50 }
+    if (r === 'Data Lead' || r === 'Data Engineer' || r === 'Data Analytics') return { order: 60 }
+    if (
+      r === 'Frontend Developer' ||
+      r === 'Backend Developer' ||
+      r === 'Full Stack Developer' ||
+      r === 'Mobile Developer' ||
+      r === 'QA'
+    ) {
+      return { order: 70 }
+    }
+    return { order: 999 }
+  }
+
+  function roleAbbrev(role) {
+    const map = {
+      'Group Product Manager': 'GPM',
+      'Product Manager': 'PM',
+      'Engineering Manager Sr': 'EM+',
+      'Engineering Manager': 'EM',
+      'Principal Engineer': 'PE',
+      'Tech Lead': 'TL',
+      'UX Lead': 'UX',
+      'Product Designer': 'PD',
+      'Data Lead': 'DL',
+      'Data Engineer': 'DE',
+      'Data Analytics': 'DA',
+      'Frontend Developer': 'FE',
+      'Backend Developer': 'BE',
+      'Full Stack Developer': 'FS',
+      'Mobile Developer': 'MB',
+      'QA': 'QA',
+    }
+    const r = (role || '').trim()
+    return map[r] || '•'
+  }
+
+  function sortSquadMembers(members) {
+    return [...members].sort((a, b) => {
+      const la = squadRoleLane(a.role).order
+      const lb = squadRoleLane(b.role).order
+      if (la !== lb) return la - lb
+      return a.name.localeCompare(b.name, 'pt-BR')
+    })
+  }
+
+  function appendSquadPeople(card, squadKey, peopleInSquad) {
+    const members = peopleInSquad[squadKey] || []
+    if (!members.length) return
+
+    const wrap = document.createElement('div')
+    wrap.className = 'mt-3 pt-3 border-t border-white/10'
+
+    const label = document.createElement('p')
+    label.className = 'text-[10px] uppercase tracking-wider text-zinc-500 mb-1.5'
+    label.textContent = `People (${members.length})`
+    wrap.appendChild(label)
+
+    const panel = document.createElement('div')
+    panel.className =
+      'rounded-lg border border-white/[0.07] bg-black/25 px-2 py-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]'
+
+    const row = document.createElement('div')
+    row.className = 'flex flex-wrap items-center gap-x-1.5 gap-y-1'
+    row.setAttribute('role', 'list')
+
+    let prevLaneOrder = null
+    sortSquadMembers(members).forEach((m) => {
+      const laneOrder = squadRoleLane(m.role).order
+      prevLaneOrder = laneOrder
+
+      const chip = document.createElement('span')
+      chip.className =
+        'inline-flex items-center gap-1.5 max-w-[min(100%,16rem)] rounded-full border border-white/10 bg-black/25 pl-0.5 pr-2 py-0.5'
+      chip.setAttribute('role', 'listitem')
+      chip.title = `${m.name} — ${m.role || ''}`.trim()
+
+      const img = document.createElement('img')
+      img.src = avatarUrlFor(m)
+      img.alt = ''
+      img.className = 'h-[18px] w-[18px] rounded-full object-cover shrink-0'
+      img.loading = 'lazy'
+      img.decoding = 'async'
+
+      const abbr = document.createElement('span')
+      abbr.className = 'inline-flex items-center justify-center rounded-md border border-white/10 bg-white/5 px-1.5 py-[1px] text-[8px] font-semibold text-zinc-300 shrink-0 tabular-nums'
+      abbr.textContent = roleAbbrev(m.role)
+      abbr.setAttribute('aria-hidden', 'true')
+
+      const nm = document.createElement('span')
+      nm.className = 'text-[10px] text-zinc-200 truncate pr-0.5'
+      nm.textContent = m.name
+
+      chip.appendChild(img)
+      chip.appendChild(abbr)
+      chip.appendChild(nm)
+      row.appendChild(chip)
+    })
+
+    panel.appendChild(row)
+    wrap.appendChild(panel)
+    card.appendChild(wrap)
+  }
+
+  /** Principal Engineers — full-width band above tribes (not tied to a single tribe/squad). */
+  function appendPrincipalEngineersHorizontal(container, allPeople) {
+    const pes = allPeople
+      .filter((m) => m.role === 'Principal Engineer')
+      .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'))
+    if (!pes.length) return
+
+    const wrap = document.createElement('div')
+    wrap.className =
+      'rounded-2xl border border-indigo-500/25 bg-indigo-500/[0.06] backdrop-blur-sm p-5 md:p-6'
+
+    const top = document.createElement('div')
+    top.className = 'mb-4'
+    const h2 = document.createElement('h2')
+    h2.className = 'text-base font-medium text-white tracking-tight'
+    h2.textContent = 'Principal Engineers'
+    const sub = document.createElement('p')
+    sub.className = 'text-xs text-zinc-500 font-light leading-relaxed mt-1'
+    sub.textContent =
+      'PEs work across tribes (architecture, standards, technical strategy).'
+    top.appendChild(h2)
+    top.appendChild(sub)
+
+    const panel = document.createElement('div')
+    panel.className =
+      'rounded-lg border border-white/[0.07] bg-black/25 px-2 py-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]'
+
+    const row = document.createElement('div')
+    row.className = 'flex flex-wrap items-center gap-x-1.5 gap-y-1'
+    row.setAttribute('role', 'list')
+
+    pes.forEach((m) => {
+      const chip = document.createElement('span')
+      chip.className =
+        'inline-flex items-center gap-1.5 max-w-[min(100%,16rem)] rounded-full border border-white/10 bg-black/25 pl-0.5 pr-2 py-0.5'
+      chip.setAttribute('role', 'listitem')
+      chip.title = `${m.name} — ${m.role || ''}`.trim()
+
+      const img = document.createElement('img')
+      img.src = avatarUrlFor(m)
+      img.alt = ''
+      img.className = 'h-[18px] w-[18px] rounded-full object-cover shrink-0'
+      img.loading = 'lazy'
+      img.decoding = 'async'
+
+      const abbr = document.createElement('span')
+      abbr.className =
+        'inline-flex items-center justify-center rounded-md border border-indigo-400/20 bg-indigo-500/10 px-1.5 py-[1px] text-[8px] font-semibold text-indigo-200/90 shrink-0 tabular-nums'
+      abbr.textContent = roleAbbrev(m.role)
+      abbr.setAttribute('aria-hidden', 'true')
+
+      const nm = document.createElement('span')
+      nm.className = 'text-[10px] text-zinc-200 truncate pr-0.5'
+      nm.textContent = m.name
+
+      chip.appendChild(img)
+      chip.appendChild(abbr)
+      chip.appendChild(nm)
+      row.appendChild(chip)
+    })
+
+    panel.appendChild(row)
+    wrap.appendChild(top)
+    wrap.appendChild(panel)
+    container.appendChild(wrap)
+  }
+
+  const mount = document.getElementById('tribes-mount')
+  const peMount = document.getElementById('pe-horizontal-mount')
+  const allSquads = Object.values(squads)
+  const everyone = [...devTeam, ...productTeam, ...uxTeam, ...dataTeam]
+  appendPrincipalEngineersHorizontal(peMount, everyone)
+  const peopleBySquad = membersBySquadKey(everyone)
+
+  const grid = document.createElement('div')
+  grid.className = 'grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6'
+
+  TRIBE_ORDER.forEach((key) => {
+    const t = tribes[key]
+    const theme = THEME[key]
+    const tribeSquads = allSquads.filter((s) => s.tribe_key === t.key)
+
+    const col = document.createElement('div')
+    col.className = 'flex flex-col gap-5'
+
+    const head = document.createElement('div')
+    head.className = `rounded-2xl border p-6 ${theme.accent} backdrop-blur-sm`
+
+    const top = document.createElement('div')
+    top.className = 'flex items-start gap-3 mb-3'
+    top.innerHTML = `
+        <span class="mt-1 h-2 w-2 rounded-full ${theme.dot} shrink-0"></span>
+        <div>
+          <h2 class="text-lg font-medium text-white tracking-tight">${t.name}</h2>
+          <p class="text-sm text-zinc-400 font-light leading-relaxed mt-2">${t.description}</p>
+        </div>
+      `
+    head.appendChild(top)
+
+    const divider = document.createElement('div')
+    divider.className = `h-px w-full bg-gradient-to-r ${theme.line} to-transparent opacity-70`
+    head.appendChild(divider)
+
+    appendTribeLeadership(head, tribeLeaders(everyone, t.key))
+
+    const squadsLabel = document.createElement('p')
+    squadsLabel.className = 'text-[11px] uppercase tracking-wider text-zinc-500 mt-4 mb-1'
+    squadsLabel.textContent = `Squads (${tribeSquads.length})`
+    head.appendChild(squadsLabel)
+
+    const stack = document.createElement('div')
+    stack.className = 'flex flex-col gap-3 pl-1 border-l border-white/10 ml-2'
+
+    tribeSquads.forEach((s) => {
+      const card = document.createElement('article')
+      card.className = `rounded-xl border px-4 py-3 ${theme.chip}`
+      const h3 = document.createElement('h3')
+      h3.className = 'text-sm font-medium text-white mb-1'
+      h3.textContent = s.name
+      const p = document.createElement('p')
+      p.className = 'text-xs text-zinc-400 font-light leading-relaxed'
+      p.textContent = s.description
+      card.appendChild(h3)
+      card.appendChild(p)
+      appendSquadPeople(card, s.key, peopleBySquad)
+      stack.appendChild(card)
+    })
+
+    col.appendChild(head)
+    col.appendChild(stack)
+    grid.appendChild(col)
+  })
+
+  mount.appendChild(grid)
+</script>
