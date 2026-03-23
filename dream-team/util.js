@@ -1,4 +1,4 @@
-// Função para retornar a quantidade de anos a partir de uma data
+// Function to return the number of years from a date
 function getTotalYears(dateString) {
   const today = new Date()
   const birthDate = new Date(dateString.split('/').reverse().join('-'))

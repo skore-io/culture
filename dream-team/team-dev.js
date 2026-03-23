@@ -124,7 +124,7 @@ const devTeam = [
   },
   {
     name: 'Tiago Elias',
-    role: devRoles.full_stack,
+    role: devRoles.mobile,
     tribes: [tribes.desenvolvimento.key],
     squads: [squads.treinamentos.key],
     description: `Aoopa, sou o Tiago! Tenho getTotalYears('01/01/1996') anos e sou natural do triângulo mineiro.
@@ -133,17 +133,6 @@ const devTeam = [
     github: 'https://github.com/tiagoelias18',
     linkedin: 'https://www.linkedin.com/in/tiago-elias',
     avatar: 'https://i.imgur.com/X6kakdT.jpg',
-  },
-  {
-    name: 'Ruan Carlos',
-    role: devRoles.full_stack,
-    tribes: [tribes.desenvolvimento.key],
-    description: `Salvee! Suavera? Me chamo Ruan, mas pode me chamar de Ruan, tenho getTotalYears('01/01/1998') anos e sou de Blumenau - SC.
-      Sou curioso desde sempre, talvez seja por isso que sou um pouco hiperativo.
-      Meus hobbies são: cozinhar, programar, viajar e curto degustar whisky.`,
-    github: 'https://github.com/RuanCarlosSantos',
-    linkedin: 'https://www.linkedin.com/in/ruancarloss',
-    avatar: 'https://i.imgur.com/2Nae5nh.jpg',
   },
   {
     name: 'Leonardo Batini',
@@ -182,21 +171,6 @@ const devTeam = [
     linkedin: 'https://www.linkedin.com/in/thiago-freitas-carneiro-39359270/',
     avatar: 'https://github.com/thiagofreitascarneiro.png',
   },
-  {
-    name: 'Caio Ximenes',
-    role: devRoles.full_stack,
-    tribes: [tribes.desenvolvimento.key],
-    squads: [squads.treinamentos.key],
-    description: `Opa, pessoal! Tranquilidade?
-    Me chamo Caio e comecei a estudar programação e fazer freelas por conta própria em 2018. Já em 2019/2020, passei a atuar de forma mais profissional na área.
-    Sou apaixonado por tecnologia e cultura pop — fã de Fullmetal Alchemist e completamente vidrado na franquia Kingdom Hearts.
-    Nas horas vagas, curto jogar videogame/PC, assistir animes e séries, e até mesmo aproveitar o tempo livre pra estudar um pouco mais (sim, eu gosto mesmo!).
-    Sou do Rio de Janeiro - RJ, mais precisamente da Ilha do Governador, no Morro do Dendê, onde vivi a maior parte da minha vida. Atualmente, moro em São Paulo - SP, em busca de novos desafios e oportunidades.`,
-    github: 'https://github.com/caioalvesdev',
-    linkedin: 'https://br.linkedin.com/in/caioximenes',
-    avatar: 'https://github.com/caioalvesdev.png',
-  },
-  // Diagnóstico Individual
   {
     name: 'Luã',
     role: productRoles.pm,
@@ -237,15 +211,6 @@ const devTeam = [
     description: 'Lorem ipsum...',
     avatar: 'https://avatars.githubusercontent.com/u/32912035?v=4',
   },
-  // Protagonismo e Hábito
-  {
-    name: 'Arnaldo Miciano',
-    role: devRoles.em,
-    tribes: [tribes.desenvolvimento.key],
-    squads: [squads.protagonismo.key],
-    description: 'Lorem ipsum...',
-    avatar: '',
-  },
   {
     name: 'Renata',
     role: devRoles.tl,
@@ -278,7 +243,6 @@ const devTeam = [
     description: 'Lorem ipsum...',
     avatar: 'https://avatars.githubusercontent.com/u/78622721?v=4',
   },
-  // UX Integrada
   {
     name: 'Math',
     role: productRoles.pm,
@@ -303,9 +267,8 @@ const devTeam = [
     description: 'Lorem ipsum...',
     avatar: 'https://avatars.githubusercontent.com/u/22087652?v=4',
   },
-  // Resultado
   {
-    name: 'L. Suzano',
+    name: 'Lucas Suzano',
     role: productRoles.pm,
     tribes: [tribes.diagnostico.key],
     squads: [squads.resultado.key],
@@ -327,14 +290,6 @@ const devTeam = [
     squads: [squads.resultado.key],
     description: 'Lorem ipsum...',
     avatar: '',
-  },
-  {
-    name: 'Thiago May',
-    role: devRoles.tl,
-    tribes: [tribes.diagnostico.key],
-    squads: [squads.resultado.key],
-    description: 'Lorem ipsum...',
-    avatar: 'https://avatars.githubusercontent.com/u/13455331?v=4',
   },
   {
     name: 'Caio Alves',
@@ -360,7 +315,6 @@ const devTeam = [
     description: 'Lorem ipsum...',
     avatar: 'https://avatars.githubusercontent.com/u/238274342?v=4',
   },
-  // Treinamentos
   {
     name: 'Wilian Lima',
     role: devRoles.em,
@@ -369,7 +323,6 @@ const devTeam = [
     description: 'Lorem ipsum...',
     avatar: '',
   },
-  // Core
   {
     name: 'João Batista',
     role: devRoles.full_stack,

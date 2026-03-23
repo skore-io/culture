@@ -1,239 +1,173 @@
 ---
 layout: default
 title: Stacks
-header_title: Stacks utilizadas
+hide_legacy_chrome: true
 ---
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .stacks-page {
+    position: relative;
+    min-height: 100vh;
+    background: transparent;
+  }
 
-<section class="stacks">
-  <link rel="stylesheet" href="./index.css" />
+  .stacks-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(99, 102, 241, 0.08) 0%, transparent 42%),
+      radial-gradient(circle at 82% 10%, rgba(165, 180, 252, 0.06) 0%, transparent 40%),
+      linear-gradient(180deg, rgba(5, 7, 13, 0.72) 0%, rgba(5, 7, 13, 0.64) 55%, rgba(5, 7, 13, 0.6) 100%);
+  }
 
-  <h1 class="title">Stacks utilizadas no Learning Rocks 🚀</h1>
-  <p class="intro">
-    Aqui no Learning Rocks, nossa equipe combina expertise com tecnologia de ponta para criar
-    experiências incríveis. Confira as ferramentas que utilizamos diariamente:
-  </p>
+  .stacks-page > :not(.noise-bg) {
+    position: relative;
+    z-index: 2;
+  }
 
-  <div class="categories">
-    <div class="category">
-      <h2><i class="fas fa-desktop"></i> Front-end</h2>
-      <p>No front-end, criamos interfaces elegantes e funcionais que encantam nossos usuários.</p>
-      <div class="badges">
-        <img src="https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5" alt="HTML5" />
-        <img
-          src="https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6"
-          alt="CSS"
-        />
-        <img src="https://img.shields.io/badge/Vue.js-333333?style=flat&logo=vue.js" alt="Vue.js" />
-        <img src="https://img.shields.io/badge/Nuxt.js-333333?style=flat&logo=nuxt" alt="Nuxt.js" />
-        <img
-          src="https://img.shields.io/badge/-Flutter-333333?style=flat&logo=flutter&logoColor=blue"
-          alt="Flutter"
-        />
-        <img
-          src="https://img.shields.io/badge/-Jest-333333?style=flat&logo=jest&logoColor=orange"
-          alt="Jest"
-        />
+  .noise-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.012;
+    background-size: 240px 240px;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 350px;
+    background: radial-gradient(circle at center, rgb(249 115 22 / 16%) 0%, transparent 65%);
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+</style>
+
+<div class="stacks-page font-['Inter'] text-zinc-400 antialiased overflow-x-hidden selection:bg-orange-900/30 selection:text-orange-100">
+  <div class="noise-bg"></div>
+  {% include header.html active='stacks' %}
+
+  <main class="pt-28 pb-20 px-6 relative z-10">
+    <section class="max-w-7xl mx-auto mb-12 relative">
+      <div class="hero-glow"></div>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-6">
+        <span class="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
+        <span class="text-xs tracking-wide text-zinc-300">Tech Landscape</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-medium text-white tracking-tight leading-[1.1] mb-4">Technical Stack</h1>
+      <p class="text-lg font-light text-zinc-400 max-w-3xl">
+        Core technologies and tools used by our engineering teams.
+      </p>
+    </section>
+
+    <section id="stack" class="z-20 flex flex-col justify-center relative overflow-hidden max-w-7xl mx-auto">
+      <div class="w-full relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#4FC08D]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(79,192,141,0.2)]">
+            <img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">Vue</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#00DC82]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(0,220,130,0.2)]">
+            <img src="https://cdn.simpleicons.org/nuxt/00DC82" alt="Nuxt.js logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">Nuxt.js</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#02569B]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(2,86,155,0.2)]">
+            <img src="https://cdn.simpleicons.org/flutter/02569B" alt="Flutter logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">Flutter</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#3178C6]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(49,120,198,0.2)]">
+            <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">TypeScript</span>
+          </div>
+
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#E0234E]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(224,35,78,0.2)]">
+            <img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">NestJS</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#CC0000]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(204,0,0,0.2)]">
+            <img src="https://cdn.simpleicons.org/rubyonrails/CC0000" alt="Ruby on Rails logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">Ruby on Rails</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#339933]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(51,153,51,0.2)]">
+            <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">Node.js</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#47A248]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(71,162,72,0.2)]">
+            <img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">MongoDB</span>
+          </div>
+
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#4285F4]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(66,133,244,0.2)]">
+            <img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="Google Cloud logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">Google Cloud</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#669DF6]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(102,157,246,0.2)]">
+            <img src="https://cdn.simpleicons.org/googlebigquery/669DF6" alt="BigQuery logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">BigQuery</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-white/50 cursor-pointer hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+            <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">GitHub</span>
+          </div>
+
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#2496ED]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(36,150,237,0.2)]">
+            <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">Docker</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#336791]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(51,103,145,0.2)]">
+            <img src="https://cdn.simpleicons.org/postgresql/336791" alt="PostgreSQL logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">PostgreSQL</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#8B5CF6]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(139,92,246,0.2)]">
+            <img src="https://cdn.simpleicons.org/cursor/FFFFFF" alt="Cursor logo" class="h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">Cursor</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-6 rounded-xl border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900/80 transition-all duration-300 hover:border-[#F7DF1E]/50 cursor-pointer hover:shadow-[0_0_20px_rgba(247,223,30,0.2)]">
+            <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo" class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <span class="mt-3 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5 bg-black pt-16 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-16">
+        <div class="col-span-2 md:col-span-2">
+          <span class="text-white font-medium tracking-tighter text-lg block mb-6">CULTURE</span>
+          <p class="text-zinc-500 text-xs font-light max-w-xs">A living engineering culture reference to guide technical growth and collaboration.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4 class="text-white text-xs font-medium uppercase tracking-wider">Product</h4>
+          <a href="{{ site.baseurl }}/dream-team" class="text-zinc-500 text-sm hover:text-white transition-colors">Dream Team</a>
+          <a href="{{ site.baseurl }}/career-ladder" class="text-zinc-500 text-sm hover:text-white transition-colors">Career Ladder</a>
+          <a href="{{ site.baseurl }}/stacks" class="text-zinc-500 text-sm hover:text-white transition-colors">Stacks</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4 class="text-white text-xs font-medium uppercase tracking-wider">Company</h4>
+          <a href="https://github.com/uoledtech-qulture-rocks/culture" target="_blank" rel="noopener noreferrer" class="text-zinc-500 text-sm hover:text-white transition-colors">Repository</a>
+          <a href="{{ site.baseurl }}/docs/dream-team.html" class="text-zinc-500 text-sm hover:text-white transition-colors">Docs</a>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5">
+        <p class="text-zinc-600 text-xs font-light">© 2026 Engineering Culture.</p>
       </div>
     </div>
-
-    <div class="category">
-      <h2><i class="fas fa-server"></i> Back-end</h2>
-      <p>Desenvolvemos sistemas robustos e escaláveis para garantir desempenho e segurança.</p>
-      <div class="badges">
-        <img
-          src="https://img.shields.io/badge/-TypeScript-333333?style=flat&logo=typescript"
-          alt="TypeScript"
-        />
-        <img
-          src="https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript"
-          alt="JavaScript"
-        />
-        <img
-          src="https://img.shields.io/badge/-Phyton-333333?style=flat&logo=python"
-          alt="Phyton"
-        />
-        <img
-          src="https://img.shields.io/badge/-Node.js-333333?style=flat&logo=node.js"
-          alt="Node.js"
-        />
-        <img
-          src="https://img.shields.io/badge/-Nest.js-333333?style=flat&logo=nestjs&logoColor=red"
-          alt="Nest.js"
-        />
-        <img
-          src="https://img.shields.io/badge/GraphQL-333333?style=flat&logo=graphql&logoColor=FF69B4"
-          alt="GraphQL"
-        />
-        <img
-          src="https://img.shields.io/badge/-Ruby-333333?style=flat&logo=ruby&logoColor=red"
-          alt="Ruby"
-        />
-        <img
-          src="https://img.shields.io/badge/-Rails-333333?style=flat&logo=ruby-on-rails"
-          alt="Rails"
-        />
-        <img
-          src="https://img.shields.io/badge/-Jest-333333?style=flat&logo=jest&logoColor=orange"
-          alt="Jest"
-        />
-        <img
-          src="https://img.shields.io/badge/-Pub/Sub-333333?style=flat&logo=firebase"
-          alt="Pub/Sub"
-        />
-        <img
-          src="https://img.shields.io/badge/-Dialogflow-333333?style=flat&logo=dialogflow"
-          alt="Dialogflow"
-        />
-        <img
-          src="https://img.shields.io/badge/-Keycloak-333333?style=flat&logo=keycloak"
-          alt="keycloak"
-        />
-      </div>
-    </div>
-
-    <div class="category">
-      <h2><i class="fas fa-database"></i> Data</h2>
-      <p>Nossos sistemas de dados oferecem insights valiosos para decisões estratégicas.</p>
-      <div class="badges">
-        <img
-          src="https://img.shields.io/badge/PostgreSQL-333333?style=flat&logo=postgresql"
-          alt="PostgreSQL"
-        />
-        <img
-          src="https://img.shields.io/badge/-MongoDB-333333?style=flat&logo=mongodb"
-          alt="MongoDB"
-        />
-        <img
-          src="https://img.shields.io/badge/-BigQuery-333333?style=flat&logo=google-cloud"
-          alt="BigQuery"
-        />
-        <img
-          src="https://img.shields.io/badge/-Firestore-333333?style=flat&logo=firebase"
-          alt="Firestore"
-        />
-        <img src="https://img.shields.io/badge/-Redis-333333?style=flat&logo=redis" alt="Redis" />
-        <img
-          src="https://img.shields.io/badge/-ElasticSearch-333333?style=flat&logo=elasticsearch&logoColor=yellow"
-          alt="ElasticSearch"
-        />
-        <img
-          src="https://img.shields.io/badge/-Looker-333333?style=flat&logo=looker"
-          alt="Looker"
-        />
-      </div>
-    </div>
-
-    <div class="category">
-      <h2><i class="fas fa-cogs"></i> DevOps</h2>
-      <p>Automatizamos processos para garantir eficiência, estabilidade e entrega contínua.</p>
-      <div class="badges">
-        <img
-          src="https://img.shields.io/badge/-Docker-333333?style=flat&logo=docker"
-          alt="Docker"
-        />
-        <img
-          src="https://img.shields.io/badge/-Kubernetes-333333?style=flat&logo=kubernetes"
-          alt="Kubernetes"
-        />
-        <img
-          src="https://img.shields.io/badge/-Amazon%20AWS-333333?style=flat&logo=amazon-web-services&logoColor=FF9900"
-          alt="AWS"
-        />
-        <img
-          src="https://img.shields.io/badge/-GoogleCloud-333333?style=flat&logo=google-cloud"
-          alt="Google Cloud"
-        />
-        <img
-          src="https://img.shields.io/badge/-AWS%20Lambda-333333?style=flat&logo=aws-lambda"
-          alt="AWS Lambda"
-        />
-        <img
-          src="https://img.shields.io/badge/-AWS%20API%20Gateway-333333?style=flat&logo=amazon-api-gateway"
-          alt="AWS API Gateway"
-        />
-      </div>
-    </div>
-
-    <div class="category">
-      <h2><i class="fas fa-tools"></i> Tools</h2>
-      <p>Ferramentas que impulsionam nossa produtividade e colaboração no dia a dia.</p>
-      <div class="badges">
-        <img src="https://img.shields.io/badge/-Git-333333?style=flat&logo=git" alt="Git" />
-        <img
-          src="https://img.shields.io/badge/-GitHub-333333?style=flat&logo=github&logoColor=lightgrey"
-          alt="GitHub"
-        />
-        <img
-          src="https://img.shields.io/badge/-GitHub%20Actions-333333?style=flat&logo=github-actions"
-          alt="GitHub Actions"
-        />
-        <img
-          src="https://img.shields.io/badge/-Notion-333333?style=flat&logo=notion"
-          alt="Notion"
-        />
-        <img src="https://img.shields.io/badge/-Jira-333333?style=flat&logo=jira" alt="Jira" />
-        <img
-          src="https://img.shields.io/badge/-Diagrams.net-333333?style=flat&logo=diagrams.net"
-          alt="Diagrams.net"
-        />
-        <img
-          src="https://img.shields.io/badge/-ESLint-333333?style=flat&logo=eslint&logoColor=blue"
-          alt="ESLint"
-        />
-        <img
-          src="https://img.shields.io/badge/-SonarQube-333333?style=flat&logo=sonarqube"
-          alt="SonarQube"
-        />
-        <img
-          src="https://img.shields.io/badge/-Stack%20Overflow-333333?style=flat&logo=stack-overflow"
-          alt="Stack Overflow"
-        />
-        <img
-          src="https://img.shields.io/badge/-Redash-333333?style=flat&logo=redash"
-          alt="Redash"
-        />
-        <img
-          src="https://img.shields.io/badge/-Postman-333333?style=flat&logo=postman"
-          alt="Postman"
-        />
-        <img
-          src="https://img.shields.io/badge/-ChatGPT-333333?style=flat&logo=openai"
-          alt="ChatGPT"
-        />
-      </div>
-    </div>
-
-    <div class="category">
-      <h2><i class="fas fa-laptop"></i> Operating System</h2>
-      <p>Usamos sistemas confiáveis para garantir eficiência e desempenho.</p>
-      <div class="badges">
-        <img src="https://img.shields.io/badge/-Linux-333333?style=flat&logo=linux" alt="Linux" />
-      </div>
-    </div>
-  </div>
-
-  <div class="curiosities-section">
-    <h2>✨ Curiosidades</h2>
-    <ul class="curiosities">
-      <li>
-        <i class="fas fa-lightbulb"></i> Amamos resolver problemas complexos de maneira criativa.
-      </li>
-      <li>
-        <i class="fas fa-tools"></i> Planejamos arquiteturas detalhadas para garantir
-        escalabilidade.
-      </li>
-      <li>
-        <i class="fas fa-chart-line"></i> Estamos sempre atentos às tendências tecnológicas mais
-        recentes.
-      </li>
-      <li>
-        <i class="fas fa-graduation-cap"></i> Aprender e compartilhar conhecimento está no DNA do
-        time.
-      </li>
-      <li>
-        <i class="fas fa-file-alt"></i> Cada grande projeto começa com uma RFC, garantindo que as
-        decisões sejam colaborativas e bem alinhadas.
-      </li>
-    </ul>
-  </div>
-</section>
+  </footer>
+</div>

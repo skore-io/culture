@@ -1,68 +1,19 @@
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/navbar.css" />
-
-<header>
-  <div class="header-container">
-    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Site Logo" class="site-logo" />
-
-    <div id="hamburger-btn" class="hamburger-btn">
-      <span></span>
-      <span></span>
-      <span></span>
+<nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <a href="{{ site.baseurl }}/" class="text-white font-medium tracking-tighter text-lg">CULTURE</a>
+      <div class="h-1.5 w-1.5 rounded-full bg-orange-500 animate-pulse"></div>
     </div>
-
-    <nav class="topbar">
-      <ul class="nav-links">
-        <li>
-          <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">
-            <i class="fas fa-home"></i> Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="{{ site.baseurl }}/dream-team"
-            class="{% if page.url == '/dream-team/' %}active{% endif %}"
-          >
-            <i class="fas fa-users"></i> Dream Team
-          </a>
-        </li>
-        <li>
-          <a
-            href="{{ site.baseurl }}/career-ladder"
-            class="{% if page.url == '/career-ladder/' %}active{% endif %}"
-          >
-            <i class="fas fa-sitemap"></i> Career Ladder
-          </a>
-        </li>
-        <li>
-          <a
-            href="{{ site.baseurl }}/stacks"
-            class="{% if page.url == '/stacks/' %}active{% endif %}"
-          >
-            <i class="fas fa-layer-group"></i> Stacks
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://learning.rocks/plataforma-lxm"
-            target="_blank"
-            class="{% if page.url == '/plataforma-lxm/' %}active{% endif %}"
-          >
-            <i class="fas fa-box"></i> Product
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div class="hidden md:flex items-center gap-8 text-sm font-light">
+      <a href="{{ site.baseurl }}/dream-team" class="{% if include.active == 'dream-team' %}text-white{% else %}hover:text-white transition-colors{% endif %}">Dream Team</a>
+      <a href="{{ site.baseurl }}/career-ladder" class="{% if include.active == 'career-ladder' %}text-white{% else %}hover:text-white transition-colors{% endif %}">Career Ladder</a>
+      <a href="{{ site.baseurl }}/stacks" class="{% if include.active == 'stacks' %}text-white{% else %}hover:text-white transition-colors{% endif %}">Stacks</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="https://github.com/uoledtech-qulture-rocks/culture" target="_blank" rel="noopener noreferrer" class="text-sm font-light hover:text-white transition-colors">GitHub</a>
+      {% if include.cta_href and include.cta_text %}
+        <a href="{{ include.cta_href }}" class="text-xs font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition-all">{{ include.cta_text }}</a>
+      {% endif %}
+    </div>
   </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburgerBtn = document.getElementById('hamburger-btn')
-      const navLinks = document.querySelector('.nav-links')
-
-      hamburgerBtn.addEventListener('click', () => {
-        hamburgerBtn.classList.toggle('active')
-        navLinks.classList.toggle('open')
-      })
-    })
-  </script>
-</header>
+</nav>

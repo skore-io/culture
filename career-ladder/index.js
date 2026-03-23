@@ -1,210 +1,210 @@
 const jobs = [
   {
     id: 'junior',
-    name: 'Júnior',
+    name: 'Junior',
     level: 'operational',
     description:
-      'O Desenvolvedor Júnior é responsável por contribuir com tarefas básicas de desenvolvimento sob supervisão. Ele participa do aprendizado contínuo e ajuda em pequenas partes dos projetos.',
+      'The Junior Developer is responsible for contributing to basic development tasks under supervision. He participates in continuous learning and helps with small parts of projects.',
     responsibilities: [
-      'Aprender e seguir padrões de código.',
-      'Implementar funcionalidades simples.',
-      'Colaborar com a equipe em tarefas menores.',
-      'Participar de treinamentos e reuniões.',
+      'Learn and follow code patterns.',
+      'Implement simple features.',
+      'Collaborate with the team on smaller tasks.',
+      'Participate in trainings and meetings.',
     ],
     behaviors: [
-      'Comunicar progresso e bloqueios de forma clara.',
-      'Comprometer-se com prazos e priorizar tarefas.',
-      'Buscar entender a raiz dos problemas apresentados.',
-      'Pedir feedbacks frequentes e celebrar conquistas.',
-      'Estudar as necessidades dos clientes e sugerir melhorias.',
+      'Communicate progress and blockages clearly.',
+      'Commit to deadlines and prioritize tasks.',
+      'Seek to understand the root of the problems presented.',
+      'Request frequent feedback and celebrate achievements.',
+      'Study the needs of the clients and suggest improvements.',
     ],
   },
   {
-    id: 'pleno',
-    name: 'Pleno',
+    id: 'middle',
+    name: 'Middle',
     level: 'operational',
     description:
-      'O Desenvolvedor Pleno possui um nível intermediário de experiência e é capaz de trabalhar de forma independente em tarefas complexas. Ele começa a participar mais ativamente do planejamento e da tomada de decisões técnicas.',
+      'The Middle Developer has an intermediate level of experience and is able to work independently on complex tasks. He starts to participate more actively in planning and technical decision-making.',
     responsibilities: [
-      'Desenvolver e implementar funcionalidades complexas.',
-      'Colaborar no design e arquitetura do software.',
-      'Revisar o código de colegas juniores.',
-      'Mentorar desenvolvedores juniores.',
-      'Testar código desenvolvido (manual e automatizado) em todos os ambientes.',
+      'Develop and implement complex features.',
+      'Collaborate in the design and architecture of the software.',
+      'Review the code of junior colleagues.',
+      'Mentor junior developers.',
+      'Test the developed code (manual and automated) in all environments.',
     ],
     behaviors: [
-      'Facilitar a comunicação dentro do time e com outras equipes.',
-      'Gerenciar e entregar tarefas complexas com qualidade.',
-      'Solucionar problemas de média complexidade de forma independente.',
-      'Fornecer feedbacks construtivos para desenvolvedores juniores.',
-      'Propor melhorias com base no feedback dos clientes.',
+      'Facilitate communication within the team and with other teams.',
+      'Manage and deliver complex tasks with quality.',
+      'Solve medium complexity problems independently.',
+      'Provide constructive feedback to junior developers.',
+      'Suggest improvements based on client feedback.',
     ],
   },
   {
     id: 'senior',
-    name: 'Sênior',
+    name: 'Senior',
     level: 'operational',
     description:
-      'O Desenvolvedor Sênior tem um alto nível de experiência e é responsável por conduzir projetos sem necessidade de apoio. Ele participa de decisões críticas sobre a arquitetura e serve como mentor para os membros mais jovens da equipe.',
+      'The Senior Developer has a high level of experience and is responsible for leading projects without the need for support. He participates in critical decisions about architecture and serves as a mentor for the youngest members of the team.',
     responsibilities: [
-      'Participar com sugestões técnicas, escrevendo ou revisando RFCs e ADRs.',
-      'Contribuir para a arquitetura e os padrões do sistema.',
-      'Revisar e aprovar códigos complexos.',
-      'Mentorar desenvolvedores plenos e juniores.',
-      'Testar código desenvolvido (manual e automatizado) em todos os ambientes.',
+      'Participate with technical suggestions, writing or reviewing RFCs and ADRs.',
+      'Contribute to the architecture and system standards.',
+      'Review and approve complex codes.',
+      'Mentor senior and junior developers.',
+      'Test the developed code (manual and automated) in all environments.',
     ],
     behaviors: [
-      'Ser um elo de comunicação entre a equipe e a gestão.',
-      'Assumir tarefas críticas garantindo qualidade.',
-      'Resolver problemas complexos e orientar a equipe em soluções eficazes.',
-      'Promover o desenvolvimento contínuo da equipe.',
-      'Participar de iniciativas que impactem positivamente a experiência do cliente.',
+      'Be a communication link between the team and the management.',
+      'Assume critical tasks ensuring quality.',
+      'Solve complex problems and guide the team in effective solutions.',
+      'Promote the continuous development of the team.',
+      'Participate in initiatives that positively impact the client experience.',
     ],
   },
   {
     id: 'coordinator',
-    name: 'Coordenador',
+    name: 'Coordinator',
     level: 'tactical',
     description:
-      'O Coordenador de Desenvolvimento é responsável por supervisionar a execução de projetos específicos. Ele garante que as metas e os prazos sejam cumpridos e atua como um elo de comunicação entre a equipe e a gerência.',
+      'The Coordinator of Development is responsible for supervising the execution of specific projects. He ensures that the goals and deadlines are met and acts as a communication link between the team and the management.',
     responsibilities: [
-      'Supervisionar a execução de projetos.',
-      'Garantir o cumprimento de prazos e metas.',
-      'Comunicar-se com a equipe e a gerência.',
-      'Resolver problemas operacionais.',
+      'Supervise the execution of projects.',
+      'Ensure the fulfillment of deadlines and goals.',
+      'Communicate with the team and the management.',
+      'Solve operational problems.',
     ],
     behaviors: [
-      'Garantir a comunicação eficaz entre diferentes squads e áreas.',
-      'Supervisionar a execução dos projetos e garantir a entrega no prazo e com qualidade.',
-      'Facilitar a resolução de problemas entre squads e promover soluções integradas.',
-      'Desenvolver líderes dentro das squads e promover a troca de conhecimento.',
-      'Implementar melhorias com base no feedback dos clientes.',
+      'Ensure effective communication between different squads and areas.',
+      'Supervise the execution of projects and ensure delivery on time and with quality.',
+      'Facilitate the resolution of problems between squads and promote integrated solutions.',
+      'Develop leaders within the squads and promote knowledge exchange.',
+      'Implement improvements based on client feedback.',
     ],
     pair: 'specialist1',
   },
   {
     id: 'specialist1',
-    name: 'Especialista I',
+    name: 'Specialist I',
     level: 'tactical',
     description:
-      'O Especialista I é um profissional com conhecimentos profundos em uma área específica da tecnologia. Ele é responsável por resolver problemas complexos e inovar dentro de sua especialidade.',
+      'The Specialist I is a professional with deep knowledge in a specific technology area. He is responsible for solving complex problems and innovating within his specialty.',
     responsibilities: [
-      'Resolver problemas complexos na sua área.',
-      'Inovar e propor novas soluções técnicas.',
-      'Servir como referência técnica.',
-      'Compartilhar conhecimento com a equipe.',
+      'Solve complex problems in your area.',
+      'Innovate and propose technical solutions.',
+      'Serve as a technical reference.',
+      'Share knowledge with the team.',
     ],
     behaviors: [
-      'Ser referência técnica e comunicar complexidades de forma clara.',
-      'Desenvolver soluções técnicas inovadoras e de alta qualidade.',
-      'Resolver problemas técnicos complexos.',
-      'Compartilhar conhecimento técnico avançado com a equipe.',
-      'Contribuir para o desenvolvimento de soluções que melhorem a experiência do cliente.',
+      'Serve as a technical reference and communicate complexities clearly.',
+      'Develop innovative technical solutions and high quality.',
+      'Solve complex technical problems.',
+      'Share advanced technical knowledge with the team.',
+      'Contribute to the development of solutions that improve the client experience.',
     ],
     pair: 'coordinator',
   },
   {
     id: 'manager',
-    name: 'Gerente',
+    name: 'Manager',
     level: 'tactical',
     description:
-      'O Gerente de Desenvolvimento é responsável por liderar uma ou mais equipes, garantindo a entrega de projetos dentro do prazo e com qualidade. Ele gerencia recursos, define prioridades e atua na resolução de conflitos.',
+      'The Manager of Development is responsible for leading one or more teams, ensuring project delivery within the deadline and with quality. He manages resources, defines priorities and acts in the resolution of conflicts.',
     responsibilities: [
-      'Liderar equipes de desenvolvimento.',
-      'Gerenciar recursos e definir prioridades.',
-      'Garantir a entrega de projetos no prazo.',
-      'Resolver conflitos e problemas da equipe.',
+      'Lead development teams.',
+      'Manage resources and define priorities.',
+      'Ensure project delivery on time.',
+      'Resolve conflicts and problems within the team.',
     ],
     behaviors: [
-      'Gerenciar a comunicação entre a equipe e a gestão.',
-      'Coordenar várias squads, garantindo a entrega de projetos no prazo e com qualidade.',
-      'Facilitar a resolução de conflitos e problemas complexos.',
-      'Promover o desenvolvimento contínuo dos membros da equipe.',
-      'Liderar iniciativas que melhorem a experiência do cliente.',
+      'Manage communication between the team and the management.',
+      'Coordinate multiple squads, ensuring project delivery on time and with quality.',
+      'Facilitate the resolution of conflicts and complex problems.',
+      'Promote the continuous development of team members.',
+      'Lead initiatives that improve the client experience.',
     ],
     pair: 'specialist2',
   },
   {
     id: 'specialist2',
-    name: 'Especialista II',
+    name: 'Specialist II',
     level: 'tactical',
     description:
-      'O Especialista II possui um nível avançado de conhecimento e experiência em sua área. Ele é responsável por liderar iniciativas técnicas complexas e colaborar com outros especialistas para resolver desafios técnicos.',
+      'The Specialist II has an advanced level of knowledge and experience in his area. He is responsible for leading technical initiatives and collaborating with other specialists to solve technical challenges.',
     responsibilities: [
-      'Liderar iniciativas técnicas complexas.',
-      'Colaborar com outros especialistas.',
-      'Resolver desafios técnicos avançados.',
-      'Mentorar desenvolvedores mais juniores.',
+      'Lead technical initiatives.',
+      'Collaborate with other specialists.',
+      'Solve advanced technical challenges.',
+      'Mentor junior developers.',
     ],
     behaviors: [
-      'Comunicar avanços e desafios técnicos para a equipe.',
-      'Entregar soluções técnicas avançadas dentro do prazo.',
-      'Resolver problemas técnicos de alta complexidade.',
-      'Mentorar desenvolvedores juniores e plenos.',
-      'Desenvolver soluções técnicas focadas na melhoria da experiência do cliente.',
+      'Communicate technical advances and challenges to the team.',
+      'Deliver advanced technical solutions within the deadline.',
+      'Solve advanced technical problems.',
+      'Mentor junior and senior developers.',
+      'Develop technical solutions focused on improving the client experience.',
     ],
     pair: 'manager',
   },
   {
     id: 'general_manager',
-    name: 'Gerente Geral',
+    name: 'General Manager',
     level: 'strategic',
     description:
-      'O Gerente Geral de Desenvolvimento é responsável pela gestão estratégica de várias equipes ou tribos. Ele define a visão de longo prazo e garante que todos os projetos estejam alinhados com os objetivos da empresa.',
+      'The General Manager of Development is responsible for the strategic management of multiple teams or tribes. He defines the long-term vision and ensures that all projects are aligned with the company\'s objectives.',
     responsibilities: [
-      'Definir a visão e estratégia de longo prazo.',
-      'Gerenciar múltiplas equipes ou tribos.',
-      'Garantir o alinhamento dos projetos com os objetivos da empresa.',
-      'Tomar decisões estratégicas críticas.',
+      'Define the long-term vision and strategy.',
+      'Manage multiple teams or tribes.',
+      'Ensure the alignment of projects with the company\'s objectives.',
+      'Take critical strategic decisions.',
     ],
     behaviors: [
-      'Representar o tribo de desenvolvimento na alta gestão.',
-      'Definir a visão e direção geral da tribo.',
-      'Tomar decisões estratégicas críticas.',
-      'Desenvolver líderes e promover a cultura de inovação.',
-      'Garantir que a estratégia do tribo esteja alinhada com a melhoria da experiência do cliente.',
+      'Represent the development tribe in the high management.',
+      'Define the general vision and direction of the tribe.',
+      'Take critical strategic decisions.',
+      'Develop leaders and promote innovation culture.',
+      'Ensure that the tribe\'s strategy is aligned with the improvement of the client experience.',
     ],
     pair: 'specialist3',
   },
   {
     id: 'specialist3',
-    name: 'Especialista III',
+    name: 'Specialist III',
     level: 'strategic',
     description:
-      'O Especialista III é um dos profissionais mais experientes da empresa, com uma profunda compreensão de sua área de atuação. Ele lidera projetos de inovação e atua como consultor para a alta gestão.',
+      'The Specialist III is one of the most experienced professionals in the company, with a deep understanding of his area of activity. He leads innovation projects and acts as a consultant for high management.',
     responsibilities: [
-      'Liderar projetos de inovação e desenvolver soluções de ponta.',
-      'Atuar como consultor para a alta gestão.',
-      'Desenvolver soluções de ponta.',
-      'Compartilhar conhecimento com a organização.',
+      'Lead innovation projects and develop top solutions.',
+      'Act as a consultant for high management.',
+      'Develop top solutions.',
+      'Share knowledge with the organization.',
     ],
     behaviors: [
-      'Comunicar com clareza e precisão as soluções inovadoras.',
-      'Desenvolver soluções técnicas de ponta dentro dos prazos estabelecidos.',
-      'Resolver problemas técnicos altamente complexos.',
-      'Promover a troca de conhecimento e inovação dentro da organização.',
-      'Desenvolver soluções técnicas que proporcionem valor significativo para os clientes.',
+      'Communicate clearly and precisely the innovative solutions.',
+      'Develop top solutions within the established deadlines.',
+      'Solve highly complex technical problems.',
+      'Promote knowledge exchange and innovation within the organization.',
+      'Develop technical solutions that provide significant value to clients.',
     ],
     pair: 'general_manager',
   },
   {
     id: 'director',
-    name: 'Diretor',
+    name: 'Director',
     level: 'strategic',
     description:
-      'O Diretor de Desenvolvimento é responsável pela visão e direção geral do tribo de desenvolvimento. Ele garante a execução da estratégia da empresa e promove a inovação contínua.',
+      'The Director of Development is responsible for the general vision and direction of the development tribe. He ensures the execution of the company\'s strategy and promotes continuous innovation.',
     responsibilities: [
-      'Definir a visão e direção geral da tribo.',
-      'Promover a inovação contínua.',
-      'Garantir a execução da estratégia da empresa.',
-      'Representar o tribo na alta gestão.',
+      'Define the general vision and direction of the tribe.',
+      'Promote continuous innovation.',
+      'Ensure the execution of the company\'s strategy.',
+      'Represent the tribe in high management.',
     ],
     behaviors: [
-      'Representar o tribo de desenvolvimento na alta gestão.',
-      'Definir a visão e direção geral da tribo.',
-      'Tomar decisões estratégicas críticas.',
-      'Desenvolver líderes e promover a cultura de inovação.',
-      'Garantir que a estratégia do tribo esteja alinhada com a melhoria da experiência do cliente.',
+      'Represent the development tribe in high management.',
+      'Define the general vision and direction of the tribe.',
+      'Take critical strategic decisions.',
+      'Develop leaders and promote innovation culture.',
+      'Ensure that the tribe\'s strategy is aligned with the improvement of the client experience.',
     ],
     pair: null,
   },
@@ -214,24 +214,12 @@ const functionalRoles = [
   {
     id: 'head',
     name: 'Head',
-    description: 'Responsável por definir a visão e estratégia da tribo de engenharia.',
+    description: 'Responsible for defining the vision and strategy of the engineering tribe.',
     responsibilities: [
-      'Definir a visão e estratégia da engenharia.',
-      'Garantir a alocação eficaz de recursos.',
-      'Promover a inovação e a melhoria contínua.',
-      'Representar o tribo na alta gestão.',
-    ],
-    pair: null,
-  },
-  {
-    id: 'ttl',
-    name: 'Tribe Tech Lead (TTL)',
-    description: 'Lidera atividades técnicas entre várias squads e define padrões de arquitetura.',
-    responsibilities: [
-      'Liderar atividades técnicas entre várias squads.',
-      'Definir padrões de arquitetura e melhores práticas.',
-      'Servir como ponto de referência técnica para a tribo.',
-      'Tomar decisões técnicas de maior criticidade dentro das squads ou tribo.',
+      'Define the vision and strategy of the engineering tribe.',
+      'Ensure effective resource allocation.',
+      'Promote innovation and continuous improvement.',
+      'Represent the tribe in high management.',
     ],
     pair: null,
   },
@@ -239,23 +227,23 @@ const functionalRoles = [
     id: 'em',
     name: 'Engineering Manager (EM)',
     description:
-      'Gestor que lidera squads, garante a entrega de projetos com qualidade e prazo, desenvolve a equipe e promove a colaboração e inovação.',
+      'Manager that leads squads, ensures project delivery with quality and deadline, develops the team and promotes collaboration and innovation.',
     responsibilities: [
-      'Gerenciar uma ou mais squads, garantindo que as equipes estejam alinhadas com os objetivos da organização e operem de maneira eficiente.',
-      'Assegurar a entrega de projetos no prazo e com qualidade, supervisionando o progresso e implementando estratégias para manter os padrões de excelência.',
-      'Implementar um sistema de feedback contínuo, tanto formal quanto informal, para garantir que os membros da equipe estejam cientes de suas áreas de melhoria e conquistas.',
-      'Identificar e desenvolver talentos internos para garantir que haja um plano de sucessão sólido para funções críticas na equipe.',
-      'Gerir conflitos e promover a colaboração na equipe, resolvendo desacordos e incentivando um ambiente de trabalho saudavel.',
-      'Garantir que todos os membros da equipe compreendam e estejam alinhados com a visão e a estratégia do produto, promovendo uma compreensão clara das prioridades do negócio.',
-      'Facilitar a adaptação da equipe a mudanças organizacionais e tecnológicas, assegurando uma transição suave e minimizando impactos negativos.',
-      'Desenvolver relatórios e métricas para acompanhar o desempenho da equipe e o progresso dos projetos, apresentando esses dados aos stakeholders garantindo transparência e alinhamento.',
-      'Identificar, avaliar e mitigar riscos ao longo do ciclo de vida do projeto, garantindo que possíveis obstáculos sejam gerenciados proativamente.',
+      'Manage one or more squads, ensuring that the teams are aligned with the organization\'s objectives and operate efficiently.',
+      'Ensure project delivery on time and with quality, supervising progress and implementing strategies to maintain excellence standards.',
+      'Implement a continuous feedback system, both formal and informal, to ensure that team members are aware of their areas of improvement and achievements.',
+      'Identify and develop internal talent to ensure a solid succession plan for critical functions in the team.',
+      'Manage conflicts and promote collaboration in the team, resolving disagreements and encouraging a healthy working environment.',
+      'Ensure that all team members understand and are aligned with the product\'s vision and strategy, promoting a clear understanding of business priorities.',
+      'Facilitate the team\'s adaptation to organizational and technological changes, ensuring a smooth transition and minimizing negative impacts.',
+      'Develop reports and metrics to track team performance and project progress, presenting these data to stakeholders ensuring transparency and alignment.',
+      'Identify, evaluate and mitigate risks throughout the project lifecycle, ensuring that possible obstacles are managed proactively.',
       'Implementar e manter processos de desenvolvimento ágil, assegurando a adoção de práticas ágeis para otimizar a eficiência e a entrega contínua de valor.',
-      'Manter-se atualizado com as novas ferramentas e tecnologias que possam beneficiar a equipe e melhorar os processos de desenvolvimento.',
-      'Facilitar a comunicação entre a equipe e outras partes interessadas, atuando como ponte entre a equipe técnica e outras áreas da empresa.',
-      'Promover a adoção e aprendizado das melhores tecnologias e práticas para melhorar continuamente os processos e produtos.',
-      'Liderar esforços de recrutamento e retenção, participando ativamente na seleção de novos talentos e implementando estratégias para manter a equipe engajada e satisfeita.',
-      'Fomentar a diversidade e inclusão na equipe, promovendo um ambiente de trabalho inclusivo que valorize diferentes perspectivas e experiências.',
+      'Stay updated with new tools and technologies that can benefit the team and improve development processes.',
+      'Facilitate communication between the team and other stakeholders, acting as a bridge between the technical team and other areas of the company.',
+      'Promote the adoption and learning of the best technologies and practices to continuously improve processes and products.',
+      'Lead recruitment and retention efforts, actively participating in the selection of new talent and implementing strategies to keep the team engaged and satisfied.',
+      'Promote diversity and inclusion in the team, promoting an inclusive working environment that values different perspectives and experiences.',
     ],
     pair: null,
   },
@@ -263,19 +251,19 @@ const functionalRoles = [
     id: 'tl',
     name: 'Tech Lead (TL)',
     description:
-      'Desenvolvedor que garante a qualidade técnica das entregas, soluciona problemas complexos, monitora métricas, atua em incidentes e assegura a conformidade com as políticas de segurança.',
+      'Developer that ensures technical delivery quality, solves complex problems, monitors metrics, acts on incidents and ensures compliance with security policies.',
     responsibilities: [
-      'Garantir a qualidade e eficiência técnica das entregas, assegurando que atendam aos padrões definidos.',
-      'Aplicar pensamento crítico para analisar problemas de diversos pontos de vista, identificando soluções eficazes.',
-      'Acompanhar métricas de desempenho das aplicações (performance, erros, etc.), monitorando indicadores-chave e implementando melhorias.',
-      'Acompanhar e atuar em incidentes, respondendo rapidamente, identificando causas raízes e aplicando soluções corretivas.',
-      'Garantir a conformidade com as políticas e regulamentações de segurança, assegurando que todos os projetos e práticas da equipe estejam em conformidade com os padrões de segurança da empresa.',
-      'Conduzir cerimônias de refinamento, facilitando sessões de planejamento para garantir um backlog bem definido.',
-      'Representar a squad tecnicamente em cerimônias internas e externas, comunicando claramente as necessidades e progressos técnicos.',
-      'Construir/desenvolver funcionalidades de grande complexidade quando necessário.',
-      'Ajudar membros do time com tarefas em atraso ou dificuldades, oferecendo suporte técnico e orientação.',
-      'Tomar decisões técnicas de menor criticidade dentro da squad, promovendo agilidade no desenvolvimento.',
-      'Garantir que o código esteja bem estruturado, limpo e mantenha padrões elevados, promovendo práticas de desenvolvimento sólidas como revisões de código e testes automatizados.',
+      'Ensure technical delivery quality and efficiency, ensuring that they meet the defined standards.',
+      'Apply critical thinking to analyze problems from different perspectives, identifying effective solutions.',
+      'Monitor performance metrics of applications (performance, errors, etc.), monitoring key indicators and implementing improvements.',
+      'Act on incidents, responding quickly, identifying root causes and applying corrective solutions.',
+      'Ensure compliance with security policies and regulations, ensuring that all projects and practices of the team are in compliance with the company\'s security standards.',
+      'Conduct refinement ceremonies, facilitating planning sessions to ensure a well-defined backlog.',
+      'Represent the squad technically in internal and external ceremonies, communicating clearly the needs and technical progress.',
+      'Build/develop features of high complexity when necessary.',
+      'Help team members with tasks in delay or difficulties, offering technical support and guidance.',
+      'Take technical decisions of lower criticality within the squad, promoting agility in development.',
+      'Ensure that the code is well structured, clean and maintains high standards, promoting solid development practices such as code reviews and automated tests.',
     ],
     pair: null,
   },
@@ -283,149 +271,128 @@ const functionalRoles = [
 
 const raciData = [
   {
-    task: 'Definir a visão e estratégia global',
+    task: 'Define the global vision and strategy',
     Head: 'A',
-    TTL: 'C',
     EM: 'C',
     TL: 'I',
   },
   {
-    task: 'Garantir a alocação eficaz de recursos',
+    task: 'Ensure effective resource allocation',
     Head: 'A',
-    TTL: 'C',
     EM: 'C',
     TL: 'I',
   },
   {
-    task: 'Promover a inovação e a melhoria contínua',
+    task: 'Promote innovation and continuous improvement',
     Head: 'A',
-    TTL: 'R',
     EM: 'I',
     TL: 'R',
   },
   {
-    task: 'Liderar atividades técnicas entre squads',
+    task: 'Lead technical activities between squads',
     Head: 'C',
-    TTL: 'A',
     EM: 'I',
     TL: 'R',
   },
   {
-    task: 'Gerenciar orçamentos e custos',
+    task: 'Manage budgets and costs',
     Head: 'A',
-    TTL: 'C',
     EM: 'C',
     TL: 'I',
   },
   {
-    task: 'Desenvolver a estratégia de tecnologia',
+    task: 'Develop the technology strategy',
     Head: 'R',
-    TTL: 'A',
     EM: 'C',
     TL: 'R',
   },
   {
-    task: 'Liderar a implementação de projetos',
+    task: 'Lead the implementation of projects',
     Head: 'I',
-    TTL: 'C',
     EM: 'R',
     TL: 'C',
   },
   {
-    task: 'Garantir a conformidade com políticas de segurança',
+    task: 'Ensure compliance with security policies',
     Head: 'A',
-    TTL: 'R',
     EM: 'C',
     TL: 'R',
   },
   {
-    task: 'Gerenciar contratos e fornecedores',
+    task: 'Manage contracts and suppliers',
     Head: 'A',
-    TTL: 'I',
     EM: 'C',
     TL: 'I',
   },
   {
-    task: 'Promover a cultura de inovação',
+    task: 'Promote innovation culture',
     Head: 'R',
-    TTL: 'A',
     EM: 'C',
     TL: 'C',
   },
   {
-    task: 'Desenvolver e manter a documentação técnica',
+    task: 'Develop and maintain technical documentation',
     Head: 'I',
-    TTL: 'C',
     EM: 'R',
     TL: 'R',
   },
   {
-    task: 'Gerenciar/acompanhar o desempenho da squad',
+    task: 'Manage/track the squad\'s performance',
     Head: 'I',
-    TTL: 'C',
     EM: 'R',
     TL: 'C',
   },
   {
-    task: 'Conduzir reuniões de refinamento',
+    task: 'Conduct refinement meetings',
     Head: 'I',
-    TTL: 'I',
     EM: 'C',
     TL: 'A',
   },
   {
-    task: 'Realizar avaliações de desempenho',
+    task: 'Perform performance evaluations',
     Head: 'I',
-    TTL: 'C',
     EM: 'R',
     TL: 'C',
   },
   {
-    task: 'Identificar e mitigar riscos',
+    task: 'Identify and mitigate risks',
     Head: 'A',
-    TTL: 'R',
     EM: 'C',
     TL: 'R',
   },
   {
-    task: 'Promover treinamentos e desenvolvimento contínuo',
+    task: 'Promote training and continuous development',
     Head: 'R',
-    TTL: 'C',
     EM: 'A',
     TL: 'C',
   },
   {
-    task: 'Monitorar os serviços (aplicações) de domínio da squad',
+    task: 'Monitor the squad\'s services (applications)',
     Head: 'I',
-    TTL: 'A',
     EM: 'C',
     TL: 'R',
   },
   {
-    task: 'Definir e implementar processos de qualidade',
+    task: 'Define and implement quality processes',
     Head: 'A',
-    TTL: 'R',
     EM: 'C',
     TL: 'C',
   },
   {
-    task: 'Garantir a escalabilidade das soluções',
+    task: 'Ensure scalability of solutions',
     Head: 'C',
-    TTL: 'A',
     EM: 'C',
     TL: 'R',
   },
   {
-    task: 'Acompanhar tendências e inovações tecnológicas',
+    task: 'Track technological trends and innovations',
     Head: 'A',
-    TTL: 'R',
     EM: 'I',
     TL: 'R',
   },
   {
-    task: 'Gerenciar crises e incidentes',
+    task: 'Manage crises and incidents',
     Head: 'A',
-    TTL: 'C',
     EM: 'R',
     TL: 'R',
   },
@@ -461,31 +428,75 @@ document.addEventListener('DOMContentLoaded', function () {
     const jobContainer = document.querySelector('.job-container')
     jobContainer.innerHTML = ''
 
+    const levelBadgeMap = {
+      operational: 'Operational',
+      tactical: 'Tactical',
+      strategic: 'Strategic',
+    }
+
+    let stepIndex = 1
+    const handled = new Set()
+
+    const makeColumn = (job) => {
+      const badge = levelBadgeMap[job.level] || 'Level'
+      const firstResponsibility = job.responsibilities?.[0] || ''
+      return `
+        <div class="platform__step-col" id="description_${job.id}">
+          <div class="platform__step-title">${job.name}</div>
+          <div class="platform__step-body">${job.description}</div>
+          <div class="platform__step-body platform__step-extra">${firstResponsibility}</div>
+          <div class="platform__step-badge">${badge}</div>
+        </div>
+      `
+    }
+
     jobs.forEach((job) => {
-      if (!job.pair) {
-        const jobSingleContainer = document.createElement('div')
-        jobSingleContainer.classList.add('job')
-        const jobElement = createJobElement(job)
-        jobSingleContainer.appendChild(jobElement)
-        jobContainer.appendChild(jobSingleContainer)
-      } else if (!document.getElementById(`description_${job.id}`)) {
-        const pairJob = jobs.find((j) => j.id === job.pair)
-        if (pairJob) {
-          const jobPairContainer = document.createElement('div')
-          jobPairContainer.classList.add('job-pairs')
+      if (handled.has(job.id)) return
 
-          const jobElement1 = createJobElement(job)
-          const jobElement2 = createJobElement(pairJob)
+      const pairJob = job.pair ? jobs.find((j) => j.id === job.pair) : null
+      const hasPair = pairJob && !handled.has(pairJob.id)
 
-          jobElement1.id = `description_${job.id}`
-          jobElement2.id = `description_${pairJob.id}`
+      const step = document.createElement('div')
+      const stepNumber = String(stepIndex).padStart(2, '0')
+      stepIndex += 1
 
-          jobPairContainer.appendChild(jobElement1)
-          jobPairContainer.appendChild(jobElement2)
+      if (hasPair) {
+        step.classList.add('platform__step', 'platform__step--pair')
 
-          jobContainer.appendChild(jobPairContainer)
-        }
+        const [left, right] =
+          job.id.startsWith('specialist') && !pairJob.id.startsWith('specialist')
+            ? [job, pairJob]
+            : pairJob.id.startsWith('specialist') && !job.id.startsWith('specialist')
+              ? [pairJob, job]
+              : [job, pairJob]
+
+        step.innerHTML = `
+          <div class="platform__step-num">${stepNumber}</div>
+          <div class="platform__step-pair">
+            ${makeColumn(left)}
+            <div class="platform__step-vdivider"></div>
+            ${makeColumn(right)}
+          </div>
+        `
+
+        handled.add(job.id)
+        handled.add(pairJob.id)
+      } else {
+        step.classList.add('platform__step')
+        step.id = `description_${job.id}`
+        step.innerHTML = `
+          <div class="platform__step-num">${stepNumber}</div>
+          <div>
+            <div class="platform__step-title">${job.name}</div>
+            <div class="platform__step-body">${job.description}</div>
+            <div class="platform__step-body platform__step-extra">${job.responsibilities?.[0] || ''}</div>
+            <div class="platform__step-badge">${levelBadgeMap[job.level] || 'Level'}</div>
+          </div>
+        `
+        handled.add(job.id)
       }
+
+      jobContainer.appendChild(step)
     })
   }
 
@@ -527,7 +538,6 @@ document.addEventListener('DOMContentLoaded', function () {
       row.innerHTML = `
         <td>${item.task}</td>
         <td><span class="raci-cell raci-${item.Head.toLowerCase()}" data-original-color="${getColor(item.Head)}">${item.Head}</span></td>
-        <td><span class="raci-cell raci-${item.TTL.toLowerCase()}" data-original-color="${getColor(item.TTL)}">${item.TTL}</span></td>
         <td><span class="raci-cell raci-${item.EM.toLowerCase()}" data-original-color="${getColor(item.EM)}">${item.EM}</span></td>
         <td><span class="raci-cell raci-${item.TL.toLowerCase()}" data-original-color="${getColor(item.TL)}">${item.TL}</span></td>
       `
@@ -538,73 +548,29 @@ document.addEventListener('DOMContentLoaded', function () {
   function getColor(role) {
     switch (role) {
       case 'R':
-        return '#4caf50'
+        return '#f97316'
       case 'A':
-        return '#f44336'
+        return '#a855f7'
       case 'C':
-        return '#2196f3'
+        return '#38bdf8'
       case 'I':
-        return '#ff9800'
+        return '#71717a'
       default:
         return '#444'
     }
-  }
-
-  function createJobElement(job) {
-    const isGestor = ['coordinator', 'manager', 'general_manager', 'director'].includes(job.id)
-    const levelMap = {
-      operational: {
-        icon: isGestor ? 'supervisor_account' : 'check_circle',
-        class: 'level-operational',
-      },
-      tactical: { icon: isGestor ? 'groups' : 'laptop_mac', class: 'level-tactical' },
-      strategic: { icon: isGestor ? 'groups' : 'laptop_mac', class: 'level-strategic' },
-    }
-    const level = levelMap[job.level] || levelMap.operational
-
-    const jobElement = document.createElement('div')
-    jobElement.classList.add('job-card', level.class)
-    jobElement.id = `description_${job.id}`
-
-    jobElement.innerHTML = `
-      <div style="flex:1">
-        <div class="job-title">
-          <span class="material-icons level-icon">${level.icon}</span>
-          ${job.name}
-          <button class="toggle-details" title="Ver mais" aria-expanded="false" aria-controls="details_${job.id}">
-            <span class="material-icons">expand_more</span>
-          </button>
-        </div>
-        <div class="job-desc">${job.description}</div>
-        <div class="job-details" id="details_${job.id}">
-          <div class="job-section-title"><span class="material-icons">checklist</span>Responsibilities</div>
-          <ul class="job-list" style="margin-bottom: 15px;">
-            ${job.responsibilities.map((item) => `<li><span class="material-icons">check</span>${item}</li>`).join('')}
-          </ul>
-          <div class="job-section-title"><span class="material-icons">psychology</span>Behaviors</div>
-          <ul class="job-list">
-            ${job.behaviors.map((item) => `<li><span class="material-icons">check</span>${item}</li>`).join('')}
-          </ul>
-        </div>
-      </div>
-    `
-
-    jobElement.querySelector('.toggle-details').onclick = function () {
-      jobElement.classList.toggle('expanded')
-      this.setAttribute('aria-expanded', jobElement.classList.contains('expanded'))
-    }
-
-    return jobElement
   }
 
   function createRoleElement(role) {
     const roleElement = document.createElement('div')
     roleElement.classList.add('role-description')
     roleElement.innerHTML = `
+      <div class="role-chip-wrap">
+        <span class="role-chip">Functional role</span>
+      </div>
       <h3>${role.name}</h3>
-      <p>${role.description}</p>
-      <ul>
-        ${role.responsibilities.map((responsibility) => `<li>${responsibility}</li>`).join('')}
+      <p class="role-context">${role.description}</p>
+      <ul class="role-items">
+        ${role.responsibilities.map((responsibility) => `<li><span class="material-icons">check_circle</span><span>${responsibility}</span></li>`).join('')}
       </ul>
     `
     return roleElement

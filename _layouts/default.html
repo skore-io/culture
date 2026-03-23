@@ -28,77 +28,77 @@
   </head>
 
   <body>
-    <div id="particles-js"></div>
-    <script>
-      particlesJS('particles-js', {
-        particles: {
-          number: {
-            value: 100, // Number of particles
-            density: {
+    {% unless page.disable_default_particles %}
+      <div id="particles-js"></div>
+      <script>
+        particlesJS('particles-js', {
+          particles: {
+            number: {
+              value: 100, // Number of particles
+              density: {
+                enable: true,
+                value_area: 800, // Density of particles
+              },
+            },
+            color: {
+              value: '#ffffff', // Color of particles
+            },
+            shape: {
+              type: 'circle', // Shape of particles (circle, edge, triangle, polygon, etc.)
+            },
+            opacity: {
+              value: 0.5,
+            },
+            size: {
+              value: 3,
+              random: true, // Random size
+            },
+            line_linked: {
+              enable: true, // Link particles with lines
+              distance: 150,
+              color: '#ffffff',
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
               enable: true,
-              value_area: 800, // Density of particles
+              speed: 2,
+              direction: 'none',
+              random: false,
+              straight: false,
+              out_mode: 'out', // Particles leave the screen and disappear
             },
           },
-          color: {
-            value: '#ffffff', // Color of particles
-          },
-          shape: {
-            type: 'circle', // Shape of particles (circle, edge, triangle, polygon, etc.)
-          },
-          opacity: {
-            value: 0.5,
-          },
-          size: {
-            value: 3,
-            random: true, // Random size
-          },
-          line_linked: {
-            enable: true, // Link particles with lines
-            distance: 150,
-            color: '#ffffff',
-            opacity: 0.4,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 2,
-            direction: 'none',
-            random: false,
-            straight: false,
-            out_mode: 'out', // Particles leave the screen and disappear
-          },
-        },
-        interactivity: {
-          detect_on: 'canvas',
-          events: {
-            onhover: {
-              enable: true,
-              mode: 'repulse', // Options: grab, bubble, repulse
+          interactivity: {
+            detect_on: 'canvas',
+            events: {
+              onhover: {
+                enable: true,
+                mode: 'repulse', // Options: grab, bubble, repulse
+              },
+              onclick: {
+                enable: true,
+                mode: 'push', // Options: push, remove, bubble, repulse
+              },
             },
-            onclick: {
-              enable: true,
-              mode: 'push', // Options: push, remove, bubble, repulse
+            modes: {
+              repulse: {
+                distance: 100,
+                duration: 0.4,
+              },
+              push: {
+                particles_nb: 4,
+              },
             },
           },
-          modes: {
-            repulse: {
-              distance: 100,
-              duration: 0.4,
-            },
-            push: {
-              particles_nb: 4,
-            },
-          },
-        },
-        retina_detect: true, // Retina support
-      })
-    </script>
+          retina_detect: true, // Retina support
+        })
+      </script>
+    {% endunless %}
 
     <div class="content-overlay"></div>
     <div class="content-wrapper">
-      {% include header.html %}
       <main>{{ content }}</main>
-      {% include footer.html %}
     </div>
   </body>
 </html>

@@ -1,76 +1,181 @@
 ---
 layout: default
+hide_legacy_chrome: true
 ---
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 
-<section class="home-content">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/home.css" />
+<style>
+  .forge-page {
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    background: transparent;
+  }
 
-  <h1 class="title">Descubra o Learning Rocks 🚀</h1>
-  <p class="intro">
-    Nossa equipe de engenharia adora resolver problemas desafiadores com inovação e criatividade.
-    Aqui estão algumas curiosidades que mostram como é trabalhar conosco:
-  </p>
+  .forge-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(99, 102, 241, 0.08) 0%, transparent 42%),
+      radial-gradient(circle at 82% 10%, rgba(165, 180, 252, 0.06) 0%, transparent 40%),
+      linear-gradient(180deg, rgba(5, 7, 13, 0.72) 0%, rgba(5, 7, 13, 0.64) 55%, rgba(5, 7, 13, 0.6) 100%);
+  }
 
-  <div class="fun-facts">
-    <div class="card">
-      <div class="icon">
-        <i class="fas fa-coffee"></i>
+  .forge-page > :not(.noise-bg) {
+    position: relative;
+    z-index: 2;
+  }
+
+  .forge-page .glass-panel {
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .forge-page .noise-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.012;
+    background-size: 240px 240px;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  </style>
+
+<div class="forge-page text-zinc-400 antialiased selection:bg-orange-900/30 selection:text-orange-100 overflow-x-hidden">
+  <div class="noise-bg"></div>
+
+  {% include header.html active='home' %}
+
+  <section class="relative pt-28 pb-20 px-6 overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-orange-500/10 to-transparent rounded-full blur-[100px] -z-10 opacity-60"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-6">
+        <span class="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
+        <span class="text-xs tracking-wide text-zinc-300">Engineering Culture Knowledge Base</span>
       </div>
-      <h3>Café e Código</h3>
-      <p>
-        Nossos engenheiros têm uma relação especial com café, a companhia perfeita para momentos de
-        concentração e criatividade.
+
+      <h1 class="text-4xl md:text-6xl font-medium text-white tracking-tight leading-[1.1] mb-4">
+        Build stronger teams.<br />
+        <span class="text-zinc-500">Scale engineering culture.</span>
+      </h1>
+
+      <p class="text-lg font-light text-zinc-400 max-w-3xl mb-10 leading-relaxed">
+        Culture centralizes practices, career paths, and tech stack references to support technical decisions, team growth, and alignment across Engineering, Product, UX, and Data.
       </p>
-    </div>
-    <div class="card">
-      <div class="icon">
-        <i class="fas fa-code"></i>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 w-full max-w-xl">
+        <a href="{{ site.baseurl }}/career-ladder" class="w-full sm:w-auto px-6 py-3 bg-white text-black text-sm font-medium rounded-full hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 whitespace-nowrap">
+          View Career Ladder
+          <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+        </a>
+        <a href="{{ site.baseurl }}/stacks" class="w-full sm:w-auto px-6 py-3 bg-transparent border border-zinc-700 text-white text-sm font-medium rounded-full hover:bg-zinc-800 transition-all flex items-center justify-center gap-2 whitespace-nowrap">
+          Explore Stacks
+          <iconify-icon icon="lucide:layers" width="16"></iconify-icon>
+        </a>
       </div>
-      <h3>Paixão por Código</h3>
-      <p>
-        Escrever código vai além de uma tarefa. É uma arte que transforma ideias em soluções
-        inovadoras.
-      </p>
     </div>
-    <div class="card">
-      <div class="icon">
-        <i class="fas fa-bug"></i>
+  </section>
+
+  <section class="py-24 px-6 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-16">
+        <h2 class="text-3xl md:text-5xl font-medium text-white tracking-tight mb-6">Culture that drives outcomes.</h2>
+        <p class="text-xl text-zinc-500 font-light max-w-2xl">Less ambiguity, more autonomy. A shared hub for roles, career growth, and engineering decisions.</p>
       </div>
-      <h3>Bugs? Desafios!</h3>
-      <p>
-        Encontrar e resolver bugs é visto como uma missão. Cada problema solucionado é um passo para
-        a excelência.
-      </p>
-    </div>
-    <div class="card">
-      <div class="icon">
-        <i class="fas fa-gamepad"></i>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-panel rounded-2xl p-8 hover:bg-zinc-900/80 transition-all duration-500 group">
+          <div class="h-10 w-10 rounded-lg bg-zinc-800/50 flex items-center justify-center border border-white/5 mb-6 group-hover:scale-110 transition-transform duration-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="text-white">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </g>
+            </svg>
+          </div>
+          <h3 class="text-lg text-white font-medium mb-3">Shared Standards</h3>
+          <p class="text-sm text-zinc-400 font-light leading-relaxed">Shared practices for consistent decisions across squads and domains.</p>
+        </div>
+        <div class="glass-panel rounded-2xl p-8 hover:bg-zinc-900/80 transition-all duration-500 group">
+          <div class="h-10 w-10 rounded-lg bg-zinc-800/50 flex items-center justify-center border border-white/5 mb-6 group-hover:scale-110 transition-transform duration-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="text-white">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M6 3v12"></path>
+                <path d="M18 9a3 3 0 0 0-3 3v9"></path>
+                <path d="M6 15a3 3 0 0 0 3 3h6"></path>
+                <circle cx="6" cy="3" r="3"></circle>
+                <circle cx="18" cy="9" r="3"></circle>
+                <circle cx="15" cy="21" r="3"></circle>
+              </g>
+            </svg>
+          </div>
+          <h3 class="text-lg text-white font-medium mb-3">Career Clarity</h3>
+          <p class="text-sm text-zinc-400 font-light leading-relaxed">A clear Y-shaped career path with explicit expectations by level and impact.</p>
+        </div>
+        <div class="glass-panel rounded-2xl p-8 hover:bg-zinc-900/80 transition-all duration-500 group">
+          <div class="h-10 w-10 rounded-lg bg-zinc-800/50 flex items-center justify-center border border-white/5 mb-6 group-hover:scale-110 transition-transform duration-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="text-white">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                <path d="m9 12l2 2l4-4"></path>
+              </g>
+            </svg>
+          </div>
+          <h3 class="text-lg text-white font-medium mb-3">Role Governance</h3>
+          <p class="text-sm text-zinc-400 font-light leading-relaxed">Functional roles and a RACI model to reduce noise and improve ownership.</p>
+        </div>
       </div>
-      <h3>Gamers de Plantão</h3>
-      <p>
-        Parte da nossa equipe encontra inspiração no mundo dos jogos, onde estratégia e diversão
-        andam de mãos dadas.
-      </p>
     </div>
-    <div class="card">
-      <div class="icon">
-        <i class="fas fa-book"></i>
+  </section>
+
+  <section class="py-32 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-black to-zinc-900"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="max-w-3xl mx-auto relative z-10 text-center">
+      <h2 class="text-4xl md:text-6xl font-medium text-white tracking-tight mb-8">Ready to evolve your team?</h2>
+      <p class="text-zinc-400 mb-10 text-lg font-light">Use this hub to align expectations, accelerate learning, and scale engineering quality.</p>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <a href="{{ site.baseurl }}/career-ladder" class="px-8 py-4 bg-white text-black text-sm font-medium rounded-full hover:bg-zinc-200 transition-all w-full md:w-auto">View Career Ladder</a>
+        <a href="{{ site.baseurl }}/stacks" class="px-8 py-4 bg-transparent border border-zinc-700 text-white text-sm font-medium rounded-full hover:bg-zinc-800 transition-all w-full md:w-auto">View Stacks</a>
       </div>
-      <h3>Aprendizado Contínuo</h3>
-      <p>
-        Estamos sempre aprendendo e explorando novas tecnologias para nos manter à frente e trazer
-        inovação.
-      </p>
     </div>
-    <div class="card">
-      <div class="icon">
-        <i class="fas fa-laptop-code"></i>
+  </section>
+
+  <footer class="border-t border-white/5 bg-black pt-16 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-16">
+        <div class="col-span-2 md:col-span-2">
+          <span class="text-white font-medium tracking-tighter text-lg block mb-6">CULTURE</span>
+          <p class="text-zinc-500 text-xs font-light max-w-xs">A living engineering culture reference to guide technical growth and collaboration.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4 class="text-white text-xs font-medium uppercase tracking-wider">Product</h4>
+          <a href="{{ site.baseurl }}/dream-team" class="text-zinc-500 text-sm hover:text-white transition-colors">Dream Team</a>
+          <a href="{{ site.baseurl }}/career-ladder" class="text-zinc-500 text-sm hover:text-white transition-colors">Career Ladder</a>
+          <a href="{{ site.baseurl }}/stacks" class="text-zinc-500 text-sm hover:text-white transition-colors">Stacks</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4 class="text-white text-xs font-medium uppercase tracking-wider">Company</h4>
+          <a href="https://github.com/uoledtech-qulture-rocks/culture" target="_blank" rel="noopener noreferrer" class="text-zinc-500 text-sm hover:text-white transition-colors">Repository</a>
+          <a href="{{ site.baseurl }}/docs/dream-team.html" class="text-zinc-500 text-sm hover:text-white transition-colors">Docs</a>
+        </div>
       </div>
-      <h3>Amor por Deploys</h3>
-      <p>
-        Deploys são vistos como celebrações. Cada nova versão lançada é motivo de orgulho para o
-        time.
-      </p>
+      <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5">
+        <p class="text-zinc-600 text-xs font-light">© 2026 Engineering Culture.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </footer>
+</div>
